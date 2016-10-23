@@ -78,6 +78,20 @@
         stopOnHover: true
     });
 
+    var owl2 = $("#videogames");
+    owl2.owlCarousel({
+        items: 3, //3 items above 1000px browser width
+        itemsDesktop: [1000, 3], //3 items between 1000px and 901px
+        itemsDesktopSmall: [900, 2], // betweem 900px and 601px
+        itemsTablet: [600, 1], //1 items between 600 and 0
+        itemsMobile: false, // itemsMobile disabled - inherit from itemsTablet option
+        navigation: false, // Show next and prev buttons
+        slideSpeed: 800,
+        paginationSpeed: 400,
+        autoPlay: 5000,
+        stopOnHover: true
+    });
+
 
 /* =================================
 ===  Nivo Lightbox              ====
@@ -86,6 +100,9 @@
         effect: 'fadeScale',
     });
 
+    $('#videogames a').nivoLightbox({
+        effect: 'fadeScale',
+    });
 
 /* =================================
 ===  CONTACT FORM               ====
@@ -176,6 +193,8 @@
       width: '400',
       height: '300'
     });
+
+    $('#spnCurrentYear').html(new Date().getFullYear());
 })(jQuery);
 
 $(window).resize(function () {
