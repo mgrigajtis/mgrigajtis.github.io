@@ -120,7 +120,7 @@
             $.ajax({
               url: "https://formspree.io/matthew.grigajtis@gmail.com",
               method: "POST",
-              data: {message: message},
+              data: {message: message, _replyto: email, subject: 'Submission from mgrigajtis.github.io'},
               dataType: "json"
             }).done(function(data){
               $('.success').fadeIn(1000);
