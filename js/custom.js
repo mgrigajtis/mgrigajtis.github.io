@@ -1,5 +1,5 @@
 (function ($) {
-    
+
     "use strict";
 
 /* =================================
@@ -7,7 +7,7 @@
 =================================== */
     $('.mailchimp').ajaxChimp({
         callback: mailchimpCallback,
-        url: "http://webdesign7.us6.list-manage.com/subscribe/post?u=9445a2e155b82208d73433060&amp;id=16dc80e353" //Replace this with your own mailchimp post URL. Don't remove the "". Just paste the url inside "".  
+        url: "http://webdesign7.us6.list-manage.com/subscribe/post?u=9445a2e155b82208d73433060&amp;id=16dc80e353" //Replace this with your own mailchimp post URL. Don't remove the "". Just paste the url inside "".
     });
 
     function mailchimpCallback(resp) {
@@ -29,7 +29,7 @@
         scrollOffset: 75, //Height of Navigation Bar
         filter: ':not(.external)',
         changeHash: true
-    }); 
+    });
 
     /* NAVIGATION VISIBLE ON SCROLL */
     mainNav();
@@ -169,19 +169,23 @@
         document.createTextNode('@-ms-viewport{width:auto!important}'))
         document.querySelector('head').appendChild(msViewportStyle)
     }
+
+    $('#divFireworks').fireworks({
+      sound: false,
+      opacity: 1,
+      width: '400',
+      height: '300'
+    });
 })(jQuery);
-
-
-
 
 $(window).resize(function () {
 
     "use strict";
 
     var ww = $(window).width();
-    
+
     /* COLLAPSE NAVIGATION ON MOBILE AFTER CLICKING ON LINK */
-    
+
     if (ww < 480) {
         $('.main-navigation a').on('click', function () {
             $(".navbar-toggle").click();
