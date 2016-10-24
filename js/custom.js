@@ -80,8 +80,8 @@
 
     var owl2 = $("#videogames");
     owl2.owlCarousel({
-        items: 3, //3 items above 1000px browser width
-        itemsDesktop: [1000, 3], //3 items between 1000px and 901px
+        items: 5, // 5 items above 1000px browser width
+        itemsDesktop: [1000, 5], // 5 items between 1000px and 901px
         itemsDesktopSmall: [900, 2], // betweem 900px and 601px
         itemsTablet: [600, 1], //1 items between 600 and 0
         itemsMobile: false, // itemsMobile disabled - inherit from itemsTablet option
