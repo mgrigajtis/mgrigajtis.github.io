@@ -192,6 +192,8 @@
       height: '300'
     });
 
+    // $('.container').holidays();
+
     $('#spnCurrentYear').html(new Date().getFullYear());
 })(jQuery);
 
