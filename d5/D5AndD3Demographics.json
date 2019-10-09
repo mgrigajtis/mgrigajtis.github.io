@@ -1,0 +1,1878 @@
+{[
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "American Indian",
+		"Gender" : "F",
+		"Party" : "DEM",
+		"TOTAL" : 59
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "American Indian",
+		"Gender" : "F",
+		"Party" : "IND",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "American Indian",
+		"Gender" : "F",
+		"Party" : "LPF",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "American Indian",
+		"Gender" : "F",
+		"Party" : "NPA",
+		"TOTAL" : 44
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "American Indian",
+		"Gender" : "F",
+		"Party" : "REP",
+		"TOTAL" : 63
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "American Indian",
+		"Gender" : "M",
+		"Party" : "DEM",
+		"TOTAL" : 49
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "American Indian",
+		"Gender" : "M",
+		"Party" : "IND",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "American Indian",
+		"Gender" : "M",
+		"Party" : "LPF",
+		"TOTAL" : 2
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "American Indian",
+		"Gender" : "M",
+		"Party" : "NPA",
+		"TOTAL" : 40
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "American Indian",
+		"Gender" : "M",
+		"Party" : "REP",
+		"TOTAL" : 55
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "American Indian",
+		"Gender" : "U",
+		"Party" : "DEM",
+		"TOTAL" : 3
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "American Indian",
+		"Gender" : "U",
+		"Party" : "NPA",
+		"TOTAL" : 2
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "American Indian",
+		"Gender" : "U",
+		"Party" : "REP",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Asian or Pacific Islander",
+		"Gender" : "F",
+		"Party" : "DEM",
+		"TOTAL" : 238
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Asian or Pacific Islander",
+		"Gender" : "F",
+		"Party" : "IND",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Asian or Pacific Islander",
+		"Gender" : "F",
+		"Party" : "LPF",
+		"TOTAL" : 4
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Asian or Pacific Islander",
+		"Gender" : "F",
+		"Party" : "NPA",
+		"TOTAL" : 343
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Asian or Pacific Islander",
+		"Gender" : "F",
+		"Party" : "REP",
+		"TOTAL" : 272
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Asian or Pacific Islander",
+		"Gender" : "M",
+		"Party" : "DEM",
+		"TOTAL" : 166
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Asian or Pacific Islander",
+		"Gender" : "M",
+		"Party" : "IND",
+		"TOTAL" : 5
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Asian or Pacific Islander",
+		"Gender" : "M",
+		"Party" : "NPA",
+		"TOTAL" : 257
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Asian or Pacific Islander",
+		"Gender" : "M",
+		"Party" : "REP",
+		"TOTAL" : 164
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Asian or Pacific Islander",
+		"Gender" : "U",
+		"Party" : "DEM",
+		"TOTAL" : 7
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Asian or Pacific Islander",
+		"Gender" : "U",
+		"Party" : "NPA",
+		"TOTAL" : 18
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Asian or Pacific Islander",
+		"Gender" : "U",
+		"Party" : "REP",
+		"TOTAL" : 6
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Black",
+		"Gender" : "F",
+		"Party" : "CPF",
+		"TOTAL" : 3
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Black",
+		"Gender" : "F",
+		"Party" : "DEM",
+		"TOTAL" : 4554
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Black",
+		"Gender" : "F",
+		"Party" : "GRE",
+		"TOTAL" : 2
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Black",
+		"Gender" : "F",
+		"Party" : "IND",
+		"TOTAL" : 35
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Black",
+		"Gender" : "F",
+		"Party" : "LPF",
+		"TOTAL" : 3
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Black",
+		"Gender" : "F",
+		"Party" : "NPA",
+		"TOTAL" : 888
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Black",
+		"Gender" : "F",
+		"Party" : "REF",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Black",
+		"Gender" : "F",
+		"Party" : "REP",
+		"TOTAL" : 204
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Black",
+		"Gender" : "M",
+		"Party" : "CPF",
+		"TOTAL" : 3
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Black",
+		"Gender" : "M",
+		"Party" : "DEM",
+		"TOTAL" : 2889
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Black",
+		"Gender" : "M",
+		"Party" : "ECO",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Black",
+		"Gender" : "M",
+		"Party" : "GRE",
+		"TOTAL" : 2
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Black",
+		"Gender" : "M",
+		"Party" : "IND",
+		"TOTAL" : 38
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Black",
+		"Gender" : "M",
+		"Party" : "LPF",
+		"TOTAL" : 9
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Black",
+		"Gender" : "M",
+		"Party" : "NPA",
+		"TOTAL" : 1014
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Black",
+		"Gender" : "M",
+		"Party" : "PSL",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Black",
+		"Gender" : "M",
+		"Party" : "REF",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Black",
+		"Gender" : "M",
+		"Party" : "REP",
+		"TOTAL" : 216
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Black",
+		"Gender" : "U",
+		"Party" : "DEM",
+		"TOTAL" : 71
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Black",
+		"Gender" : "U",
+		"Party" : "NPA",
+		"TOTAL" : 24
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Black",
+		"Gender" : "U",
+		"Party" : "REP",
+		"TOTAL" : 3
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Hispanic",
+		"Gender" : "F",
+		"Party" : "CPF",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Hispanic",
+		"Gender" : "F",
+		"Party" : "DEM",
+		"TOTAL" : 1707
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Hispanic",
+		"Gender" : "F",
+		"Party" : "ECO",
+		"TOTAL" : 2
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Hispanic",
+		"Gender" : "F",
+		"Party" : "GRE",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Hispanic",
+		"Gender" : "F",
+		"Party" : "IND",
+		"TOTAL" : 21
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Hispanic",
+		"Gender" : "F",
+		"Party" : "LPF",
+		"TOTAL" : 10
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Hispanic",
+		"Gender" : "F",
+		"Party" : "NPA",
+		"TOTAL" : 1320
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Hispanic",
+		"Gender" : "F",
+		"Party" : "REP",
+		"TOTAL" : 722
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Hispanic",
+		"Gender" : "M",
+		"Party" : "DEM",
+		"TOTAL" : 1250
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Hispanic",
+		"Gender" : "M",
+		"Party" : "GRE",
+		"TOTAL" : 8
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Hispanic",
+		"Gender" : "M",
+		"Party" : "IND",
+		"TOTAL" : 21
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Hispanic",
+		"Gender" : "M",
+		"Party" : "LPF",
+		"TOTAL" : 6
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Hispanic",
+		"Gender" : "M",
+		"Party" : "NPA",
+		"TOTAL" : 1263
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Hispanic",
+		"Gender" : "M",
+		"Party" : "REF",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Hispanic",
+		"Gender" : "M",
+		"Party" : "REP",
+		"TOTAL" : 757
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Hispanic",
+		"Gender" : "U",
+		"Party" : "DEM",
+		"TOTAL" : 43
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Hispanic",
+		"Gender" : "U",
+		"Party" : "GRE",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Hispanic",
+		"Gender" : "U",
+		"Party" : "NPA",
+		"TOTAL" : 43
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Hispanic",
+		"Gender" : "U",
+		"Party" : "REP",
+		"TOTAL" : 9
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Multi-Racial",
+		"Gender" : "F",
+		"Party" : "DEM",
+		"TOTAL" : 145
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Multi-Racial",
+		"Gender" : "F",
+		"Party" : "GRE",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Multi-Racial",
+		"Gender" : "F",
+		"Party" : "IND",
+		"TOTAL" : 3
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Multi-Racial",
+		"Gender" : "F",
+		"Party" : "LPF",
+		"TOTAL" : 2
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Multi-Racial",
+		"Gender" : "F",
+		"Party" : "NPA",
+		"TOTAL" : 114
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Multi-Racial",
+		"Gender" : "F",
+		"Party" : "REP",
+		"TOTAL" : 43
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Multi-Racial",
+		"Gender" : "M",
+		"Party" : "DEM",
+		"TOTAL" : 64
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Multi-Racial",
+		"Gender" : "M",
+		"Party" : "GRE",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Multi-Racial",
+		"Gender" : "M",
+		"Party" : "LPF",
+		"TOTAL" : 3
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Multi-Racial",
+		"Gender" : "M",
+		"Party" : "NPA",
+		"TOTAL" : 105
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Multi-Racial",
+		"Gender" : "M",
+		"Party" : "REP",
+		"TOTAL" : 47
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Multi-Racial",
+		"Gender" : "U",
+		"Party" : "DEM",
+		"TOTAL" : 6
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Multi-Racial",
+		"Gender" : "U",
+		"Party" : "NPA",
+		"TOTAL" : 14
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Multi-Racial",
+		"Gender" : "U",
+		"Party" : "REP",
+		"TOTAL" : 5
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Other",
+		"Gender" : "F",
+		"Party" : "DEM",
+		"TOTAL" : 405
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Other",
+		"Gender" : "F",
+		"Party" : "GRE",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Other",
+		"Gender" : "F",
+		"Party" : "IND",
+		"TOTAL" : 12
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Other",
+		"Gender" : "F",
+		"Party" : "NPA",
+		"TOTAL" : 267
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Other",
+		"Gender" : "F",
+		"Party" : "PSL",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Other",
+		"Gender" : "F",
+		"Party" : "REP",
+		"TOTAL" : 192
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Other",
+		"Gender" : "M",
+		"Party" : "DEM",
+		"TOTAL" : 285
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Other",
+		"Gender" : "M",
+		"Party" : "ECO",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Other",
+		"Gender" : "M",
+		"Party" : "GRE",
+		"TOTAL" : 3
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Other",
+		"Gender" : "M",
+		"Party" : "IND",
+		"TOTAL" : 12
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Other",
+		"Gender" : "M",
+		"Party" : "LPF",
+		"TOTAL" : 4
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Other",
+		"Gender" : "M",
+		"Party" : "NPA",
+		"TOTAL" : 300
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Other",
+		"Gender" : "M",
+		"Party" : "REF",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Other",
+		"Gender" : "M",
+		"Party" : "REP",
+		"TOTAL" : 216
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Other",
+		"Gender" : "U",
+		"Party" : "DEM",
+		"TOTAL" : 16
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Other",
+		"Gender" : "U",
+		"Party" : "NPA",
+		"TOTAL" : 22
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Other",
+		"Gender" : "U",
+		"Party" : "REP",
+		"TOTAL" : 12
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Unknown",
+		"Gender" : "F",
+		"Party" : "DEM",
+		"TOTAL" : 178
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Unknown",
+		"Gender" : "F",
+		"Party" : "IND",
+		"TOTAL" : 3
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Unknown",
+		"Gender" : "F",
+		"Party" : "LPF",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Unknown",
+		"Gender" : "F",
+		"Party" : "NPA",
+		"TOTAL" : 168
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Unknown",
+		"Gender" : "F",
+		"Party" : "PSL",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Unknown",
+		"Gender" : "F",
+		"Party" : "REP",
+		"TOTAL" : 54
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Unknown",
+		"Gender" : "M",
+		"Party" : "DEM",
+		"TOTAL" : 116
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Unknown",
+		"Gender" : "M",
+		"Party" : "IND",
+		"TOTAL" : 2
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Unknown",
+		"Gender" : "M",
+		"Party" : "LPF",
+		"TOTAL" : 2
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Unknown",
+		"Gender" : "M",
+		"Party" : "NPA",
+		"TOTAL" : 154
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Unknown",
+		"Gender" : "M",
+		"Party" : "REP",
+		"TOTAL" : 81
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Unknown",
+		"Gender" : "U",
+		"Party" : "DEM",
+		"TOTAL" : 137
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Unknown",
+		"Gender" : "U",
+		"Party" : "IND",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Unknown",
+		"Gender" : "U",
+		"Party" : "NPA",
+		"TOTAL" : 366
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "Unknown",
+		"Gender" : "U",
+		"Party" : "REP",
+		"TOTAL" : 100
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "White",
+		"Gender" : "F",
+		"Party" : "CPF",
+		"TOTAL" : 5
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "White",
+		"Gender" : "F",
+		"Party" : "DEM",
+		"TOTAL" : 10294
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "White",
+		"Gender" : "F",
+		"Party" : "ECO",
+		"TOTAL" : 6
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "White",
+		"Gender" : "F",
+		"Party" : "GRE",
+		"TOTAL" : 34
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "White",
+		"Gender" : "F",
+		"Party" : "IND",
+		"TOTAL" : 356
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "White",
+		"Gender" : "F",
+		"Party" : "LPF",
+		"TOTAL" : 100
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "White",
+		"Gender" : "F",
+		"Party" : "NPA",
+		"TOTAL" : 9298
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "White",
+		"Gender" : "F",
+		"Party" : "PSL",
+		"TOTAL" : 2
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "White",
+		"Gender" : "F",
+		"Party" : "REF",
+		"TOTAL" : 3
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "White",
+		"Gender" : "F",
+		"Party" : "REP",
+		"TOTAL" : 14672
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "White",
+		"Gender" : "M",
+		"Party" : "CPF",
+		"TOTAL" : 14
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "White",
+		"Gender" : "M",
+		"Party" : "DEM",
+		"TOTAL" : 6806
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "White",
+		"Gender" : "M",
+		"Party" : "ECO",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "White",
+		"Gender" : "M",
+		"Party" : "GRE",
+		"TOTAL" : 41
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "White",
+		"Gender" : "M",
+		"Party" : "IND",
+		"TOTAL" : 340
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "White",
+		"Gender" : "M",
+		"Party" : "LPF",
+		"TOTAL" : 176
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "White",
+		"Gender" : "M",
+		"Party" : "NPA",
+		"TOTAL" : 9454
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "White",
+		"Gender" : "M",
+		"Party" : "PSL",
+		"TOTAL" : 2
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "White",
+		"Gender" : "M",
+		"Party" : "REF",
+		"TOTAL" : 3
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "White",
+		"Gender" : "M",
+		"Party" : "REP",
+		"TOTAL" : 14651
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "White",
+		"Gender" : "U",
+		"Party" : "DEM",
+		"TOTAL" : 113
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "White",
+		"Gender" : "U",
+		"Party" : "LPF",
+		"TOTAL" : 4
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "White",
+		"Gender" : "U",
+		"Party" : "NPA",
+		"TOTAL" : 203
+	},
+	{
+		"CountyCommissionDistrict" : "3",
+		"Race" : "White",
+		"Gender" : "U",
+		"Party" : "REP",
+		"TOTAL" : 181
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "American Indian",
+		"Gender" : "F",
+		"Party" : "DEM",
+		"TOTAL" : 61
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "American Indian",
+		"Gender" : "F",
+		"Party" : "LPF",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "American Indian",
+		"Gender" : "F",
+		"Party" : "NPA",
+		"TOTAL" : 53
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "American Indian",
+		"Gender" : "F",
+		"Party" : "REP",
+		"TOTAL" : 50
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "American Indian",
+		"Gender" : "M",
+		"Party" : "DEM",
+		"TOTAL" : 47
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "American Indian",
+		"Gender" : "M",
+		"Party" : "IND",
+		"TOTAL" : 4
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "American Indian",
+		"Gender" : "M",
+		"Party" : "NPA",
+		"TOTAL" : 40
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "American Indian",
+		"Gender" : "M",
+		"Party" : "REP",
+		"TOTAL" : 57
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "American Indian",
+		"Gender" : "U",
+		"Party" : "DEM",
+		"TOTAL" : 3
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "American Indian",
+		"Gender" : "U",
+		"Party" : "NPA",
+		"TOTAL" : 3
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "American Indian",
+		"Gender" : "U",
+		"Party" : "REP",
+		"TOTAL" : 2
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Asian or Pacific Islander",
+		"Gender" : "F",
+		"Party" : "DEM",
+		"TOTAL" : 282
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Asian or Pacific Islander",
+		"Gender" : "F",
+		"Party" : "IND",
+		"TOTAL" : 8
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Asian or Pacific Islander",
+		"Gender" : "F",
+		"Party" : "LPF",
+		"TOTAL" : 2
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Asian or Pacific Islander",
+		"Gender" : "F",
+		"Party" : "NPA",
+		"TOTAL" : 324
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Asian or Pacific Islander",
+		"Gender" : "F",
+		"Party" : "REF",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Asian or Pacific Islander",
+		"Gender" : "F",
+		"Party" : "REP",
+		"TOTAL" : 299
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Asian or Pacific Islander",
+		"Gender" : "M",
+		"Party" : "DEM",
+		"TOTAL" : 170
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Asian or Pacific Islander",
+		"Gender" : "M",
+		"Party" : "IND",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Asian or Pacific Islander",
+		"Gender" : "M",
+		"Party" : "LPF",
+		"TOTAL" : 2
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Asian or Pacific Islander",
+		"Gender" : "M",
+		"Party" : "NPA",
+		"TOTAL" : 254
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Asian or Pacific Islander",
+		"Gender" : "M",
+		"Party" : "REP",
+		"TOTAL" : 220
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Asian or Pacific Islander",
+		"Gender" : "U",
+		"Party" : "DEM",
+		"TOTAL" : 10
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Asian or Pacific Islander",
+		"Gender" : "U",
+		"Party" : "NPA",
+		"TOTAL" : 12
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Asian or Pacific Islander",
+		"Gender" : "U",
+		"Party" : "REP",
+		"TOTAL" : 5
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Black",
+		"Gender" : "F",
+		"Party" : "DEM",
+		"TOTAL" : 3726
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Black",
+		"Gender" : "F",
+		"Party" : "GRE",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Black",
+		"Gender" : "F",
+		"Party" : "IND",
+		"TOTAL" : 26
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Black",
+		"Gender" : "F",
+		"Party" : "LPF",
+		"TOTAL" : 2
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Black",
+		"Gender" : "F",
+		"Party" : "NPA",
+		"TOTAL" : 870
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Black",
+		"Gender" : "F",
+		"Party" : "REP",
+		"TOTAL" : 157
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Black",
+		"Gender" : "M",
+		"Party" : "DEM",
+		"TOTAL" : 2672
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Black",
+		"Gender" : "M",
+		"Party" : "ECO",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Black",
+		"Gender" : "M",
+		"Party" : "GRE",
+		"TOTAL" : 2
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Black",
+		"Gender" : "M",
+		"Party" : "IND",
+		"TOTAL" : 33
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Black",
+		"Gender" : "M",
+		"Party" : "LPF",
+		"TOTAL" : 4
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Black",
+		"Gender" : "M",
+		"Party" : "NPA",
+		"TOTAL" : 1041
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Black",
+		"Gender" : "M",
+		"Party" : "PSL",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Black",
+		"Gender" : "M",
+		"Party" : "REF",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Black",
+		"Gender" : "M",
+		"Party" : "REP",
+		"TOTAL" : 214
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Black",
+		"Gender" : "U",
+		"Party" : "DEM",
+		"TOTAL" : 71
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Black",
+		"Gender" : "U",
+		"Party" : "NPA",
+		"TOTAL" : 25
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Black",
+		"Gender" : "U",
+		"Party" : "REP",
+		"TOTAL" : 3
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Hispanic",
+		"Gender" : "",
+		"Party" : "DEM",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Hispanic",
+		"Gender" : "F",
+		"Party" : "CPF",
+		"TOTAL" : 2
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Hispanic",
+		"Gender" : "F",
+		"Party" : "DEM",
+		"TOTAL" : 1908
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Hispanic",
+		"Gender" : "F",
+		"Party" : "ECO",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Hispanic",
+		"Gender" : "F",
+		"Party" : "GRE",
+		"TOTAL" : 2
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Hispanic",
+		"Gender" : "F",
+		"Party" : "IND",
+		"TOTAL" : 23
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Hispanic",
+		"Gender" : "F",
+		"Party" : "LPF",
+		"TOTAL" : 8
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Hispanic",
+		"Gender" : "F",
+		"Party" : "NPA",
+		"TOTAL" : 1520
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Hispanic",
+		"Gender" : "F",
+		"Party" : "REP",
+		"TOTAL" : 892
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Hispanic",
+		"Gender" : "M",
+		"Party" : "CPF",
+		"TOTAL" : 3
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Hispanic",
+		"Gender" : "M",
+		"Party" : "DEM",
+		"TOTAL" : 1368
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Hispanic",
+		"Gender" : "M",
+		"Party" : "ECO",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Hispanic",
+		"Gender" : "M",
+		"Party" : "GRE",
+		"TOTAL" : 2
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Hispanic",
+		"Gender" : "M",
+		"Party" : "IND",
+		"TOTAL" : 28
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Hispanic",
+		"Gender" : "M",
+		"Party" : "LPF",
+		"TOTAL" : 9
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Hispanic",
+		"Gender" : "M",
+		"Party" : "NPA",
+		"TOTAL" : 1368
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Hispanic",
+		"Gender" : "M",
+		"Party" : "PSL",
+		"TOTAL" : 2
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Hispanic",
+		"Gender" : "M",
+		"Party" : "REP",
+		"TOTAL" : 841
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Hispanic",
+		"Gender" : "U",
+		"Party" : "DEM",
+		"TOTAL" : 35
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Hispanic",
+		"Gender" : "U",
+		"Party" : "NPA",
+		"TOTAL" : 42
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Hispanic",
+		"Gender" : "U",
+		"Party" : "REP",
+		"TOTAL" : 18
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Multi-Racial",
+		"Gender" : "F",
+		"Party" : "DEM",
+		"TOTAL" : 135
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Multi-Racial",
+		"Gender" : "F",
+		"Party" : "GRE",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Multi-Racial",
+		"Gender" : "F",
+		"Party" : "LPF",
+		"TOTAL" : 2
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Multi-Racial",
+		"Gender" : "F",
+		"Party" : "NPA",
+		"TOTAL" : 132
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Multi-Racial",
+		"Gender" : "F",
+		"Party" : "REP",
+		"TOTAL" : 73
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Multi-Racial",
+		"Gender" : "M",
+		"Party" : "CPF",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Multi-Racial",
+		"Gender" : "M",
+		"Party" : "DEM",
+		"TOTAL" : 69
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Multi-Racial",
+		"Gender" : "M",
+		"Party" : "LPF",
+		"TOTAL" : 2
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Multi-Racial",
+		"Gender" : "M",
+		"Party" : "NPA",
+		"TOTAL" : 111
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Multi-Racial",
+		"Gender" : "M",
+		"Party" : "REP",
+		"TOTAL" : 52
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Multi-Racial",
+		"Gender" : "U",
+		"Party" : "DEM",
+		"TOTAL" : 5
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Multi-Racial",
+		"Gender" : "U",
+		"Party" : "NPA",
+		"TOTAL" : 14
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Multi-Racial",
+		"Gender" : "U",
+		"Party" : "REP",
+		"TOTAL" : 6
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Other",
+		"Gender" : "F",
+		"Party" : "DEM",
+		"TOTAL" : 416
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Other",
+		"Gender" : "F",
+		"Party" : "IND",
+		"TOTAL" : 14
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Other",
+		"Gender" : "F",
+		"Party" : "LPF",
+		"TOTAL" : 4
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Other",
+		"Gender" : "F",
+		"Party" : "NPA",
+		"TOTAL" : 287
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Other",
+		"Gender" : "F",
+		"Party" : "REP",
+		"TOTAL" : 185
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Other",
+		"Gender" : "M",
+		"Party" : "DEM",
+		"TOTAL" : 277
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Other",
+		"Gender" : "M",
+		"Party" : "IND",
+		"TOTAL" : 9
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Other",
+		"Gender" : "M",
+		"Party" : "LPF",
+		"TOTAL" : 7
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Other",
+		"Gender" : "M",
+		"Party" : "NPA",
+		"TOTAL" : 298
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Other",
+		"Gender" : "M",
+		"Party" : "REP",
+		"TOTAL" : 195
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Other",
+		"Gender" : "U",
+		"Party" : "DEM",
+		"TOTAL" : 13
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Other",
+		"Gender" : "U",
+		"Party" : "NPA",
+		"TOTAL" : 24
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Other",
+		"Gender" : "U",
+		"Party" : "REP",
+		"TOTAL" : 16
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Unknown",
+		"Gender" : "F",
+		"Party" : "DEM",
+		"TOTAL" : 154
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Unknown",
+		"Gender" : "F",
+		"Party" : "ECO",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Unknown",
+		"Gender" : "F",
+		"Party" : "GRE",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Unknown",
+		"Gender" : "F",
+		"Party" : "IND",
+		"TOTAL" : 3
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Unknown",
+		"Gender" : "F",
+		"Party" : "NPA",
+		"TOTAL" : 141
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Unknown",
+		"Gender" : "F",
+		"Party" : "REP",
+		"TOTAL" : 51
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Unknown",
+		"Gender" : "M",
+		"Party" : "DEM",
+		"TOTAL" : 125
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Unknown",
+		"Gender" : "M",
+		"Party" : "IND",
+		"TOTAL" : 4
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Unknown",
+		"Gender" : "M",
+		"Party" : "LPF",
+		"TOTAL" : 5
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Unknown",
+		"Gender" : "M",
+		"Party" : "NPA",
+		"TOTAL" : 132
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Unknown",
+		"Gender" : "M",
+		"Party" : "REF",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Unknown",
+		"Gender" : "M",
+		"Party" : "REP",
+		"TOTAL" : 97
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Unknown",
+		"Gender" : "U",
+		"Party" : "DEM",
+		"TOTAL" : 119
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Unknown",
+		"Gender" : "U",
+		"Party" : "GRE",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Unknown",
+		"Gender" : "U",
+		"Party" : "IND",
+		"TOTAL" : 3
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Unknown",
+		"Gender" : "U",
+		"Party" : "LPF",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Unknown",
+		"Gender" : "U",
+		"Party" : "NPA",
+		"TOTAL" : 327
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "Unknown",
+		"Gender" : "U",
+		"Party" : "REP",
+		"TOTAL" : 88
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "White",
+		"Gender" : "",
+		"Party" : "REP",
+		"TOTAL" : 2
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "White",
+		"Gender" : "F",
+		"Party" : "CPF",
+		"TOTAL" : 6
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "White",
+		"Gender" : "F",
+		"Party" : "DEM",
+		"TOTAL" : 10090
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "White",
+		"Gender" : "F",
+		"Party" : "ECO",
+		"TOTAL" : 2
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "White",
+		"Gender" : "F",
+		"Party" : "GRE",
+		"TOTAL" : 32
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "White",
+		"Gender" : "F",
+		"Party" : "IND",
+		"TOTAL" : 347
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "White",
+		"Gender" : "F",
+		"Party" : "LPF",
+		"TOTAL" : 97
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "White",
+		"Gender" : "F",
+		"Party" : "NPA",
+		"TOTAL" : 8753
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "White",
+		"Gender" : "F",
+		"Party" : "PSL",
+		"TOTAL" : 2
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "White",
+		"Gender" : "F",
+		"Party" : "REF",
+		"TOTAL" : 5
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "White",
+		"Gender" : "F",
+		"Party" : "REP",
+		"TOTAL" : 14554
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "White",
+		"Gender" : "M",
+		"Party" : "CPF",
+		"TOTAL" : 10
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "White",
+		"Gender" : "M",
+		"Party" : "DEM",
+		"TOTAL" : 6826
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "White",
+		"Gender" : "M",
+		"Party" : "ECO",
+		"TOTAL" : 6
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "White",
+		"Gender" : "M",
+		"Party" : "GRE",
+		"TOTAL" : 31
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "White",
+		"Gender" : "M",
+		"Party" : "IND",
+		"TOTAL" : 276
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "White",
+		"Gender" : "M",
+		"Party" : "LPF",
+		"TOTAL" : 176
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "White",
+		"Gender" : "M",
+		"Party" : "NPA",
+		"TOTAL" : 9147
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "White",
+		"Gender" : "M",
+		"Party" : "PSL",
+		"TOTAL" : 5
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "White",
+		"Gender" : "M",
+		"Party" : "REF",
+		"TOTAL" : 6
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "White",
+		"Gender" : "M",
+		"Party" : "REP",
+		"TOTAL" : 14982
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "White",
+		"Gender" : "U",
+		"Party" : "DEM",
+		"TOTAL" : 99
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "White",
+		"Gender" : "U",
+		"Party" : "IND",
+		"TOTAL" : 1
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "White",
+		"Gender" : "U",
+		"Party" : "NPA",
+		"TOTAL" : 186
+	},
+	{
+		"CountyCommissionDistrict" : "5",
+		"Race" : "White",
+		"Gender" : "U",
+		"Party" : "REP",
+		"TOTAL" : 157
+	}
+]}

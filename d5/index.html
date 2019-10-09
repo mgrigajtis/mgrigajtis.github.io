@@ -481,7 +481,7 @@
           </tr>
         </thead>
 
-        <tbody>
+        <tbody><!--
           <tr><td>3</td><td>American Indian</td><td>F</td><td>DEM</td><td>59</td></tr>
           <tr><td>3</td><td>American Indian</td><td>F</td><td>IND</td><td>1</td></tr>
           <tr><td>3</td><td>American Indian</td><td>F</td><td>LPF</td><td>1</td></tr>
@@ -749,7 +749,7 @@
           <tr><td>5</td><td>White</td><td>U</td><td>DEM</td><td>99</td></tr>
           <tr><td>5</td><td>White</td><td>U</td><td>IND</td><td>1</td></tr>
           <tr><td>5</td><td>White</td><td>U</td><td>NPA</td><td>186</td></tr>
-          <tr><td>5</td><td>White</td><td>U</td><td>REP</td><td>157</td></tr>
+          <tr><td>5</td><td>White</td><td>U</td><td>REP</td><td>157</td></tr>-->
         </tbody>
       </table>
     </div>
@@ -761,7 +761,9 @@
           $('#tblTotalVoters').dataTable();
           $('#tblDistrict3').dataTable();
           $('#tblDistrict5').dataTable();
-          $('#tblDemographics').dataTable();
+          $('#tblDemographics').dataTable({
+            ajax: 'D5AndD3Demographics.json'
+          });
       });
     </script>
 	</body>
