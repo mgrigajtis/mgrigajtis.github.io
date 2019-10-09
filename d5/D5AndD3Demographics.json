@@ -3,1876 +3,1876 @@
 	[
 		"3",
 		"American Indian",
-		"Gender" : "F",
+		"F",
 		"DEM",
 		59
 	],
 	[
 		"3",
 		"American Indian",
-		"Gender" : "F",
+		"F",
 		"IND",
 		1
 	],
 	[
 		"3",
 		"American Indian",
-		"Gender" : "F",
+		"F",
 		"LPF",
 		1
 	],
 	[
 		"3",
 		"American Indian",
-		"Gender" : "F",
+		"F",
 		"NPA",
 		44
 	],
 	[
 		"3",
 		"American Indian",
-		"Gender" : "F",
+		"F",
 		"REP",
 		63
 	],
 	[
 		"3",
 		"American Indian",
-		"Gender" : "M",
+		"M",
 		"DEM",
 		49
 	],
 	[
 		"3",
 		"American Indian",
-		"Gender" : "M",
+		"M",
 		"IND",
 		1
 	],
 	[
 		"3",
 		"American Indian",
-		"Gender" : "M",
+		"M",
 		"LPF",
 		2
 	],
 	[
 		"3",
 		"American Indian",
-		"Gender" : "M",
+		"M",
 		"NPA",
 		40
 	],
 	[
 		"3",
 		"American Indian",
-		"Gender" : "M",
+		"M",
 		"REP",
 		55
 	],
 	[
 		"3",
 		"American Indian",
-		"Gender" : "U",
+		"U",
 		"DEM",
 		3
 	],
 	[
 		"3",
 		"American Indian",
-		"Gender" : "U",
+		"U",
 		"NPA",
 		2
 	],
 	[
 		"3",
 		"American Indian",
-		"Gender" : "U",
+		"U",
 		"REP",
 		1
 	],
 	[
 		"3",
 		"Asian or Pacific Islander",
-		"Gender" : "F",
+		"F",
 		"DEM",
 		238
 	],
 	[
 		"3",
 		"Asian or Pacific Islander",
-		"Gender" : "F",
+		"F",
 		"IND",
 		1
 	],
 	[
 		"3",
 		"Asian or Pacific Islander",
-		"Gender" : "F",
+		"F",
 		"LPF",
 		4
 	],
 	[
 		"3",
 		"Asian or Pacific Islander",
-		"Gender" : "F",
+		"F",
 		"NPA",
 		343
 	],
 	[
 		"3",
 		"Asian or Pacific Islander",
-		"Gender" : "F",
+		"F",
 		"REP",
 		272
 	],
 	[
 		"3",
 		"Asian or Pacific Islander",
-		"Gender" : "M",
+		"M",
 		"DEM",
 		166
 	],
 	[
 		"3",
 		"Asian or Pacific Islander",
-		"Gender" : "M",
+		"M",
 		"IND",
 		5
 	],
 	[
 		"3",
 		"Asian or Pacific Islander",
-		"Gender" : "M",
+		"M",
 		"NPA",
 		257
 	],
 	[
 		"3",
 		"Asian or Pacific Islander",
-		"Gender" : "M",
+		"M",
 		"REP",
 		164
 	],
 	[
 		"3",
 		"Asian or Pacific Islander",
-		"Gender" : "U",
+		"U",
 		"DEM",
 		7
 	],
 	[
 		"3",
 		"Asian or Pacific Islander",
-		"Gender" : "U",
+		"U",
 		"NPA",
 		18
 	],
 	[
 		"3",
 		"Asian or Pacific Islander",
-		"Gender" : "U",
+		"U",
 		"REP",
 		6
 	],
 	[
 		"3",
 		"Black",
-		"Gender" : "F",
+		"F",
 		"CPF",
 		3
 	],
 	[
 		"3",
 		"Black",
-		"Gender" : "F",
+		"F",
 		"DEM",
 		4554
 	],
 	[
 		"3",
 		"Black",
-		"Gender" : "F",
+		"F",
 		"GRE",
 		2
 	],
 	[
 		"3",
 		"Black",
-		"Gender" : "F",
+		"F",
 		"IND",
 		35
 	],
 	[
 		"3",
 		"Black",
-		"Gender" : "F",
+		"F",
 		"LPF",
 		3
 	],
 	[
 		"3",
 		"Black",
-		"Gender" : "F",
+		"F",
 		"NPA",
 		888
 	],
 	[
 		"3",
 		"Black",
-		"Gender" : "F",
+		"F",
 		"REF",
 		1
 	],
 	[
 		"3",
 		"Black",
-		"Gender" : "F",
+		"F",
 		"REP",
 		204
 	],
 	[
 		"3",
 		"Black",
-		"Gender" : "M",
+		"M",
 		"CPF",
 		3
 	],
 	[
 		"3",
 		"Black",
-		"Gender" : "M",
+		"M",
 		"DEM",
 		2889
 	],
 	[
 		"3",
 		"Black",
-		"Gender" : "M",
+		"M",
 		"ECO",
 		1
 	],
 	[
 		"3",
 		"Black",
-		"Gender" : "M",
+		"M",
 		"GRE",
 		2
 	],
 	[
 		"3",
 		"Black",
-		"Gender" : "M",
+		"M",
 		"IND",
 		38
 	],
 	[
 		"3",
 		"Black",
-		"Gender" : "M",
+		"M",
 		"LPF",
 		9
 	],
 	[
 		"3",
 		"Black",
-		"Gender" : "M",
+		"M",
 		"NPA",
 		1014
 	],
 	[
 		"3",
 		"Black",
-		"Gender" : "M",
+		"M",
 		"PSL",
 		1
 	],
 	[
 		"3",
 		"Black",
-		"Gender" : "M",
+		"M",
 		"REF",
 		1
 	],
 	[
 		"3",
 		"Black",
-		"Gender" : "M",
+		"M",
 		"REP",
 		216
 	],
 	[
 		"3",
 		"Black",
-		"Gender" : "U",
+		"U",
 		"DEM",
 		71
 	],
 	[
 		"3",
 		"Black",
-		"Gender" : "U",
+		"U",
 		"NPA",
 		24
 	],
 	[
 		"3",
 		"Black",
-		"Gender" : "U",
+		"U",
 		"REP",
 		3
 	],
 	[
 		"3",
 		"Hispanic",
-		"Gender" : "F",
+		"F",
 		"CPF",
 		1
 	],
 	[
 		"3",
 		"Hispanic",
-		"Gender" : "F",
+		"F",
 		"DEM",
 		1707
 	],
 	[
 		"3",
 		"Hispanic",
-		"Gender" : "F",
+		"F",
 		"ECO",
 		2
 	],
 	[
 		"3",
 		"Hispanic",
-		"Gender" : "F",
+		"F",
 		"GRE",
 		1
 	],
 	[
 		"3",
 		"Hispanic",
-		"Gender" : "F",
+		"F",
 		"IND",
 		21
 	],
 	[
 		"3",
 		"Hispanic",
-		"Gender" : "F",
+		"F",
 		"LPF",
 		10
 	],
 	[
 		"3",
 		"Hispanic",
-		"Gender" : "F",
+		"F",
 		"NPA",
 		1320
 	],
 	[
 		"3",
 		"Hispanic",
-		"Gender" : "F",
+		"F",
 		"REP",
 		722
 	],
 	[
 		"3",
 		"Hispanic",
-		"Gender" : "M",
+		"M",
 		"DEM",
 		1250
 	],
 	[
 		"3",
 		"Hispanic",
-		"Gender" : "M",
+		"M",
 		"GRE",
 		8
 	],
 	[
 		"3",
 		"Hispanic",
-		"Gender" : "M",
+		"M",
 		"IND",
 		21
 	],
 	[
 		"3",
 		"Hispanic",
-		"Gender" : "M",
+		"M",
 		"LPF",
 		6
 	],
 	[
 		"3",
 		"Hispanic",
-		"Gender" : "M",
+		"M",
 		"NPA",
 		1263
 	],
 	[
 		"3",
 		"Hispanic",
-		"Gender" : "M",
+		"M",
 		"REF",
 		1
 	],
 	[
 		"3",
 		"Hispanic",
-		"Gender" : "M",
+		"M",
 		"REP",
 		757
 	],
 	[
 		"3",
 		"Hispanic",
-		"Gender" : "U",
+		"U",
 		"DEM",
 		43
 	],
 	[
 		"3",
 		"Hispanic",
-		"Gender" : "U",
+		"U",
 		"GRE",
 		1
 	],
 	[
 		"3",
 		"Hispanic",
-		"Gender" : "U",
+		"U",
 		"NPA",
 		43
 	],
 	[
 		"3",
 		"Hispanic",
-		"Gender" : "U",
+		"U",
 		"REP",
 		9
 	],
 	[
 		"3",
 		"Multi-Racial",
-		"Gender" : "F",
+		"F",
 		"DEM",
 		145
 	],
 	[
 		"3",
 		"Multi-Racial",
-		"Gender" : "F",
+		"F",
 		"GRE",
 		1
 	],
 	[
 		"3",
 		"Multi-Racial",
-		"Gender" : "F",
+		"F",
 		"IND",
 		3
 	],
 	[
 		"3",
 		"Multi-Racial",
-		"Gender" : "F",
+		"F",
 		"LPF",
 		2
 	],
 	[
 		"3",
 		"Multi-Racial",
-		"Gender" : "F",
+		"F",
 		"NPA",
 		114
 	],
 	[
 		"3",
 		"Multi-Racial",
-		"Gender" : "F",
+		"F",
 		"REP",
 		43
 	],
 	[
 		"3",
 		"Multi-Racial",
-		"Gender" : "M",
+		"M",
 		"DEM",
 		64
 	],
 	[
 		"3",
 		"Multi-Racial",
-		"Gender" : "M",
+		"M",
 		"GRE",
 		1
 	],
 	[
 		"3",
 		"Multi-Racial",
-		"Gender" : "M",
+		"M",
 		"LPF",
 		3
 	],
 	[
 		"3",
 		"Multi-Racial",
-		"Gender" : "M",
+		"M",
 		"NPA",
 		105
 	],
 	[
 		"3",
 		"Multi-Racial",
-		"Gender" : "M",
+		"M",
 		"REP",
 		47
 	],
 	[
 		"3",
 		"Multi-Racial",
-		"Gender" : "U",
+		"U",
 		"DEM",
 		6
 	],
 	[
 		"3",
 		"Multi-Racial",
-		"Gender" : "U",
+		"U",
 		"NPA",
 		14
 	],
 	[
 		"3",
 		"Multi-Racial",
-		"Gender" : "U",
+		"U",
 		"REP",
 		5
 	],
 	[
 		"3",
 		"Other",
-		"Gender" : "F",
+		"F",
 		"DEM",
 		405
 	],
 	[
 		"3",
 		"Other",
-		"Gender" : "F",
+		"F",
 		"GRE",
 		1
 	],
 	[
 		"3",
 		"Other",
-		"Gender" : "F",
+		"F",
 		"IND",
 		12
 	],
 	[
 		"3",
 		"Other",
-		"Gender" : "F",
+		"F",
 		"NPA",
 		267
 	],
 	[
 		"3",
 		"Other",
-		"Gender" : "F",
+		"F",
 		"PSL",
 		1
 	],
 	[
 		"3",
 		"Other",
-		"Gender" : "F",
+		"F",
 		"REP",
 		192
 	],
 	[
 		"3",
 		"Other",
-		"Gender" : "M",
+		"M",
 		"DEM",
 		285
 	],
 	[
 		"3",
 		"Other",
-		"Gender" : "M",
+		"M",
 		"ECO",
 		1
 	],
 	[
 		"3",
 		"Other",
-		"Gender" : "M",
+		"M",
 		"GRE",
 		3
 	],
 	[
 		"3",
 		"Other",
-		"Gender" : "M",
+		"M",
 		"IND",
 		12
 	],
 	[
 		"3",
 		"Other",
-		"Gender" : "M",
+		"M",
 		"LPF",
 		4
 	],
 	[
 		"3",
 		"Other",
-		"Gender" : "M",
+		"M",
 		"NPA",
 		300
 	],
 	[
 		"3",
 		"Other",
-		"Gender" : "M",
+		"M",
 		"REF",
 		1
 	],
 	[
 		"3",
 		"Other",
-		"Gender" : "M",
+		"M",
 		"REP",
 		216
 	],
 	[
 		"3",
 		"Other",
-		"Gender" : "U",
+		"U",
 		"DEM",
 		16
 	],
 	[
 		"3",
 		"Other",
-		"Gender" : "U",
+		"U",
 		"NPA",
 		22
 	],
 	[
 		"3",
 		"Other",
-		"Gender" : "U",
+		"U",
 		"REP",
 		12
 	],
 	[
 		"3",
 		"Unknown",
-		"Gender" : "F",
+		"F",
 		"DEM",
 		178
 	],
 	[
 		"3",
 		"Unknown",
-		"Gender" : "F",
+		"F",
 		"IND",
 		3
 	],
 	[
 		"3",
 		"Unknown",
-		"Gender" : "F",
+		"F",
 		"LPF",
 		1
 	],
 	[
 		"3",
 		"Unknown",
-		"Gender" : "F",
+		"F",
 		"NPA",
 		168
 	],
 	[
 		"3",
 		"Unknown",
-		"Gender" : "F",
+		"F",
 		"PSL",
 		1
 	],
 	[
 		"3",
 		"Unknown",
-		"Gender" : "F",
+		"F",
 		"REP",
 		54
 	],
 	[
 		"3",
 		"Unknown",
-		"Gender" : "M",
+		"M",
 		"DEM",
 		116
 	],
 	[
 		"3",
 		"Unknown",
-		"Gender" : "M",
+		"M",
 		"IND",
 		2
 	],
 	[
 		"3",
 		"Unknown",
-		"Gender" : "M",
+		"M",
 		"LPF",
 		2
 	],
 	[
 		"3",
 		"Unknown",
-		"Gender" : "M",
+		"M",
 		"NPA",
 		154
 	],
 	[
 		"3",
 		"Unknown",
-		"Gender" : "M",
+		"M",
 		"REP",
 		81
 	],
 	[
 		"3",
 		"Unknown",
-		"Gender" : "U",
+		"U",
 		"DEM",
 		137
 	],
 	[
 		"3",
 		"Unknown",
-		"Gender" : "U",
+		"U",
 		"IND",
 		1
 	],
 	[
 		"3",
 		"Unknown",
-		"Gender" : "U",
+		"U",
 		"NPA",
 		366
 	],
 	[
 		"3",
 		"Unknown",
-		"Gender" : "U",
+		"U",
 		"REP",
 		100
 	],
 	[
 		"3",
 		"White",
-		"Gender" : "F",
+		"F",
 		"CPF",
 		5
 	],
 	[
 		"3",
 		"White",
-		"Gender" : "F",
+		"F",
 		"DEM",
 		10294
 	],
 	[
 		"3",
 		"White",
-		"Gender" : "F",
+		"F",
 		"ECO",
 		6
 	],
 	[
 		"3",
 		"White",
-		"Gender" : "F",
+		"F",
 		"GRE",
 		34
 	],
 	[
 		"3",
 		"White",
-		"Gender" : "F",
+		"F",
 		"IND",
 		356
 	],
 	[
 		"3",
 		"White",
-		"Gender" : "F",
+		"F",
 		"LPF",
 		100
 	],
 	[
 		"3",
 		"White",
-		"Gender" : "F",
+		"F",
 		"NPA",
 		9298
 	],
 	[
 		"3",
 		"White",
-		"Gender" : "F",
+		"F",
 		"PSL",
 		2
 	],
 	[
 		"3",
 		"White",
-		"Gender" : "F",
+		"F",
 		"REF",
 		3
 	],
 	[
 		"3",
 		"White",
-		"Gender" : "F",
+		"F",
 		"REP",
 		14672
 	],
 	[
 		"3",
 		"White",
-		"Gender" : "M",
+		"M",
 		"CPF",
 		14
 	],
 	[
 		"3",
 		"White",
-		"Gender" : "M",
+		"M",
 		"DEM",
 		6806
 	],
 	[
 		"3",
 		"White",
-		"Gender" : "M",
+		"M",
 		"ECO",
 		1
 	],
 	[
 		"3",
 		"White",
-		"Gender" : "M",
+		"M",
 		"GRE",
 		41
 	],
 	[
 		"3",
 		"White",
-		"Gender" : "M",
+		"M",
 		"IND",
 		340
 	],
 	[
 		"3",
 		"White",
-		"Gender" : "M",
+		"M",
 		"LPF",
 		176
 	],
 	[
 		"3",
 		"White",
-		"Gender" : "M",
+		"M",
 		"NPA",
 		9454
 	],
 	[
 		"3",
 		"White",
-		"Gender" : "M",
+		"M",
 		"PSL",
 		2
 	],
 	[
 		"3",
 		"White",
-		"Gender" : "M",
+		"M",
 		"REF",
 		3
 	],
 	[
 		"3",
 		"White",
-		"Gender" : "M",
+		"M",
 		"REP",
 		14651
 	],
 	[
 		"3",
 		"White",
-		"Gender" : "U",
+		"U",
 		"DEM",
 		113
 	],
 	[
 		"3",
 		"White",
-		"Gender" : "U",
+		"U",
 		"LPF",
 		4
 	],
 	[
 		"3",
 		"White",
-		"Gender" : "U",
+		"U",
 		"NPA",
 		203
 	],
 	[
 		"3",
 		"White",
-		"Gender" : "U",
+		"U",
 		"REP",
 		181
 	],
 	[
 		"5",
 		"American Indian",
-		"Gender" : "F",
+		"F",
 		"DEM",
 		61
 	],
 	[
 		"5",
 		"American Indian",
-		"Gender" : "F",
+		"F",
 		"LPF",
 		1
 	],
 	[
 		"5",
 		"American Indian",
-		"Gender" : "F",
+		"F",
 		"NPA",
 		53
 	],
 	[
 		"5",
 		"American Indian",
-		"Gender" : "F",
+		"F",
 		"REP",
 		50
 	],
 	[
 		"5",
 		"American Indian",
-		"Gender" : "M",
+		"M",
 		"DEM",
 		47
 	],
 	[
 		"5",
 		"American Indian",
-		"Gender" : "M",
+		"M",
 		"IND",
 		4
 	],
 	[
 		"5",
 		"American Indian",
-		"Gender" : "M",
+		"M",
 		"NPA",
 		40
 	],
 	[
 		"5",
 		"American Indian",
-		"Gender" : "M",
+		"M",
 		"REP",
 		57
 	],
 	[
 		"5",
 		"American Indian",
-		"Gender" : "U",
+		"U",
 		"DEM",
 		3
 	],
 	[
 		"5",
 		"American Indian",
-		"Gender" : "U",
+		"U",
 		"NPA",
 		3
 	],
 	[
 		"5",
 		"American Indian",
-		"Gender" : "U",
+		"U",
 		"REP",
 		2
 	],
 	[
 		"5",
 		"Asian or Pacific Islander",
-		"Gender" : "F",
+		"F",
 		"DEM",
 		282
 	],
 	[
 		"5",
 		"Asian or Pacific Islander",
-		"Gender" : "F",
+		"F",
 		"IND",
 		8
 	],
 	[
 		"5",
 		"Asian or Pacific Islander",
-		"Gender" : "F",
+		"F",
 		"LPF",
 		2
 	],
 	[
 		"5",
 		"Asian or Pacific Islander",
-		"Gender" : "F",
+		"F",
 		"NPA",
 		324
 	],
 	[
 		"5",
 		"Asian or Pacific Islander",
-		"Gender" : "F",
+		"F",
 		"REF",
 		1
 	],
 	[
 		"5",
 		"Asian or Pacific Islander",
-		"Gender" : "F",
+		"F",
 		"REP",
 		299
 	],
 	[
 		"5",
 		"Asian or Pacific Islander",
-		"Gender" : "M",
+		"M",
 		"DEM",
 		170
 	],
 	[
 		"5",
 		"Asian or Pacific Islander",
-		"Gender" : "M",
+		"M",
 		"IND",
 		1
 	],
 	[
 		"5",
 		"Asian or Pacific Islander",
-		"Gender" : "M",
+		"M",
 		"LPF",
 		2
 	],
 	[
 		"5",
 		"Asian or Pacific Islander",
-		"Gender" : "M",
+		"M",
 		"NPA",
 		254
 	],
 	[
 		"5",
 		"Asian or Pacific Islander",
-		"Gender" : "M",
+		"M",
 		"REP",
 		220
 	],
 	[
 		"5",
 		"Asian or Pacific Islander",
-		"Gender" : "U",
+		"U",
 		"DEM",
 		10
 	],
 	[
 		"5",
 		"Asian or Pacific Islander",
-		"Gender" : "U",
+		"U",
 		"NPA",
 		12
 	],
 	[
 		"5",
 		"Asian or Pacific Islander",
-		"Gender" : "U",
+		"U",
 		"REP",
 		5
 	],
 	[
 		"5",
 		"Black",
-		"Gender" : "F",
+		"F",
 		"DEM",
 		3726
 	],
 	[
 		"5",
 		"Black",
-		"Gender" : "F",
+		"F",
 		"GRE",
 		1
 	],
 	[
 		"5",
 		"Black",
-		"Gender" : "F",
+		"F",
 		"IND",
 		26
 	],
 	[
 		"5",
 		"Black",
-		"Gender" : "F",
+		"F",
 		"LPF",
 		2
 	],
 	[
 		"5",
 		"Black",
-		"Gender" : "F",
+		"F",
 		"NPA",
 		870
 	],
 	[
 		"5",
 		"Black",
-		"Gender" : "F",
+		"F",
 		"REP",
 		157
 	],
 	[
 		"5",
 		"Black",
-		"Gender" : "M",
+		"M",
 		"DEM",
 		2672
 	],
 	[
 		"5",
 		"Black",
-		"Gender" : "M",
+		"M",
 		"ECO",
 		1
 	],
 	[
 		"5",
 		"Black",
-		"Gender" : "M",
+		"M",
 		"GRE",
 		2
 	],
 	[
 		"5",
 		"Black",
-		"Gender" : "M",
+		"M",
 		"IND",
 		33
 	],
 	[
 		"5",
 		"Black",
-		"Gender" : "M",
+		"M",
 		"LPF",
 		4
 	],
 	[
 		"5",
 		"Black",
-		"Gender" : "M",
+		"M",
 		"NPA",
 		1041
 	],
 	[
 		"5",
 		"Black",
-		"Gender" : "M",
+		"M",
 		"PSL",
 		1
 	],
 	[
 		"5",
 		"Black",
-		"Gender" : "M",
+		"M",
 		"REF",
 		1
 	],
 	[
 		"5",
 		"Black",
-		"Gender" : "M",
+		"M",
 		"REP",
 		214
 	],
 	[
 		"5",
 		"Black",
-		"Gender" : "U",
+		"U",
 		"DEM",
 		71
 	],
 	[
 		"5",
 		"Black",
-		"Gender" : "U",
+		"U",
 		"NPA",
 		25
 	],
 	[
 		"5",
 		"Black",
-		"Gender" : "U",
+		"U",
 		"REP",
 		3
 	],
 	[
 		"5",
 		"Hispanic",
-		"Gender" : "",
+		"",
 		"DEM",
 		1
 	],
 	[
 		"5",
 		"Hispanic",
-		"Gender" : "F",
+		"F",
 		"CPF",
 		2
 	],
 	[
 		"5",
 		"Hispanic",
-		"Gender" : "F",
+		"F",
 		"DEM",
 		1908
 	],
 	[
 		"5",
 		"Hispanic",
-		"Gender" : "F",
+		"F",
 		"ECO",
 		1
 	],
 	[
 		"5",
 		"Hispanic",
-		"Gender" : "F",
+		"F",
 		"GRE",
 		2
 	],
 	[
 		"5",
 		"Hispanic",
-		"Gender" : "F",
+		"F",
 		"IND",
 		23
 	],
 	[
 		"5",
 		"Hispanic",
-		"Gender" : "F",
+		"F",
 		"LPF",
 		8
 	],
 	[
 		"5",
 		"Hispanic",
-		"Gender" : "F",
+		"F",
 		"NPA",
 		1520
 	],
 	[
 		"5",
 		"Hispanic",
-		"Gender" : "F",
+		"F",
 		"REP",
 		892
 	],
 	[
 		"5",
 		"Hispanic",
-		"Gender" : "M",
+		"M",
 		"CPF",
 		3
 	],
 	[
 		"5",
 		"Hispanic",
-		"Gender" : "M",
+		"M",
 		"DEM",
 		1368
 	],
 	[
 		"5",
 		"Hispanic",
-		"Gender" : "M",
+		"M",
 		"ECO",
 		1
 	],
 	[
 		"5",
 		"Hispanic",
-		"Gender" : "M",
+		"M",
 		"GRE",
 		2
 	],
 	[
 		"5",
 		"Hispanic",
-		"Gender" : "M",
+		"M",
 		"IND",
 		28
 	],
 	[
 		"5",
 		"Hispanic",
-		"Gender" : "M",
+		"M",
 		"LPF",
 		9
 	],
 	[
 		"5",
 		"Hispanic",
-		"Gender" : "M",
+		"M",
 		"NPA",
 		1368
 	],
 	[
 		"5",
 		"Hispanic",
-		"Gender" : "M",
+		"M",
 		"PSL",
 		2
 	],
 	[
 		"5",
 		"Hispanic",
-		"Gender" : "M",
+		"M",
 		"REP",
 		841
 	],
 	[
 		"5",
 		"Hispanic",
-		"Gender" : "U",
+		"U",
 		"DEM",
 		35
 	],
 	[
 		"5",
 		"Hispanic",
-		"Gender" : "U",
+		"U",
 		"NPA",
 		42
 	],
 	[
 		"5",
 		"Hispanic",
-		"Gender" : "U",
+		"U",
 		"REP",
 		18
 	],
 	[
 		"5",
 		"Multi-Racial",
-		"Gender" : "F",
+		"F",
 		"DEM",
 		135
 	],
 	[
 		"5",
 		"Multi-Racial",
-		"Gender" : "F",
+		"F",
 		"GRE",
 		1
 	],
 	[
 		"5",
 		"Multi-Racial",
-		"Gender" : "F",
+		"F",
 		"LPF",
 		2
 	],
 	[
 		"5",
 		"Multi-Racial",
-		"Gender" : "F",
+		"F",
 		"NPA",
 		132
 	],
 	[
 		"5",
 		"Multi-Racial",
-		"Gender" : "F",
+		"F",
 		"REP",
 		73
 	],
 	[
 		"5",
 		"Multi-Racial",
-		"Gender" : "M",
+		"M",
 		"CPF",
 		1
 	],
 	[
 		"5",
 		"Multi-Racial",
-		"Gender" : "M",
+		"M",
 		"DEM",
 		69
 	],
 	[
 		"5",
 		"Multi-Racial",
-		"Gender" : "M",
+		"M",
 		"LPF",
 		2
 	],
 	[
 		"5",
 		"Multi-Racial",
-		"Gender" : "M",
+		"M",
 		"NPA",
 		111
 	],
 	[
 		"5",
 		"Multi-Racial",
-		"Gender" : "M",
+		"M",
 		"REP",
 		52
 	],
 	[
 		"5",
 		"Multi-Racial",
-		"Gender" : "U",
+		"U",
 		"DEM",
 		5
 	],
 	[
 		"5",
 		"Multi-Racial",
-		"Gender" : "U",
+		"U",
 		"NPA",
 		14
 	],
 	[
 		"5",
 		"Multi-Racial",
-		"Gender" : "U",
+		"U",
 		"REP",
 		6
 	],
 	[
 		"5",
 		"Other",
-		"Gender" : "F",
+		"F",
 		"DEM",
 		416
 	],
 	[
 		"5",
 		"Other",
-		"Gender" : "F",
+		"F",
 		"IND",
 		14
 	],
 	[
 		"5",
 		"Other",
-		"Gender" : "F",
+		"F",
 		"LPF",
 		4
 	],
 	[
 		"5",
 		"Other",
-		"Gender" : "F",
+		"F",
 		"NPA",
 		287
 	],
 	[
 		"5",
 		"Other",
-		"Gender" : "F",
+		"F",
 		"REP",
 		185
 	],
 	[
 		"5",
 		"Other",
-		"Gender" : "M",
+		"M",
 		"DEM",
 		277
 	],
 	[
 		"5",
 		"Other",
-		"Gender" : "M",
+		"M",
 		"IND",
 		9
 	],
 	[
 		"5",
 		"Other",
-		"Gender" : "M",
+		"M",
 		"LPF",
 		7
 	],
 	[
 		"5",
 		"Other",
-		"Gender" : "M",
+		"M",
 		"NPA",
 		298
 	],
 	[
 		"5",
 		"Other",
-		"Gender" : "M",
+		"M",
 		"REP",
 		195
 	],
 	[
 		"5",
 		"Other",
-		"Gender" : "U",
+		"U",
 		"DEM",
 		13
 	],
 	[
 		"5",
 		"Other",
-		"Gender" : "U",
+		"U",
 		"NPA",
 		24
 	],
 	[
 		"5",
 		"Other",
-		"Gender" : "U",
+		"U",
 		"REP",
 		16
 	],
 	[
 		"5",
 		"Unknown",
-		"Gender" : "F",
+		"F",
 		"DEM",
 		154
 	],
 	[
 		"5",
 		"Unknown",
-		"Gender" : "F",
+		"F",
 		"ECO",
 		1
 	],
 	[
 		"5",
 		"Unknown",
-		"Gender" : "F",
+		"F",
 		"GRE",
 		1
 	],
 	[
 		"5",
 		"Unknown",
-		"Gender" : "F",
+		"F",
 		"IND",
 		3
 	],
 	[
 		"5",
 		"Unknown",
-		"Gender" : "F",
+		"F",
 		"NPA",
 		141
 	],
 	[
 		"5",
 		"Unknown",
-		"Gender" : "F",
+		"F",
 		"REP",
 		51
 	],
 	[
 		"5",
 		"Unknown",
-		"Gender" : "M",
+		"M",
 		"DEM",
 		125
 	],
 	[
 		"5",
 		"Unknown",
-		"Gender" : "M",
+		"M",
 		"IND",
 		4
 	],
 	[
 		"5",
 		"Unknown",
-		"Gender" : "M",
+		"M",
 		"LPF",
 		5
 	],
 	[
 		"5",
 		"Unknown",
-		"Gender" : "M",
+		"M",
 		"NPA",
 		132
 	],
 	[
 		"5",
 		"Unknown",
-		"Gender" : "M",
+		"M",
 		"REF",
 		1
 	],
 	[
 		"5",
 		"Unknown",
-		"Gender" : "M",
+		"M",
 		"REP",
 		97
 	],
 	[
 		"5",
 		"Unknown",
-		"Gender" : "U",
+		"U",
 		"DEM",
 		119
 	],
 	[
 		"5",
 		"Unknown",
-		"Gender" : "U",
+		"U",
 		"GRE",
 		1
 	],
 	[
 		"5",
 		"Unknown",
-		"Gender" : "U",
+		"U",
 		"IND",
 		3
 	],
 	[
 		"5",
 		"Unknown",
-		"Gender" : "U",
+		"U",
 		"LPF",
 		1
 	],
 	[
 		"5",
 		"Unknown",
-		"Gender" : "U",
+		"U",
 		"NPA",
 		327
 	],
 	[
 		"5",
 		"Unknown",
-		"Gender" : "U",
+		"U",
 		"REP",
 		88
 	],
 	[
 		"5",
 		"White",
-		"Gender" : "",
+		"",
 		"REP",
 		2
 	],
 	[
 		"5",
 		"White",
-		"Gender" : "F",
+		"F",
 		"CPF",
 		6
 	],
 	[
 		"5",
 		"White",
-		"Gender" : "F",
+		"F",
 		"DEM",
 		10090
 	],
 	[
 		"5",
 		"White",
-		"Gender" : "F",
+		"F",
 		"ECO",
 		2
 	],
 	[
 		"5",
 		"White",
-		"Gender" : "F",
+		"F",
 		"GRE",
 		32
 	],
 	[
 		"5",
 		"White",
-		"Gender" : "F",
+		"F",
 		"IND",
 		347
 	],
 	[
 		"5",
 		"White",
-		"Gender" : "F",
+		"F",
 		"LPF",
 		97
 	],
 	[
 		"5",
 		"White",
-		"Gender" : "F",
+		"F",
 		"NPA",
 		8753
 	],
 	[
 		"5",
 		"White",
-		"Gender" : "F",
+		"F",
 		"PSL",
 		2
 	],
 	[
 		"5",
 		"White",
-		"Gender" : "F",
+		"F",
 		"REF",
 		5
 	],
 	[
 		"5",
 		"White",
-		"Gender" : "F",
+		"F",
 		"REP",
 		14554
 	],
 	[
 		"5",
 		"White",
-		"Gender" : "M",
+		"M",
 		"CPF",
 		10
 	],
 	[
 		"5",
 		"White",
-		"Gender" : "M",
+		"M",
 		"DEM",
 		6826
 	],
 	[
 		"5",
 		"White",
-		"Gender" : "M",
+		"M",
 		"ECO",
 		6
 	],
 	[
 		"5",
 		"White",
-		"Gender" : "M",
+		"M",
 		"GRE",
 		31
 	],
 	[
 		"5",
 		"White",
-		"Gender" : "M",
+		"M",
 		"IND",
 		276
 	],
 	[
 		"5",
 		"White",
-		"Gender" : "M",
+		"M",
 		"LPF",
 		176
 	],
 	[
 		"5",
 		"White",
-		"Gender" : "M",
+		"M",
 		"NPA",
 		9147
 	],
 	[
 		"5",
 		"White",
-		"Gender" : "M",
+		"M",
 		"PSL",
 		5
 	],
 	[
 		"5",
 		"White",
-		"Gender" : "M",
+		"M",
 		"REF",
 		6
 	],
 	[
 		"5",
 		"White",
-		"Gender" : "M",
+		"M",
 		"REP",
 		14982
 	],
 	[
 		"5",
 		"White",
-		"Gender" : "U",
+		"U",
 		"DEM",
 		99
 	],
 	[
 		"5",
 		"White",
-		"Gender" : "U",
+		"U",
 		"IND",
 		1
 	],
 	[
 		"5",
 		"White",
-		"Gender" : "U",
+		"U",
 		"NPA",
 		186
 	],
 	[
 		"5",
 		"White",
-		"Gender" : "U",
+		"U",
 		"REP",
 		157
 	]
