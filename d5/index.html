@@ -20,7 +20,7 @@
       <div><h1>Total Voters in Brevard</h1></div>
 
       <div style="position: relative; margin-top: 1em;">
-        <table id="tblTotalVoters" class="cell-border compact stripe">
+        <table id="tblTotalVoters" class="display stripe">
           <thead>
             <tr>
               <th>&nbsp;</th>
@@ -178,7 +178,7 @@
       <div style="position: relative; margin-top: 1em;"><h1>District 3</h1></div>
 
       <div style="position: relative; margin-top: 1em;">
-        <table id="tblDistrict3" class="cell-border compact stripe">
+        <table id="tblDistrict3" class="display stripe">
           <thead>
             <tr>
               <th>&nbsp;</th>
@@ -323,7 +323,7 @@
       <div style="position: relative; margin-top: 1em;"><h1>District 5</h1></div>
 
       <div style="position: relative; margin-top: 1em;">
-        <table id="tblDistrict5" class="cell-border compact stripe">
+        <table id="tblDistrict5" class="display stripe">
           <thead>
             <tr>
               <th>&nbsp;</th>
@@ -492,7 +492,7 @@
     </div>
 
     <div style="position: relative; display: block; margin-top: 1em; width: 100%;">
-      <table id="tblDemographics" style="width: 100%;">
+      <table id="tblDemographics" class="display stripe">
         <thead>
           <tr>
             <th>District</th>
@@ -564,7 +564,8 @@
           });
 
           $('#tblDemographics').dataTable({
-            ajax: 'D5AndD3Demographics.json'
+            //ajax: 'D5AndD3Demographics.json'
+            ajax: 'https://raw.githubusercontent.com/mgrigajtis/mgrigajtis.github.io/master/d5/D5AndD3Demographics.json'
           });
 
           new roughViz.Donut({
