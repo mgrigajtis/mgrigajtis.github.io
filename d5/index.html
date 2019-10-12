@@ -15,9 +15,27 @@
 		<![endif]-->
 	</head>
 
-	<body class="animated bounceInDown">
-		<div class="content">
-      <div><h1>Total Voters in Brevard</h1></div>
+	<body>
+		<div>
+			<div id="divLoadingData"><h1>Loading Data, Please Wait</h1></div>
+
+			<div style="position: relative; margin-top: 1em;">
+				Total Voters in Brevard: <span id="spnTotalVoters"></span>
+			</div>
+
+			<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+			<div id="gendersChart"></div>
+
+			<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+			<div id="raceChart"></div>
+
+			<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+			<div id="totalBrevardVotersChart"></div>
+
+      <div style="position: relative; margin-top: 1em;"><h1>Voter Registration Over Time in Brevard</h1></div>
 
       <div style="position: relative; margin-top: 1em;">
         <table id="tblTotalVoters" class="display stripe">
@@ -172,8 +190,6 @@
           </tfoot>
         </table>
       </div>
-
-      <div id="totalBrevardVotersChart"></div>
 
       <div style="position: relative; margin-top: 1em;"><h1>District 3</h1></div>
 
@@ -512,96 +528,231 @@
     <script src="https://unpkg.com/rough-viz@1.0.2"></script>
     <script type="text/javascript">
       $(document).ready(function() {
+				function dataWorker() {
+					self.addEventListener('message', function(e) {
+						if (e.data[0] === 'close') {
+							self.close();
+						} else {
+							// Load the raw anonymous data:
+							var url = 'https://raw.githubusercontent.com/mgrigajtis/mgrigajtis.github.io/master/d5/data/data.json';
+							var xmlhttp = new XMLHttpRequest();
 
-					try {
-						// load the data via worker
-						var dataWorker = new Worker('/workers/worker-getdata.js');
+							xmlhttp.onreadystatechange = function() {
+									if (xmlhttp.readyState === 4) {
+										switch(xmlhttp.status) {
+											case 200:
+												var data = JSON.parse(xmlhttp.responseText);
+												postMessage(data);
+												break;
+											default:
+												postMessage('');
+												break;
+										}
+									}
+							};
 
-						dataWorker.onmessage = function(event) {
-							var data = event.data;
-							alert(data.length);
-							dataWorker.postMessage(['close']);
-						};
+							xmlhttp.open('GET', url, true);
+							xmlhttp.send();
+						}
+					});
+				}
 
-						dataWorker.postMessage(['']);
-					} catch (e) {
-						alert(e.Message);	
-					} finally {
+				if(window !== self) {
+					dataWorker();
+				}
 
-					}
+				try {
+					// load the data via worker
+					var dataWorker = new Worker(URL.createObjectURL(new Blob(['(' + dataWorker.toString() + ')()'], {type: 'text/javascript'})));
 
-          $('#tblTotalVoters').dataTable({
-            bPaginate: false,
-            bLengthChange: false,
-            bFilter: false,
-            bInfo: false,
-            ordering: false,
-            bAutoWidth: true,
-            columnDefs: [
-              {
-                targets: [0], visible: false
-              },
-              {
-                targets: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], className: 'righty'
-              }
-            ]
-          });
+					dataWorker.onmessage = function(event) {
+						var voterData = event.data.data;
 
-          $('#tblDistrict3').dataTable({
-            bPaginate: false,
-            bLengthChange: false,
-            bFilter: false,
-            ordering: false,
-            bInfo: false,
-            bAutoWidth: true,
-            columnDefs: [
-              {
-                targets: [0], visible: false
-              },
-              {
-                targets: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11], className: 'righty'
-              }
-            ]
-          });
+						// total gender variables
+						var males = 0;
+						var females = 0;
+						var unkownGenders = 0;
 
-          $('#tblDistrict5').dataTable({
-            bPaginate: false,
-            bLengthChange: false,
-            bFilter: false,
-            ordering: false,
-            bInfo: false,
-            bAutoWidth: true,
-            columnDefs: [
-              {
-                targets: [0], visible: false
-              },
-              {
-                targets: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11], className: 'righty'
-              }
-            ]
-          });
+						// total race variables
+						var blacks = 0;
+						var whites = 0;
+						var hispanics = 0;
+						var otherRace = 0;
 
-          $('#tblDemographics').dataTable({
-            //ajax: 'D5AndD3Demographics.json'
-            ajax: 'https://raw.githubusercontent.com/mgrigajtis/mgrigajtis.github.io/master/d5/D5AndD3Demographics.json'
-          });
+						// total party variables
+						var republicans = 0;
+						var democrats = 0;
+						var npas = 0;
+						var thirdPartyVoters = 0;
 
-          new roughViz.Donut({
-            element: '#totalBrevardVotersChart',
-            data: {
-              labels: ['DEMOCRATS', 'NO PARTY AFFILIATION', 'REPUBLICANS', 'THIRD PARTY'],
-              values: [138263, 120134, 185765, 6167]
+						// Close the worker
+						dataWorker.postMessage(['close']);
+
+						// We're done loading
+						$('#divLoadingData').html('<h1>Processing data, please wait.</h1>');
+
+						// Total Voters Span
+						$('#spnTotalVoters').html(voterData.length);
+
+						// Now that we have the voter data, we can chop it up and analyze it
+						for (var i=0; i<voterData.length; i++) {
+							switch (voterData[i].Gender) {
+								case 'F':
+									females++;
+									break;
+								case 'M':
+									males++;
+									break;
+								default:
+									unkownGenders++;
+									break;
+							}
+
+							switch (voterData[i].Race) {
+								case 'White':
+									whites++;
+									break;
+								case 'Black':
+									blacks++;
+									break;
+								case 'Hispanic':
+									hispanics++;
+									break;
+								default:
+									otherRace++;
+									break;
+							}
+
+							switch (voterData[i].Party) {
+								case 'REP':
+									republicans++;
+									break;
+								case 'DEM':
+									democrats++;
+									break;
+								case 'NPA':
+									npas++;
+									break;
+								default:
+									thirdPartyVoters++;
+									break;
+							}
+						}
+
+						// We're done processing
+						$('#divLoadingData').html('');
+
+						// Create the genders chart
+						new roughViz.Donut({
+	            element: '#gendersChart',
+	            data: {
+	              labels: ['Male', 'Female', 'Unkown'],
+	              values: [males, females, unkownGenders]
+	            },
+	            title: 'Voters By Gender',
+	            roughness: 1,
+	            colors: ['blue', 'pink', 'yellow'],
+	            stroke: 'black',
+	            strokeWidth: 1,
+	            fillStyle: 'zigzag',
+	            fillWeight: 1,
+	          });
+
+						// Create the race chart
+						new roughViz.Donut({
+	            element: '#raceChart',
+	            data: {
+	              labels: ['Whites', 'Blacks', 'Hispanics', 'Other'],
+	              values: [whites, blacks, hispanics, otherRace]
+	            },
+	            title: 'Voters By Race',
+	            roughness: 1,
+	            colors: ['red', 'green', 'yellow', 'blue'],
+	            stroke: 'black',
+	            strokeWidth: 1,
+	            fillStyle: 'zigzag',
+	            fillWeight: 1,
+	          });
+
+						// Create the party chart
+	          new roughViz.Donut({
+	            element: '#totalBrevardVotersChart',
+	            data: {
+	              labels: ['DEMOCRATS', 'NPAs', 'REPUBLICANS', 'THIRD PARTY'],
+	              values: [democrats, npas, republicans, thirdPartyVoters]
+	            },
+	            title: 'Voters By Party',
+	            roughness: 1,
+	            colors: ['blue', 'purple', 'red', 'yellow'],
+	            stroke: 'black',
+	            strokeWidth: 1,
+	            fillStyle: 'zigzag',
+	            fillWeight: 1,
+	          });
+					};
+
+					dataWorker.postMessage(['']);
+				} catch (e) {
+					alert(e.Message);
+				} finally {
+
+				}
+
+        $('#tblTotalVoters').dataTable({
+          bPaginate: false,
+          bLengthChange: false,
+          bFilter: false,
+          bInfo: false,
+          ordering: false,
+          bAutoWidth: true,
+          columnDefs: [
+            {
+              targets: [0], visible: false
             },
-            title: 'Total Brevard Voters',
-            width: window.innerWidth / 2,
-            roughness: 1,
-            colors: ['blue', 'purple', 'red', 'yellow'],
-            stroke: 'black',
-            strokeWidth: 1,
-            fillStyle: 'zigzag',
-            fillWeight: 1,
-          }
-        );
+            {
+              targets: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], className: 'righty'
+            }
+          ]
+        });
+
+        $('#tblDistrict3').dataTable({
+          bPaginate: false,
+          bLengthChange: false,
+          bFilter: false,
+          ordering: false,
+          bInfo: false,
+          bAutoWidth: true,
+          columnDefs: [
+            {
+              targets: [0], visible: false
+            },
+            {
+              targets: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11], className: 'righty'
+            }
+          ]
+        });
+
+        $('#tblDistrict5').dataTable({
+          bPaginate: false,
+          bLengthChange: false,
+          bFilter: false,
+          ordering: false,
+          bInfo: false,
+          bAutoWidth: true,
+          columnDefs: [
+            {
+              targets: [0], visible: false
+            },
+            {
+              targets: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11], className: 'righty'
+            }
+          ]
+        });
+
+				$('#tblDemographics').dataTable({
+					//ajax: 'D5AndD3Demographics.json'
+					ajax: 'https://raw.githubusercontent.com/mgrigajtis/mgrigajtis.github.io/master/d5/D5AndD3Demographics.json'
+				});
       });
     </script>
 	</body>
