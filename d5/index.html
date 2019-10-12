@@ -550,16 +550,16 @@
           new roughViz.Donut({
             element: '#totalBrevardVotersChart',
             data: {
-              labels: ['CONSTITUTION', 'DEMOCRATS', 'ECO', 'GREEN', 'INDEPENDENT', 'LIBERTARIAN', 'NO PARTY AFFILIATION', 'COMMIES', 'REFERENDUM', 'REPUBLICANS'],
-              values: [123,	138263,	46,	364, 3940, 1615, 120134, 33, 46, 185765]
+              labels: ['DEMOCRATS', 'NO PARTY AFFILIATION', 'REPUBLICANS', 'THIRD PARTY'],
+              values: [138263, 120134, 185765, 6167]
             },
             title: 'Total Brevard Voters',
             width: window.innerWidth / 2,
-            roughness: 2,
-            colors: ['orange', 'blue', 'lightgreen', 'green', 'skyblue', 'gold', 'purple', 'pink', 'brown', 'red'],
+            roughness: 1,
+            colors: ['blue', 'purple', 'red', 'yellow'],
             stroke: 'black',
             strokeWidth: 1,
-            fillStyle: 'solid',
+            fillStyle: 'zigzag',
             fillWeight: 1,
           }
         );
