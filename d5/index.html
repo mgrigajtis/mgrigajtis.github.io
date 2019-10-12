@@ -20,7 +20,7 @@
       <div><h1>Total Voters in Brevard</h1></div>
 
       <div style="position: relative; margin-top: 1em;">
-        <table id="tblTotalVoters">
+        <table id="tblTotalVoters" class="cell-border compact stripe">
           <thead>
             <tr>
               <th>&nbsp;</th>
@@ -173,10 +173,12 @@
         </table>
       </div>
 
+      <div id="totalBrevardVotersChart"></div>
+
       <div style="position: relative; margin-top: 1em;"><h1>District 3</h1></div>
 
       <div style="position: relative; margin-top: 1em;">
-        <table id="tblDistrict3">
+        <table id="tblDistrict3" class="cell-border compact stripe">
           <thead>
             <tr>
               <th>&nbsp;</th>
@@ -321,7 +323,7 @@
       <div style="position: relative; margin-top: 1em;"><h1>District 5</h1></div>
 
       <div style="position: relative; margin-top: 1em;">
-        <table id="tblDistrict5">
+        <table id="tblDistrict5" class="cell-border compact stripe">
           <thead>
             <tr>
               <th>&nbsp;</th>
@@ -487,14 +489,80 @@
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="https://unpkg.com/rough-viz@1.0.2"></script>
     <script type="text/javascript">
       $(document).ready(function() {
-          $('#tblTotalVoters').dataTable();
-          $('#tblDistrict3').dataTable();
-          $('#tblDistrict5').dataTable();
+          $('#tblTotalVoters').dataTable({
+            bPaginate: false,
+            bLengthChange: false,
+            bFilter: false,
+            bInfo: false,
+            ordering: false,
+            bAutoWidth: true,
+            columnDefs: [
+              {
+                targets: [0], visible: false
+              },
+              {
+                targets: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], className: 'righty'
+              }
+            ]
+          });
+
+          $('#tblDistrict3').dataTable({
+            bPaginate: false,
+            bLengthChange: false,
+            bFilter: false,
+            ordering: false,
+            bInfo: false,
+            bAutoWidth: true,
+            columnDefs: [
+              {
+                targets: [0], visible: false
+              },
+              {
+                targets: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11], className: 'righty'
+              }
+            ]
+          });
+
+          $('#tblDistrict5').dataTable({
+            bPaginate: false,
+            bLengthChange: false,
+            bFilter: false,
+            ordering: false,
+            bInfo: false,
+            bAutoWidth: true,
+            columnDefs: [
+              {
+                targets: [0], visible: false
+              },
+              {
+                targets: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11], className: 'righty'
+              }
+            ]
+          });
+
           $('#tblDemographics').dataTable({
             ajax: 'D5AndD3Demographics.json'
           });
+
+          new roughViz.Donut({
+            element: '#totalBrevardVotersChart',
+            data: {
+              labels: ['CONSTITUTION', 'DEMOCRATS', 'ECO', 'GREEN', 'INDEPENDENT', 'LIBERTARIAN', 'NO PARTY AFFILIATION', 'COMMIES', 'REFERENDUM', 'REPUBLICANS'],
+              values: [123,	138263,	46,	364, 3940, 1615, 120134, 33, 46, 185765]
+            },
+            title: 'Total Brevard Voters',
+            width: window.innerWidth / 2,
+            roughness: 2,
+            colors: ['orange', 'blue', 'lightgreen', 'green', 'skyblue', 'gold', 'purple', 'pink', 'brown', 'red'],
+            stroke: 'black',
+            strokeWidth: 1,
+            fillStyle: 'solid',
+            fillWeight: 1,
+          }
+        );
       });
     </script>
 	</body>

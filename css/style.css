@@ -66,9 +66,17 @@ textarea {
     font: inherit;
 }
 
+.righty {
+  text-align: right;
+}
 
+.lefty {
+  text-align: left;
+}
 
-
+.centery {
+  text-align: center;
+}
 
 /*------------------------------------*\
     $MAIN
@@ -222,15 +230,15 @@ Copyright (c) 2012 Dan Eden
     0% {
         -webkit-transform: translateY(-2000px);
     }
-    
+
     60% {
         -webkit-transform: translateY(30px);
     }
-    
+
     80% {
         -webkit-transform: translateY(-10px);
     }
-    
+
     100% {
         -webkit-transform: translateY(0);
     }
@@ -240,15 +248,15 @@ Copyright (c) 2012 Dan Eden
     0% {
         -moz-transform: translateY(-2000px);
     }
-    
+
     60% {
         -moz-transform: translateY(30px);
     }
-    
+
     80% {
         -moz-transform: translateY(-10px);
     }
-    
+
     100% {
         -moz-transform: translateY(0);
     }
@@ -258,15 +266,15 @@ Copyright (c) 2012 Dan Eden
     0% {
         -o-transform: translateY(-2000px);
     }
-    
+
     60% {
         -o-transform: translateY(30px);
     }
-    
+
     80% {
         -o-transform: translateY(-10px);
     }
-    
+
     100% {
         -o-transform: translateY(0);
     }
@@ -276,15 +284,15 @@ Copyright (c) 2012 Dan Eden
     0% {
         transform: translateY(-2000px);
     }
-    
+
     60% {
         transform: translateY(30px);
     }
-    
+
     80% {
         transform: translateY(-10px);
     }
-    
+
     100% {
         transform: translateY(0);
     }
@@ -308,7 +316,7 @@ Copyright (c) 2012 Dan Eden
     .avatar,
     .content {
         float: none;
-        
+
     }
 
     .avatar img {
