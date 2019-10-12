@@ -512,6 +512,24 @@
     <script src="https://unpkg.com/rough-viz@1.0.2"></script>
     <script type="text/javascript">
       $(document).ready(function() {
+
+					try {
+						// load the data via worker
+						var dataWorker = new Worker('/workers/worker-getdata.js');
+
+						dataWorker.onmessage = function(event) {
+							var data = event.data;
+							alert(data.length);
+							dataWorker.postMessage(['close']);
+						};
+
+						dataWorker.postMessage(['']);
+					} catch (e) {
+						alert(e.Message);	
+					} finally {
+
+					}
+
           $('#tblTotalVoters').dataTable({
             bPaginate: false,
             bLengthChange: false,
