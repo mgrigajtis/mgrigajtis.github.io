@@ -17,519 +17,537 @@
 
 	<body>
 		<div>
-			<div id="divLoadingData"><h1>Loading Data, Please Wait</h1></div>
+			<div id="divLoadingData"><h1 class="pulsate" style="font-size: 2em;">Loading Data, Please Wait</h1></div>
 
-			<div style="position: relative; margin-top: 1em;">
-				Total Voters in Brevard: <span id="spnTotalVoters"></span>
+			<div id="mainContent" style="display: none;">
+				<div style="position: relative; margin-top: 1em;">
+					Total Voters in Brevard: <span id="spnTotalVoters"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of Voters: <span id="spnAverageAge"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of Republicans: <span id="spnAverageRepublicanAge"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of Democrats: <span id="spnAverageDemocratAge"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of NPAs: <span id="spnAverageNpaAge"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of 3rd Party: <span id="spnAverageOtherAge"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+				<div id="gendersChart"></div>
+
+				<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+				<div id="raceChart"></div>
+
+				<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+				<div id="totalBrevardVotersChart"></div>
+
+				<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+				<div id="votersByDistrictChart"></div>
+
+	      <div style="position: relative; margin-top: 1em;"><h1>Voter Registration Over Time in Brevard</h1></div>
+
+	      <div style="position: relative; margin-top: 1em;">
+	        <table id="tblTotalVoters" class="display stripe">
+	          <thead>
+	            <tr>
+	              <th>&nbsp;</th>
+	              <th>Month</th>
+	              <th>CPF</th>
+	              <th>DEM</th>
+	              <th>ECO</th>
+	              <th>GRE</th>
+	              <th>IND</th>
+	              <th>LPF</th>
+	              <th>NPA</th>
+	              <th>PSL</th>
+	              <th>REF</th>
+	              <th>REP</th>
+	              <th>Total Registered Voters</th>
+	            </tr>
+	          </thead>
+	          <tbody>
+	            <tr>
+	              <td>1</td>
+	              <td>April</td>
+	              <td>120</td>
+	              <td>136930</td>
+	              <td>42</td>
+	              <td>357</td>
+	              <td>3258</td>
+	              <td>1551</td>
+	              <td>118164</td>
+	              <td>28</td>
+	              <td>46</td>
+	              <td>183716</td>
+	              <td>444212</td>
+	            </tr>
+
+	            <tr>
+	              <td>2</td>
+	              <td>May</td>
+	              <td>121</td>
+	              <td>136674</td>
+	              <td>42</td>
+	              <td>356</td>
+	              <td>3381</td>
+	              <td>1547</td>
+	              <td>118106</td>
+	              <td>28</td>
+	              <td>46</td>
+	              <td>183609</td>
+	              <td>443910</td>
+	            </tr>
+
+	            <tr>
+	              <td>3</td>
+	              <td>June</td>
+	              <td>122</td>
+	              <td>136622</td>
+	              <td>44</td>
+	              <td>358</td>
+	              <td>3466</td>
+	              <td>1559</td>
+	              <td>118284</td>
+	              <td>28</td>
+	              <td>45</td>
+	              <td>183491</td>
+	              <td>444019</td>
+	            </tr>
+
+	            <tr>
+	              <td>4</td>
+	              <td>July</td>
+	              <td>120</td>
+	              <td>137008</td>
+	              <td>44</td>
+	              <td>361</td>
+	              <td>3604</td>
+	              <td>1579</td>
+	              <td>118753</td>
+	              <td>31</td>
+	              <td>46</td>
+	              <td>183994</td>
+	              <td>445540</td>
+	            </tr>
+
+	            <tr>
+	              <td>5</td>
+	              <td>August</td>
+	              <td>122</td>
+	              <td>137528</td>
+	              <td>44</td>
+	              <td>365</td>
+	              <td>3784</td>
+	              <td>1588</td>
+	              <td>119338</td>
+	              <td>33</td>
+	              <td>46</td>
+	              <td>184644</td>
+	              <td>447492</td>
+	            </tr>
+
+
+	            <tr>
+	              <td>6</td>
+	              <td>September</td>
+	              <td>123</td>
+	              <td>138263</td>
+	              <td>46</td>
+	              <td>364</td>
+	              <td>3940</td>
+	              <td>1615</td>
+	              <td>120134</td>
+	              <td>33</td>
+	              <td>46</td>
+	              <td>185765</td>
+	              <td>450329</td>
+	            </tr>
+	          </tbody>
+
+	          <tfoot>
+	            <tr>
+	              <td>&nbsp;</td>
+	              <td>Net Gain\Loss</td>
+	              <td>3</td>
+	              <td>1333</td>
+	              <td>4</td>
+	              <td>7</td>
+	              <td>682</td>
+	              <td>64</td>
+	              <td>1970</td>
+	              <td>5</td>
+	              <td>0</td>
+	              <td>2049</td>
+	              <td>6117</td>
+	            </tr
+
+	            <tr>
+	              <td>&nbsp;</td>
+	              <td>Growth Percentage</td>
+	              <td>2.50%</td>
+	              <td>0.97%</td>
+	              <td>9.52%</td>
+	              <td>1.96%</td>
+	              <td>20.93%</td>
+	              <td>4.13%</td>
+	              <td>1.67%</td>
+	              <td>17.86%</td>
+	              <td>0.00%</td>
+	              <td>1.12%</td>
+	              <td>1.38%</td>
+	            </tr>
+	          </tfoot>
+	        </table>
+	      </div>
+
+	      <div style="position: relative; margin-top: 1em;"><h1>District 3</h1></div>
+
+	      <div style="position: relative; margin-top: 1em;">
+	        <table id="tblDistrict3" class="display stripe">
+	          <thead>
+	            <tr>
+	              <th>&nbsp;</th>
+	              <th>Month</th>
+	              <th>CPF</th>
+	              <th>DEM</th>
+	              <th>ECO</th>
+	              <th>GRE</th>
+	              <th>IND</th>
+	              <th>LPF</th>
+	              <th>NPA</th>
+	              <th>PSL</th>
+	              <th>REF</th>
+	              <th>REP</th>
+	            </tr>
+	          </thead>
+	          <tbody>
+	            <tr>
+	              <td>1</td>
+	              <td>April</td>
+	              <td>23</td>
+	              <td>29264</td>
+	              <td>8</td>
+	              <td>93</td>
+	              <td>717</td>
+	              <td>322</td>
+	              <td>25365</td>
+	              <td>6</td>
+	              <td>9</td>
+	              <td>32400</td>
+	            </tr>
+
+	            <tr>
+	              <td>2</td>
+	              <td>May</td>
+	              <td>24</td>
+	              <td>29246</td>
+	              <td>8</td>
+	              <td>95</td>
+	              <td>746</td>
+	              <td>315</td>
+	              <td>25365</td>
+	              <td>6</td>
+	              <td>9</td>
+	              <td>32420</td>
+	            </tr>
+
+	            <tr>
+	              <td>3</td>
+	              <td>June</td>
+	              <td>24</td>
+	              <td>29223</td>
+	              <td>9</td>
+	              <td>96</td>
+	              <td>761</td>
+	              <td>320</td>
+	              <td>25417</td>
+	              <td>6</td>
+	              <td>9</td>
+	              <td>32410</td>
+	            </tr>
+
+	            <tr>
+	              <td>4</td>
+	              <td>July</td>
+	              <td>24</td>
+	              <td>29331</td>
+	              <td>9</td>
+	              <td>96</td>
+	              <td>790</td>
+	              <td>321</td>
+	              <td>25512</td>
+	              <td>6</td>
+	              <td>9</td>
+	              <td>32499</td>
+	            </tr>
+
+	            <tr>
+	              <td>5</td>
+	              <td>August</td>
+	              <td>26</td>
+	              <td>29464</td>
+	              <td>10</td>
+	              <td>97</td>
+	              <td>816</td>
+	              <td>320</td>
+	              <td>25596</td>
+	              <td>7</td>
+	              <td>9</td>
+	              <td>32645</td>
+	            </tr>
+
+	            <tr>
+	              <td>6</td>
+	              <td>September</td>
+	              <td>26</td>
+	              <td>29601</td>
+	              <td>11</td>
+	              <td>95</td>
+	              <td>852</td>
+	              <td>327</td>
+	              <td>25721</td>
+	              <td>7</td>
+	              <td>10</td>
+	              <td>32726</td>
+	            </tr>
+	          </tbody>
+	          <tfoot>
+	            <tr>
+	              <td>&nbsp;</td>
+	              <td>Net Gain\Loss</td>
+	              <td>3</td>
+	              <td>337</td>
+	              <td>3</td>
+	              <td>2</td>
+	              <td>135</td>
+	              <td>5</td>
+	              <td>356</td>
+	              <td>1</td>
+	              <td>1</td>
+	              <td>326</td>
+	            </tr>
+
+	            <tr>
+	              <td>&nbsp;</td>
+	              <td>Growth Percentage</td>
+	              <td>13.04%</td>
+	              <td>1.15%</td>
+	              <td>37.50%</td>
+	              <td>2.15%</td>
+	              <td>18.83%</td>
+	              <td>1.55%</td>
+	              <td>1.40%</td>
+	              <td>16.67%</td>
+	              <td>11.11%</td>
+	              <td>1.01%</td>
+	            </tr>
+	          </tfoot>
+	        </table>
+	      </div>
+
+	      <div style="position: relative; margin-top: 1em;"><h1>District 5</h1></div>
+
+	      <div style="position: relative; margin-top: 1em;">
+	        <table id="tblDistrict5" class="display stripe">
+	          <thead>
+	            <tr>
+	              <th>&nbsp;</th>
+	              <th>Month</th>
+	              <th>CPF</th>
+	              <th>DEM</th>
+	              <th>ECO</th>
+	              <th>GRE</th>
+	              <th>IND</th>
+	              <th>LPF</th>
+	              <th>NPA</th>
+	              <th>PSL</th>
+	              <th>REF</th>
+	              <th>REP</th>
+	            </tr>
+	          </thead>
+
+	          <tbody>
+	            <tr>
+	              <td>1</td>
+	              <td>April</td>
+	              <td>24</td>
+	              <td>28367</td>
+	              <td>12</td>
+	              <td>69</td>
+	              <td>656</td>
+	              <td>307</td>
+	              <td>24621</td>
+	              <td>10</td>
+	              <td>14</td>
+	              <td>32967</td>
+	            </tr>
+
+	            <tr>
+	              <td>2</td>
+	              <td>May</td>
+	              <td>23</td>
+	              <td>28363</td>
+	              <td>12</td>
+	              <td>70</td>
+	              <td>675</td>
+	              <td>306</td>
+	              <td>24714</td>
+	              <td>10</td>
+	              <td>14</td>
+	              <td>32947</td>
+	            </tr>
+
+	            <tr>
+	              <td>3</td>
+	              <td>June</td>
+	              <td>23</td>
+	              <td>28374</td>
+	              <td>12</td>
+	              <td>71</td>
+	              <td>688</td>
+	              <td>307</td>
+	              <td>24746</td>
+	              <td>10</td>
+	              <td>14</td>
+	              <td>32919</td>
+	            </tr>
+
+	            <tr>
+	              <td>4</td>
+	              <td>July</td>
+	              <td>22</td>
+	              <td>28492</td>
+	              <td>12</td>
+	              <td>73</td>
+	              <td>717</td>
+	              <td>316</td>
+	              <td>24880</td>
+	              <td>10</td>
+	              <td>14</td>
+	              <td>32992</td>
+	            </tr>
+
+	            <tr>
+	              <td>5</td>
+	              <td>August</td>
+	              <td>22</td>
+	              <td>28616</td>
+	              <td>12</td>
+	              <td>73</td>
+	              <td>758</td>
+	              <td>319</td>
+	              <td>24988</td>
+	              <td>10</td>
+	              <td>14</td>
+	              <td>33118</td>
+	            </tr>
+
+	            <tr>
+	              <td>6</td>
+	              <td>September</td>
+	              <td>22</td>
+	              <td>28682</td>
+	              <td>12</td>
+	              <td>73</td>
+	              <td>780</td>
+	              <td>322</td>
+	              <td>25104</td>
+	              <td>10</td>
+	              <td>14</td>
+	              <td>33216</td>
+	            </tr>
+	          </tbody>
+
+	          <tfoot>
+	            <tr>
+	              <td>&nbsp;</td>
+	              <td>Net Gain\Loss</td>
+	              <td>-2</td>
+	              <td>315</td>
+	              <td>0</td>
+	              <td>4</td>
+	              <td>124</td>
+	              <td>15</td>
+	              <td>483</td>
+	              <td>0</td>
+	              <td>0</td>
+	              <td>249</td>
+	            </tr>
+
+	            <tr>
+	              <td>&nbsp;</td>
+	              <td>Growth Percentage</td>
+	              <td>-8.33%</td>
+	              <td>1.11%</td>
+	              <td>0.00%</td>
+	              <td>5.80%</td>
+	              <td>18.90%</td>
+	              <td>4.89%</td>
+	              <td>1.96%</td>
+	              <td>0.00%</td>
+	              <td>0.00%</td>
+	              <td>0.76%</td>
+	            </tr>
+	          </tfoot>
+	        </table>
 			</div>
 
-			<div style="position: relative; margin-top: 1em;">
-				Average Age of Voters: <span id="spnAverageAge"></span>
-			</div>
+	    <div style="position: relative; margin-top: 1em;">
+	      <img src="images/PartyBreakdown.png" />
+	    </div>
 
-			<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+	    <div style="position: relative; margin-top: 1em;">
+	      <img src="images/D1Precincts.png" />
+	    </div>
 
-			<div id="gendersChart"></div>
+	    <div style="position: relative; margin-top: 1em;">
+	      <img src="images/D2Precincts.png" />
+	    </div>
 
-			<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+	    <div style="position: relative; margin-top: 1em;">
+	      <img src="images/D3Precincts.png" />
+	    </div>
 
-			<div id="raceChart"></div>
+	    <div style="position: relative; margin-top: 1em;">
+	      <img src="images/D4Precincts.png" />
+	    </div>
 
-			<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+	    <div style="position: relative; margin-top: 1em;">
+	      <img src="images/D5Precincts.png" />
+	    </div>
 
-			<div id="totalBrevardVotersChart"></div>
+	    <div style="position: relative; display: block; margin-top: 1em; width: 100%;">
+	      <table id="tblDemographics" class="display stripe">
+	        <thead>
+	          <tr>
+	            <th>District</th>
+	            <th>Race</th>
+	            <th>Gender</th>
+	            <th>Party</th>
+	            <th>Total</th>
+	          </tr>
+	        </thead>
 
-			<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-			<div id="votersByDistrictChart"></div>
-
-      <div style="position: relative; margin-top: 1em;"><h1>Voter Registration Over Time in Brevard</h1></div>
-
-      <div style="position: relative; margin-top: 1em;">
-        <table id="tblTotalVoters" class="display stripe">
-          <thead>
-            <tr>
-              <th>&nbsp;</th>
-              <th>Month</th>
-              <th>CPF</th>
-              <th>DEM</th>
-              <th>ECO</th>
-              <th>GRE</th>
-              <th>IND</th>
-              <th>LPF</th>
-              <th>NPA</th>
-              <th>PSL</th>
-              <th>REF</th>
-              <th>REP</th>
-              <th>Total Registered Voters</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>April</td>
-              <td>120</td>
-              <td>136930</td>
-              <td>42</td>
-              <td>357</td>
-              <td>3258</td>
-              <td>1551</td>
-              <td>118164</td>
-              <td>28</td>
-              <td>46</td>
-              <td>183716</td>
-              <td>444212</td>
-            </tr>
-
-            <tr>
-              <td>2</td>
-              <td>May</td>
-              <td>121</td>
-              <td>136674</td>
-              <td>42</td>
-              <td>356</td>
-              <td>3381</td>
-              <td>1547</td>
-              <td>118106</td>
-              <td>28</td>
-              <td>46</td>
-              <td>183609</td>
-              <td>443910</td>
-            </tr>
-
-            <tr>
-              <td>3</td>
-              <td>June</td>
-              <td>122</td>
-              <td>136622</td>
-              <td>44</td>
-              <td>358</td>
-              <td>3466</td>
-              <td>1559</td>
-              <td>118284</td>
-              <td>28</td>
-              <td>45</td>
-              <td>183491</td>
-              <td>444019</td>
-            </tr>
-
-            <tr>
-              <td>4</td>
-              <td>July</td>
-              <td>120</td>
-              <td>137008</td>
-              <td>44</td>
-              <td>361</td>
-              <td>3604</td>
-              <td>1579</td>
-              <td>118753</td>
-              <td>31</td>
-              <td>46</td>
-              <td>183994</td>
-              <td>445540</td>
-            </tr>
-
-            <tr>
-              <td>5</td>
-              <td>August</td>
-              <td>122</td>
-              <td>137528</td>
-              <td>44</td>
-              <td>365</td>
-              <td>3784</td>
-              <td>1588</td>
-              <td>119338</td>
-              <td>33</td>
-              <td>46</td>
-              <td>184644</td>
-              <td>447492</td>
-            </tr>
-
-
-            <tr>
-              <td>6</td>
-              <td>September</td>
-              <td>123</td>
-              <td>138263</td>
-              <td>46</td>
-              <td>364</td>
-              <td>3940</td>
-              <td>1615</td>
-              <td>120134</td>
-              <td>33</td>
-              <td>46</td>
-              <td>185765</td>
-              <td>450329</td>
-            </tr>
-          </tbody>
-
-          <tfoot>
-            <tr>
-              <td>&nbsp;</td>
-              <td>Net Gain\Loss</td>
-              <td>3</td>
-              <td>1333</td>
-              <td>4</td>
-              <td>7</td>
-              <td>682</td>
-              <td>64</td>
-              <td>1970</td>
-              <td>5</td>
-              <td>0</td>
-              <td>2049</td>
-              <td>6117</td>
-            </tr
-
-            <tr>
-              <td>&nbsp;</td>
-              <td>Growth Percentage</td>
-              <td>2.50%</td>
-              <td>0.97%</td>
-              <td>9.52%</td>
-              <td>1.96%</td>
-              <td>20.93%</td>
-              <td>4.13%</td>
-              <td>1.67%</td>
-              <td>17.86%</td>
-              <td>0.00%</td>
-              <td>1.12%</td>
-              <td>1.38%</td>
-            </tr>
-          </tfoot>
-        </table>
-      </div>
-
-      <div style="position: relative; margin-top: 1em;"><h1>District 3</h1></div>
-
-      <div style="position: relative; margin-top: 1em;">
-        <table id="tblDistrict3" class="display stripe">
-          <thead>
-            <tr>
-              <th>&nbsp;</th>
-              <th>Month</th>
-              <th>CPF</th>
-              <th>DEM</th>
-              <th>ECO</th>
-              <th>GRE</th>
-              <th>IND</th>
-              <th>LPF</th>
-              <th>NPA</th>
-              <th>PSL</th>
-              <th>REF</th>
-              <th>REP</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>April</td>
-              <td>23</td>
-              <td>29264</td>
-              <td>8</td>
-              <td>93</td>
-              <td>717</td>
-              <td>322</td>
-              <td>25365</td>
-              <td>6</td>
-              <td>9</td>
-              <td>32400</td>
-            </tr>
-
-            <tr>
-              <td>2</td>
-              <td>May</td>
-              <td>24</td>
-              <td>29246</td>
-              <td>8</td>
-              <td>95</td>
-              <td>746</td>
-              <td>315</td>
-              <td>25365</td>
-              <td>6</td>
-              <td>9</td>
-              <td>32420</td>
-            </tr>
-
-            <tr>
-              <td>3</td>
-              <td>June</td>
-              <td>24</td>
-              <td>29223</td>
-              <td>9</td>
-              <td>96</td>
-              <td>761</td>
-              <td>320</td>
-              <td>25417</td>
-              <td>6</td>
-              <td>9</td>
-              <td>32410</td>
-            </tr>
-
-            <tr>
-              <td>4</td>
-              <td>July</td>
-              <td>24</td>
-              <td>29331</td>
-              <td>9</td>
-              <td>96</td>
-              <td>790</td>
-              <td>321</td>
-              <td>25512</td>
-              <td>6</td>
-              <td>9</td>
-              <td>32499</td>
-            </tr>
-
-            <tr>
-              <td>5</td>
-              <td>August</td>
-              <td>26</td>
-              <td>29464</td>
-              <td>10</td>
-              <td>97</td>
-              <td>816</td>
-              <td>320</td>
-              <td>25596</td>
-              <td>7</td>
-              <td>9</td>
-              <td>32645</td>
-            </tr>
-
-            <tr>
-              <td>6</td>
-              <td>September</td>
-              <td>26</td>
-              <td>29601</td>
-              <td>11</td>
-              <td>95</td>
-              <td>852</td>
-              <td>327</td>
-              <td>25721</td>
-              <td>7</td>
-              <td>10</td>
-              <td>32726</td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td>&nbsp;</td>
-              <td>Net Gain\Loss</td>
-              <td>3</td>
-              <td>337</td>
-              <td>3</td>
-              <td>2</td>
-              <td>135</td>
-              <td>5</td>
-              <td>356</td>
-              <td>1</td>
-              <td>1</td>
-              <td>326</td>
-            </tr>
-
-            <tr>
-              <td>&nbsp;</td>
-              <td>Growth Percentage</td>
-              <td>13.04%</td>
-              <td>1.15%</td>
-              <td>37.50%</td>
-              <td>2.15%</td>
-              <td>18.83%</td>
-              <td>1.55%</td>
-              <td>1.40%</td>
-              <td>16.67%</td>
-              <td>11.11%</td>
-              <td>1.01%</td>
-            </tr>
-          </tfoot>
-        </table>
-      </div>
-
-      <div style="position: relative; margin-top: 1em;"><h1>District 5</h1></div>
-
-      <div style="position: relative; margin-top: 1em;">
-        <table id="tblDistrict5" class="display stripe">
-          <thead>
-            <tr>
-              <th>&nbsp;</th>
-              <th>Month</th>
-              <th>CPF</th>
-              <th>DEM</th>
-              <th>ECO</th>
-              <th>GRE</th>
-              <th>IND</th>
-              <th>LPF</th>
-              <th>NPA</th>
-              <th>PSL</th>
-              <th>REF</th>
-              <th>REP</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>April</td>
-              <td>24</td>
-              <td>28367</td>
-              <td>12</td>
-              <td>69</td>
-              <td>656</td>
-              <td>307</td>
-              <td>24621</td>
-              <td>10</td>
-              <td>14</td>
-              <td>32967</td>
-            </tr>
-
-            <tr>
-              <td>2</td>
-              <td>May</td>
-              <td>23</td>
-              <td>28363</td>
-              <td>12</td>
-              <td>70</td>
-              <td>675</td>
-              <td>306</td>
-              <td>24714</td>
-              <td>10</td>
-              <td>14</td>
-              <td>32947</td>
-            </tr>
-
-            <tr>
-              <td>3</td>
-              <td>June</td>
-              <td>23</td>
-              <td>28374</td>
-              <td>12</td>
-              <td>71</td>
-              <td>688</td>
-              <td>307</td>
-              <td>24746</td>
-              <td>10</td>
-              <td>14</td>
-              <td>32919</td>
-            </tr>
-
-            <tr>
-              <td>4</td>
-              <td>July</td>
-              <td>22</td>
-              <td>28492</td>
-              <td>12</td>
-              <td>73</td>
-              <td>717</td>
-              <td>316</td>
-              <td>24880</td>
-              <td>10</td>
-              <td>14</td>
-              <td>32992</td>
-            </tr>
-
-            <tr>
-              <td>5</td>
-              <td>August</td>
-              <td>22</td>
-              <td>28616</td>
-              <td>12</td>
-              <td>73</td>
-              <td>758</td>
-              <td>319</td>
-              <td>24988</td>
-              <td>10</td>
-              <td>14</td>
-              <td>33118</td>
-            </tr>
-
-            <tr>
-              <td>6</td>
-              <td>September</td>
-              <td>22</td>
-              <td>28682</td>
-              <td>12</td>
-              <td>73</td>
-              <td>780</td>
-              <td>322</td>
-              <td>25104</td>
-              <td>10</td>
-              <td>14</td>
-              <td>33216</td>
-            </tr>
-          </tbody>
-
-          <tfoot>
-            <tr>
-              <td>&nbsp;</td>
-              <td>Net Gain\Loss</td>
-              <td>-2</td>
-              <td>315</td>
-              <td>0</td>
-              <td>4</td>
-              <td>124</td>
-              <td>15</td>
-              <td>483</td>
-              <td>0</td>
-              <td>0</td>
-              <td>249</td>
-            </tr>
-
-            <tr>
-              <td>&nbsp;</td>
-              <td>Growth Percentage</td>
-              <td>-8.33%</td>
-              <td>1.11%</td>
-              <td>0.00%</td>
-              <td>5.80%</td>
-              <td>18.90%</td>
-              <td>4.89%</td>
-              <td>1.96%</td>
-              <td>0.00%</td>
-              <td>0.00%</td>
-              <td>0.76%</td>
-            </tr>
-          </tfoot>
-        </table>
+	        <tbody></tbody>
+	      </table>
+	    </div>
 		</div>
-
-    <div style="position: relative; margin-top: 1em;">
-      <img src="images/PartyBreakdown.png" />
-    </div>
-
-    <div style="position: relative; margin-top: 1em;">
-      <img src="images/D1Precincts.png" />
-    </div>
-
-    <div style="position: relative; margin-top: 1em;">
-      <img src="images/D2Precincts.png" />
-    </div>
-
-    <div style="position: relative; margin-top: 1em;">
-      <img src="images/D3Precincts.png" />
-    </div>
-
-    <div style="position: relative; margin-top: 1em;">
-      <img src="images/D4Precincts.png" />
-    </div>
-
-    <div style="position: relative; margin-top: 1em;">
-      <img src="images/D5Precincts.png" />
-    </div>
-
-    <div style="position: relative; display: block; margin-top: 1em; width: 100%;">
-      <table id="tblDemographics" class="display stripe">
-        <thead>
-          <tr>
-            <th>District</th>
-            <th>Race</th>
-            <th>Gender</th>
-            <th>Party</th>
-            <th>Total</th>
-          </tr>
-        </thead>
-
-        <tbody></tbody>
-      </table>
-    </div>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
@@ -575,6 +593,14 @@
 							// Age variables
 							var totalAgeSum = 0;
 							var knownAges = 0;
+							var totalDemocratAge = 0;
+							var knownDemocratAges = 0;
+							var totalRepublicanAge = 0;
+							var knownRepublicanAges = 0;
+							var totalNpaAge = 0;
+							var knownNpaAges = 0;
+							var totalOtherAge = 0;
+							var knownOtherAges = 0;
 
 							// District variables
 							district1Voters = [];
@@ -659,20 +685,40 @@
 								switch (dataToProcess[i].Party) {
 									case 'REP':
 										republicans++;
+										if (dataToProcess[i].Age !== '') {
+											totalRepublicanAge += parseInt(dataToProcess[i].Age, 10);
+											knownRepublicanAges++;
+										}
 										break;
 									case 'DEM':
 										democrats++;
+										if (dataToProcess[i].Age !== '') {
+											totalDemocratAge += parseInt(dataToProcess[i].Age, 10);
+											knownDemocratAges++;
+										}
 										break;
 									case 'NPA':
 										npas++;
+										if (dataToProcess[i].Age !== '') {
+											totalNpaAge += parseInt(dataToProcess[i].Age, 10);
+											knownNpaAges++;
+										}
 										break;
 									default:
 										thirdPartyVoters++;
+										if (dataToProcess[i].Age !== '') {
+											totalOtherAge += parseInt(dataToProcess[i].Age, 10);
+											knownOtherAges++;
+										}
 										break;
 								}
 							}
 
-							returnData.averageAge = totalAgeSum / knownAges;
+							returnData.averageAge = Math.round(totalAgeSum / knownAges);
+							returnData.averageRepublicanAge = Math.round(totalRepublicanAge / knownRepublicanAges);
+							returnData.averageDemocratAge = Math.round(totalDemocratAge / knownDemocratAges);
+							returnData.averageNpaAge = Math.round(totalNpaAge / knownNpaAges);
+							returnData.averageOtherAge = Math.round(totalOtherAge / knownOtherAges);
 							returnData.district1Voters = district1Voters;
 							returnData.district2Voters = district2Voters;
 							returnData.district3Voters = district3Voters;
@@ -714,7 +760,7 @@
 						var dataProcessor = new Worker(URL.createObjectURL(dataProcessorName));
 
 						// We're done loading
-						$('#divLoadingData').html('<h1>Processing data, please wait.</h1>');
+						$('#divLoadingData').html('<h1 class="pulsate" style="font-size: 2em;">Processing data, please wait.</h1>');
 
 						dataProcessor.onmessage = function(event) {
 							var data = event.data;
@@ -726,6 +772,10 @@
 
 							// Average Age span
 							$('#spnAverageAge').html(data.averageAge);
+							$('#spnAverageRepublicanAge').html(data.averageRepublicanAge);
+							$('#spnAverageDemocratAge').html(data.averageDemocratAge);
+							$('#spnAverageNpaAge').html(data.averageNpaAge);
+							$('#spnAverageOtherAge').html(data.averageOtherAge);
 
 							// We're done processing
 							$('#divLoadingData').html('');
@@ -793,6 +843,8 @@
 		            fillStyle: 'zigzag',
 		            fillWeight: 1,
 		          });
+
+							$('#mainContent').css('display', 'block');
 						};
 
 						dataProcessor.postMessage([voterData]);
