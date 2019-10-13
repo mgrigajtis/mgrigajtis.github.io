@@ -23,6 +23,10 @@
 				Total Voters in Brevard: <span id="spnTotalVoters"></span>
 			</div>
 
+			<div style="position: relative; margin-top: 1em;">
+				Average Age of Voters: <span id="spnAverageAge"></span>
+			</div>
+
 			<div style="position: relative; margin-top: 1em;">&nbsp;</div>
 
 			<div id="gendersChart"></div>
@@ -34,6 +38,10 @@
 			<div style="position: relative; margin-top: 1em;">&nbsp;</div>
 
 			<div id="totalBrevardVotersChart"></div>
+
+			<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+			<div id="votersByDistrictChart"></div>
 
       <div style="position: relative; margin-top: 1em;"><h1>Voter Registration Over Time in Brevard</h1></div>
 
@@ -557,138 +565,237 @@
 					});
 				}
 
+				function dataProcessor() {
+					self.addEventListener('message', function(e) {
+						if (e.data[0] === 'close') {
+							self.close();
+						} else {
+							var dataToProcess = e.data[0];
+
+							// Age variables
+							var totalAgeSum = 0;
+							var knownAges = 0;
+
+							// District variables
+							district1Voters = [];
+							district2Voters = [];
+							district3Voters = [];
+							district4Voters = [];
+							district5Voters = [];
+
+							// total gender variables
+							var males = 0;
+							var females = 0;
+							var unkownGenders = 0;
+
+							// total race variables
+							var blacks = 0;
+							var whites = 0;
+							var hispanics = 0;
+							var otherRace = 0;
+
+							// total party variables
+							var republicans = 0;
+							var democrats = 0;
+							var npas = 0;
+							var thirdPartyVoters = 0;
+
+							var returnData = {};
+
+							// Now that we have the voter data, we can chop it up and analyze it
+							for (var i=0; i<dataToProcess.length; i++) {
+								if (dataToProcess[i].Age !== '') {
+									totalAgeSum += parseInt(dataToProcess[i].Age, 10);
+									knownAges++;
+								}
+
+								switch (dataToProcess[i].CountyCommissionDistrict) {
+									case '1':
+										district1Voters.push(dataToProcess[i]);
+										break;
+									case '2':
+										district2Voters.push(dataToProcess[i]);
+										break;
+									case '3':
+										district3Voters.push(dataToProcess[i]);
+										break;
+									case '4':
+										district4Voters.push(dataToProcess[i]);
+										break;
+									case '5':
+										district5Voters.push(dataToProcess[i]);
+										break;
+									default:
+										break;
+								}
+
+								switch (dataToProcess[i].Gender) {
+									case 'F':
+										females++;
+										break;
+									case 'M':
+										males++;
+										break;
+									default:
+										unkownGenders++;
+										break;
+								}
+
+								switch (dataToProcess[i].Race) {
+									case 'White':
+										whites++;
+										break;
+									case 'Black':
+										blacks++;
+										break;
+									case 'Hispanic':
+										hispanics++;
+										break;
+									default:
+										otherRace++;
+										break;
+								}
+
+								switch (dataToProcess[i].Party) {
+									case 'REP':
+										republicans++;
+										break;
+									case 'DEM':
+										democrats++;
+										break;
+									case 'NPA':
+										npas++;
+										break;
+									default:
+										thirdPartyVoters++;
+										break;
+								}
+							}
+
+							returnData.averageAge = totalAgeSum / knownAges;
+							returnData.district1Voters = district1Voters;
+							returnData.district2Voters = district2Voters;
+							returnData.district3Voters = district3Voters;
+							returnData.district4Voters = district4Voters;
+							returnData.district5Voters = district5Voters;
+							returnData.males = males;
+							returnData.females = females;
+							returnData.unkownGenders = unkownGenders;
+							returnData.blacks = blacks;
+							returnData.whites = whites;
+							returnData.hispanics = hispanics;
+							returnData.otherRace = otherRace;
+							returnData.republicans = republicans;
+							returnData.democrats = democrats;
+							returnData.npas = npas;
+							returnData.thirdPartyVoters = thirdPartyVoters;
+
+							postMessage(returnData);
+						}
+					});
+				}
+
 				if(window !== self) {
 					dataWorker();
+					dataProcessor();
 				}
 
 				try {
-					// load the data via worker
+					// load and process the data via workers
 					var dataWorker = new Worker(URL.createObjectURL(new Blob(['(' + dataWorker.toString() + ')()'], {type: 'text/javascript'})));
+					var dataProcessorName = new Blob(['(' + dataProcessor.toString() + ')()'], {type: 'text/javascript'});
 
 					dataWorker.onmessage = function(event) {
 						var voterData = event.data.data;
 
-						// total gender variables
-						var males = 0;
-						var females = 0;
-						var unkownGenders = 0;
-
-						// total race variables
-						var blacks = 0;
-						var whites = 0;
-						var hispanics = 0;
-						var otherRace = 0;
-
-						// total party variables
-						var republicans = 0;
-						var democrats = 0;
-						var npas = 0;
-						var thirdPartyVoters = 0;
-
 						// Close the worker
 						dataWorker.postMessage(['close']);
+
+						var dataProcessor = new Worker(URL.createObjectURL(dataProcessorName));
 
 						// We're done loading
 						$('#divLoadingData').html('<h1>Processing data, please wait.</h1>');
 
-						// Total Voters Span
-						$('#spnTotalVoters').html(voterData.length);
+						dataProcessor.onmessage = function(event) {
+							var data = event.data;
 
-						// Now that we have the voter data, we can chop it up and analyze it
-						for (var i=0; i<voterData.length; i++) {
-							switch (voterData[i].Gender) {
-								case 'F':
-									females++;
-									break;
-								case 'M':
-									males++;
-									break;
-								default:
-									unkownGenders++;
-									break;
-							}
+							dataProcessor.postMessage(['close']);
 
-							switch (voterData[i].Race) {
-								case 'White':
-									whites++;
-									break;
-								case 'Black':
-									blacks++;
-									break;
-								case 'Hispanic':
-									hispanics++;
-									break;
-								default:
-									otherRace++;
-									break;
-							}
+							// Total Voters Span
+							$('#spnTotalVoters').html(voterData.length);
 
-							switch (voterData[i].Party) {
-								case 'REP':
-									republicans++;
-									break;
-								case 'DEM':
-									democrats++;
-									break;
-								case 'NPA':
-									npas++;
-									break;
-								default:
-									thirdPartyVoters++;
-									break;
-							}
-						}
+							// Average Age span
+							$('#spnAverageAge').html(data.averageAge);
 
-						// We're done processing
-						$('#divLoadingData').html('');
+							// We're done processing
+							$('#divLoadingData').html('');
 
-						// Create the genders chart
-						new roughViz.Donut({
-	            element: '#gendersChart',
-	            data: {
-	              labels: ['Male', 'Female', 'Unkown'],
-	              values: [males, females, unkownGenders]
-	            },
-	            title: 'Voters By Gender',
-	            roughness: 1,
-	            colors: ['blue', 'pink', 'yellow'],
-	            stroke: 'black',
-	            strokeWidth: 1,
-	            fillStyle: 'zigzag',
-	            fillWeight: 1,
-	          });
+							// Create the genders chart
+							new roughViz.Donut({
+		            element: '#gendersChart',
+		            data: {
+		              labels: ['Male', 'Female', 'Unkown'],
+		              values: [data.males, data.females, data.unkownGenders]
+		            },
+		            title: 'Voters By Gender',
+		            roughness: 1,
+		            colors: ['blue', 'pink', 'yellow'],
+		            stroke: 'black',
+		            strokeWidth: 1,
+		            fillStyle: 'zigzag',
+		            fillWeight: 1,
+		          });
 
-						// Create the race chart
-						new roughViz.Donut({
-	            element: '#raceChart',
-	            data: {
-	              labels: ['Whites', 'Blacks', 'Hispanics', 'Other'],
-	              values: [whites, blacks, hispanics, otherRace]
-	            },
-	            title: 'Voters By Race',
-	            roughness: 1,
-	            colors: ['red', 'green', 'yellow', 'blue'],
-	            stroke: 'black',
-	            strokeWidth: 1,
-	            fillStyle: 'zigzag',
-	            fillWeight: 1,
-	          });
+							// Create the race chart
+							new roughViz.Donut({
+		            element: '#raceChart',
+		            data: {
+		              labels: ['Whites', 'Blacks', 'Hispanics', 'Other'],
+		              values: [data.whites, data.blacks, data.hispanics, data.otherRace]
+		            },
+		            title: 'Voters By Race',
+		            roughness: 1,
+		            colors: ['red', 'green', 'yellow', 'blue'],
+		            stroke: 'black',
+		            strokeWidth: 1,
+		            fillStyle: 'zigzag',
+		            fillWeight: 1,
+		          });
 
-						// Create the party chart
-	          new roughViz.Donut({
-	            element: '#totalBrevardVotersChart',
-	            data: {
-	              labels: ['DEMOCRATS', 'NPAs', 'REPUBLICANS', 'THIRD PARTY'],
-	              values: [democrats, npas, republicans, thirdPartyVoters]
-	            },
-	            title: 'Voters By Party',
-	            roughness: 1,
-	            colors: ['blue', 'purple', 'red', 'yellow'],
-	            stroke: 'black',
-	            strokeWidth: 1,
-	            fillStyle: 'zigzag',
-	            fillWeight: 1,
-	          });
+							// Create the party chart
+		          new roughViz.Donut({
+		            element: '#totalBrevardVotersChart',
+		            data: {
+		              labels: ['DEMOCRATS', 'NPAs', 'REPUBLICANS', 'THIRD PARTY'],
+		              values: [data.democrats, data.npas, data.republicans, data.thirdPartyVoters]
+		            },
+		            title: 'Voters By Party',
+		            roughness: 1,
+		            colors: ['blue', 'purple', 'red', 'yellow'],
+		            stroke: 'black',
+		            strokeWidth: 1,
+		            fillStyle: 'zigzag',
+		            fillWeight: 1,
+		          });
+
+							// Create the voters by district chart
+		          new roughViz.Donut({
+		            element: '#votersByDistrictChart',
+		            data: {
+		              labels: ['D1', 'D2', 'D3', 'D4', 'D5'],
+		              values: [data.district1Voters.length, data.district2Voters.length, data.district3Voters.length, data.district4Voters.length, data.district5Voters.length]
+		            },
+		            title: 'Voters By District',
+		            roughness: 1,
+		            colors: ['blue', 'purple', 'red', 'yellow', 'green'],
+		            stroke: 'black',
+		            strokeWidth: 1,
+		            fillStyle: 'zigzag',
+		            fillWeight: 1,
+		          });
+						};
+
+						dataProcessor.postMessage([voterData]);
 					};
 
 					dataWorker.postMessage(['']);
