@@ -60,7 +60,7 @@
 
 				<div id="votersByDistrictChart"></div>
 
-	      <div style="position: relative; margin-top: 1em;"><h1>Voter Registration Over Time in Brevard</h1></div>
+	      <div style="position: relative; margin-top: 1em;"><h1 style="font-size: 1.5em;">Voter Registration Over Time in Brevard</h1></div>
 
 	      <div style="position: relative; margin-top: 1em;">
 	        <table id="tblTotalVoters" class="display stripe">
@@ -216,7 +216,71 @@
 	        </table>
 	      </div>
 
-	      <div style="position: relative; margin-top: 1em;"><h1>District 3</h1></div>
+				<div style="position: relative; margin-top: 1em;"><h1 style="font-size: 2em;">District 1</h1></div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of Voters: <span id="spnAverageAgeD1"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of Republicans: <span id="spnAverageRepublicanAgeD1"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of Democrats: <span id="spnAverageDemocratAgeD1"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of NPAs: <span id="spnAverageNpaAgeD1"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of 3rd Party: <span id="spnAverageOtherAgeD1"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;"><h1 style="font-size: 2em;">District 2</h1></div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of Voters: <span id="spnAverageAgeD1"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of Republicans: <span id="spnAverageRepublicanAgeD2"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of Democrats: <span id="spnAverageDemocratAgeD2"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of NPAs: <span id="spnAverageNpaAgeD2"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of 3rd Party: <span id="spnAverageOtherAgeD2"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;"><h1 style="font-size: 2em;">District 3</h1></div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of Voters: <span id="spnAverageAgeD3"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of Republicans: <span id="spnAverageRepublicanAgeD3"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of Democrats: <span id="spnAverageDemocratAgeD3"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of NPAs: <span id="spnAverageNpaAgeD3"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of 3rd Party: <span id="spnAverageOtherAgeD3"></span>
+				</div>
 
 	      <div style="position: relative; margin-top: 1em;">
 	        <table id="tblDistrict3" class="display stripe">
@@ -361,7 +425,49 @@
 	        </table>
 	      </div>
 
-	      <div style="position: relative; margin-top: 1em;"><h1>District 5</h1></div>
+				<div style="position: relative; margin-top: 1em;"><h1 style="font-size: 2em;">District 4</h1></div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of Voters: <span id="spnAverageAgeD4"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of Republicans: <span id="spnAverageRepublicanAgeD4"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of Democrats: <span id="spnAverageDemocratAgeD4"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of NPAs: <span id="spnAverageNpaAgeD4"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of 3rd Party: <span id="spnAverageOtherAgeD4"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;"><h1 style="font-size: 2em;">District 5</h1></div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of Voters: <span id="spnAverageAgeD5"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of Republicans: <span id="spnAverageRepublicanAgeD5"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of Democrats: <span id="spnAverageDemocratAgeD5"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of NPAs: <span id="spnAverageNpaAgeD5"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of 3rd Party: <span id="spnAverageOtherAgeD5"></span>
+				</div>
 
 	      <div style="position: relative; margin-top: 1em;">
 	        <table id="tblDistrict5" class="display stripe">
@@ -588,19 +694,127 @@
 						if (e.data[0] === 'close') {
 							self.close();
 						} else {
-							var dataToProcess = e.data[0];
 
-							// Age variables
-							var totalAgeSum = 0;
-							var knownAges = 0;
-							var totalDemocratAge = 0;
-							var knownDemocratAges = 0;
-							var totalRepublicanAge = 0;
-							var knownRepublicanAges = 0;
-							var totalNpaAge = 0;
-							var knownNpaAges = 0;
-							var totalOtherAge = 0;
-							var knownOtherAges = 0;
+							function analyzeData(dataArray, callback) {
+								var returnData = {};
+
+								// Age variables
+								var totalAgeSum = 0;
+								var knownAges = 0;
+								var totalDemocratAge = 0;
+								var knownDemocratAges = 0;
+								var totalRepublicanAge = 0;
+								var knownRepublicanAges = 0;
+								var totalNpaAge = 0;
+								var knownNpaAges = 0;
+								var totalOtherAge = 0;
+								var knownOtherAges = 0;
+
+								// total gender variables
+								var males = 0;
+								var females = 0;
+								var unkownGenders = 0;
+
+								// total race variables
+								var blacks = 0;
+								var whites = 0;
+								var hispanics = 0;
+								var otherRace = 0;
+
+								// total party variables
+								var republicans = 0;
+								var democrats = 0;
+								var npas = 0;
+								var thirdPartyVoters = 0;
+
+								for(var i=0; i<dataArray.length; i++) {
+									if (dataArray[i].Age !== '') {
+										totalAgeSum += parseInt(dataArray[i].Age, 10);
+										knownAges++;
+									}
+
+									switch (dataArray[i].Gender) {
+										case 'F':
+											females++;
+											break;
+										case 'M':
+											males++;
+											break;
+										default:
+											unkownGenders++;
+											break;
+									}
+
+									switch (dataArray[i].Race) {
+										case 'White':
+											whites++;
+											break;
+										case 'Black':
+											blacks++;
+											break;
+										case 'Hispanic':
+											hispanics++;
+											break;
+										default:
+											otherRace++;
+											break;
+									}
+
+									switch (dataArray[i].Party) {
+										case 'REP':
+											republicans++;
+											if (dataArray[i].Age !== '') {
+												totalRepublicanAge += parseInt(dataArray[i].Age, 10);
+												knownRepublicanAges++;
+											}
+											break;
+										case 'DEM':
+											democrats++;
+											if (dataArray[i].Age !== '') {
+												totalDemocratAge += parseInt(dataArray[i].Age, 10);
+												knownDemocratAges++;
+											}
+											break;
+										case 'NPA':
+											npas++;
+											if (dataArray[i].Age !== '') {
+												totalNpaAge += parseInt(dataArray[i].Age, 10);
+												knownNpaAges++;
+											}
+											break;
+										default:
+											thirdPartyVoters++;
+											if (dataArray[i].Age !== '') {
+												totalOtherAge += parseInt(dataArray[i].Age, 10);
+												knownOtherAges++;
+											}
+											break;
+									}
+								}
+
+								returnData.averageAge = Math.round(totalAgeSum / knownAges);
+								returnData.averageRepublicanAge = Math.round(totalRepublicanAge / knownRepublicanAges);
+								returnData.averageDemocratAge = Math.round(totalDemocratAge / knownDemocratAges);
+								returnData.averageNpaAge = Math.round(totalNpaAge / knownNpaAges);
+								returnData.averageOtherAge = Math.round(totalOtherAge / knownOtherAges);
+								returnData.males = males;
+								returnData.females = females;
+								returnData.unkownGenders = unkownGenders;
+								returnData.blacks = blacks;
+								returnData.whites = whites;
+								returnData.hispanics = hispanics;
+								returnData.otherRace = otherRace;
+								returnData.republicans = republicans;
+								returnData.democrats = democrats;
+								returnData.npas = npas;
+								returnData.thirdPartyVoters = thirdPartyVoters;
+
+								if (callback) {
+									callback(returnData);
+								}
+							}
+
+							var dataToProcess = e.data[0];
 
 							// District variables
 							district1Voters = [];
@@ -609,32 +823,10 @@
 							district4Voters = [];
 							district5Voters = [];
 
-							// total gender variables
-							var males = 0;
-							var females = 0;
-							var unkownGenders = 0;
-
-							// total race variables
-							var blacks = 0;
-							var whites = 0;
-							var hispanics = 0;
-							var otherRace = 0;
-
-							// total party variables
-							var republicans = 0;
-							var democrats = 0;
-							var npas = 0;
-							var thirdPartyVoters = 0;
-
 							var returnData = {};
 
 							// Now that we have the voter data, we can chop it up and analyze it
 							for (var i=0; i<dataToProcess.length; i++) {
-								if (dataToProcess[i].Age !== '') {
-									totalAgeSum += parseInt(dataToProcess[i].Age, 10);
-									knownAges++;
-								}
-
 								switch (dataToProcess[i].CountyCommissionDistrict) {
 									case '1':
 										district1Voters.push(dataToProcess[i]);
@@ -654,89 +846,38 @@
 									default:
 										break;
 								}
+							} // end of chopping all the data
 
-								switch (dataToProcess[i].Gender) {
-									case 'F':
-										females++;
-										break;
-									case 'M':
-										males++;
-										break;
-									default:
-										unkownGenders++;
-										break;
-								}
-
-								switch (dataToProcess[i].Race) {
-									case 'White':
-										whites++;
-										break;
-									case 'Black':
-										blacks++;
-										break;
-									case 'Hispanic':
-										hispanics++;
-										break;
-									default:
-										otherRace++;
-										break;
-								}
-
-								switch (dataToProcess[i].Party) {
-									case 'REP':
-										republicans++;
-										if (dataToProcess[i].Age !== '') {
-											totalRepublicanAge += parseInt(dataToProcess[i].Age, 10);
-											knownRepublicanAges++;
-										}
-										break;
-									case 'DEM':
-										democrats++;
-										if (dataToProcess[i].Age !== '') {
-											totalDemocratAge += parseInt(dataToProcess[i].Age, 10);
-											knownDemocratAges++;
-										}
-										break;
-									case 'NPA':
-										npas++;
-										if (dataToProcess[i].Age !== '') {
-											totalNpaAge += parseInt(dataToProcess[i].Age, 10);
-											knownNpaAges++;
-										}
-										break;
-									default:
-										thirdPartyVoters++;
-										if (dataToProcess[i].Age !== '') {
-											totalOtherAge += parseInt(dataToProcess[i].Age, 10);
-											knownOtherAges++;
-										}
-										break;
-								}
-							}
-
-							returnData.averageAge = Math.round(totalAgeSum / knownAges);
-							returnData.averageRepublicanAge = Math.round(totalRepublicanAge / knownRepublicanAges);
-							returnData.averageDemocratAge = Math.round(totalDemocratAge / knownDemocratAges);
-							returnData.averageNpaAge = Math.round(totalNpaAge / knownNpaAges);
-							returnData.averageOtherAge = Math.round(totalOtherAge / knownOtherAges);
 							returnData.district1Voters = district1Voters;
 							returnData.district2Voters = district2Voters;
 							returnData.district3Voters = district3Voters;
 							returnData.district4Voters = district4Voters;
 							returnData.district5Voters = district5Voters;
-							returnData.males = males;
-							returnData.females = females;
-							returnData.unkownGenders = unkownGenders;
-							returnData.blacks = blacks;
-							returnData.whites = whites;
-							returnData.hispanics = hispanics;
-							returnData.otherRace = otherRace;
-							returnData.republicans = republicans;
-							returnData.democrats = democrats;
-							returnData.npas = npas;
-							returnData.thirdPartyVoters = thirdPartyVoters;
 
-							postMessage(returnData);
+							analyzeData(dataToProcess, function(totalVoters) {
+								returnData.totals = totalVoters;
+
+								analyzeData(returnData.district1Voters, function(d1Totals) {
+									returnData.d1Totals = d1Totals;
+
+									analyzeData(returnData.district2Voters, function(d2Totals) {
+										returnData.d2Totals = d2Totals;
+
+										analyzeData(returnData.district3Voters, function(d3Totals) {
+											returnData.d3Totals = d3Totals;
+
+											analyzeData(returnData.district4Voters, function(d4Totals) {
+												returnData.d4Totals = d4Totals;
+
+												analyzeData(returnData.district5Voters, function(d5Totals) {
+													returnData.d5Totals = d5Totals;
+													postMessage(returnData);
+												});
+											});
+										});
+									});
+								});
+							});
 						}
 					});
 				}
@@ -767,15 +908,45 @@
 
 							dataProcessor.postMessage(['close']);
 
-							// Total Voters Span
+							// Voter Numbers
 							$('#spnTotalVoters').html(voterData.length);
 
-							// Average Age span
-							$('#spnAverageAge').html(data.averageAge);
-							$('#spnAverageRepublicanAge').html(data.averageRepublicanAge);
-							$('#spnAverageDemocratAge').html(data.averageDemocratAge);
-							$('#spnAverageNpaAge').html(data.averageNpaAge);
-							$('#spnAverageOtherAge').html(data.averageOtherAge);
+							// Average Ages
+							$('#spnAverageAge').html(data.totals.averageAge);
+							$('#spnAverageRepublicanAge').html(data.totals.averageRepublicanAge);
+							$('#spnAverageDemocratAge').html(data.totals.averageDemocratAge);
+							$('#spnAverageNpaAge').html(data.totals.averageNpaAge);
+							$('#spnAverageOtherAge').html(data.totals.averageOtherAge);
+
+							$('#spnAverageAgeD1').html(data.d1Totals.averageAge);
+							$('#spnAverageRepublicanAgeD1').html(data.d1Totals.averageRepublicanAge);
+							$('#spnAverageDemocratAgeD1').html(data.d1Totals.averageDemocratAge);
+							$('#spnAverageNpaAgeD1').html(data.d1Totals.averageNpaAge);
+							$('#spnAverageOtherAgeD1').html(data.d1Totals.averageOtherAge);
+
+							$('#spnAverageAgeD2').html(data.d2Totals.averageAge);
+							$('#spnAverageRepublicanAgeD2').html(data.d2Totals.averageRepublicanAge);
+							$('#spnAverageDemocratAgeD2').html(data.d2Totals.averageDemocratAge);
+							$('#spnAverageNpaAgeD2').html(data.d2Totals.averageNpaAge);
+							$('#spnAverageOtherAgeD2').html(data.d2Totals.averageOtherAge);
+
+							$('#spnAverageAgeD3').html(data.d3Totals.averageAge);
+							$('#spnAverageRepublicanAgeD3').html(data.d3Totals.averageRepublicanAge);
+							$('#spnAverageDemocratAgeD3').html(data.d3Totals.averageDemocratAge);
+							$('#spnAverageNpaAgeD3').html(data.d3Totals.averageNpaAge);
+							$('#spnAverageOtherAgeD3').html(data.d3Totals.averageOtherAge);
+
+							$('#spnAverageAgeD4').html(data.d4Totals.averageAge);
+							$('#spnAverageRepublicanAgeD4').html(data.d4Totals.averageRepublicanAge);
+							$('#spnAverageDemocratAgeD4').html(data.d4Totals.averageDemocratAge);
+							$('#spnAverageNpaAgeD4').html(data.d4Totals.averageNpaAge);
+							$('#spnAverageOtherAgeD4').html(data.d4Totals.averageOtherAge);
+
+							$('#spnAverageAgeD5').html(data.d5Totals.averageAge);
+							$('#spnAverageRepublicanAgeD5').html(data.d5Totals.averageRepublicanAge);
+							$('#spnAverageDemocratAgeD5').html(data.d5Totals.averageDemocratAge);
+							$('#spnAverageNpaAgeD5').html(data.d5Totals.averageNpaAge);
+							$('#spnAverageOtherAgeD5').html(data.d5Totals.averageOtherAge);
 
 							// We're done processing
 							$('#divLoadingData').html('');
@@ -785,7 +956,7 @@
 		            element: '#gendersChart',
 		            data: {
 		              labels: ['Male', 'Female', 'Unkown'],
-		              values: [data.males, data.females, data.unkownGenders]
+		              values: [data.totals.males, data.totals.females, data.totals.unkownGenders]
 		            },
 		            title: 'Voters By Gender',
 		            roughness: 1,
@@ -801,7 +972,7 @@
 		            element: '#raceChart',
 		            data: {
 		              labels: ['Whites', 'Blacks', 'Hispanics', 'Other'],
-		              values: [data.whites, data.blacks, data.hispanics, data.otherRace]
+		              values: [data.totals.whites, data.totals.blacks, data.totals.hispanics, data.totals.otherRace]
 		            },
 		            title: 'Voters By Race',
 		            roughness: 1,
@@ -817,7 +988,7 @@
 		            element: '#totalBrevardVotersChart',
 		            data: {
 		              labels: ['DEMOCRATS', 'NPAs', 'REPUBLICANS', 'THIRD PARTY'],
-		              values: [data.democrats, data.npas, data.republicans, data.thirdPartyVoters]
+		              values: [data.totals.democrats, data.totals.npas, data.totals.republicans, data.totals.thirdPartyVoters]
 		            },
 		            title: 'Voters By Party',
 		            roughness: 1,
