@@ -20,6 +20,8 @@
 			<div id="divLoadingData"><h1 class="pulsate" style="font-size: 2em;">Loading Data, Please Wait</h1></div>
 
 			<div id="mainContent" style="display: none;">
+<div style="position: relative; margin-top: 1em;"><h1 style="font-size: 1.5em;">Brevard County Totals</h1></div>
+
 				<div style="position: relative; margin-top: 1em;">
 					Total Voters in Brevard: <span id="spnTotalVoters"></span>
 				</div>
@@ -60,161 +62,32 @@
 
 				<div id="votersByDistrictChart"></div>
 
-	      <div style="position: relative; margin-top: 1em;"><h1 style="font-size: 1.5em;">Voter Registration Over Time in Brevard</h1></div>
+				<div style="position: relative; margin-top: 1em;">&nbsp;</div>
 
-	      <div style="position: relative; margin-top: 1em;">
-	        <table id="tblTotalVoters" class="display stripe">
-	          <thead>
-	            <tr>
-	              <th>&nbsp;</th>
-	              <th>Month</th>
-	              <th>CPF</th>
-	              <th>DEM</th>
-	              <th>ECO</th>
-	              <th>GRE</th>
-	              <th>IND</th>
-	              <th>LPF</th>
-	              <th>NPA</th>
-	              <th>PSL</th>
-	              <th>REF</th>
-	              <th>REP</th>
-	              <th>Total Registered Voters</th>
-	            </tr>
-	          </thead>
-	          <tbody>
-	            <tr>
-	              <td>1</td>
-	              <td>April</td>
-	              <td>120</td>
-	              <td>136930</td>
-	              <td>42</td>
-	              <td>357</td>
-	              <td>3258</td>
-	              <td>1551</td>
-	              <td>118164</td>
-	              <td>28</td>
-	              <td>46</td>
-	              <td>183716</td>
-	              <td>444212</td>
-	            </tr>
+				<div style="position: relative; margin-top: 1em;"><h1 style="font-size: 1em;">Registered Voters Over Time</h1></div>
 
-	            <tr>
-	              <td>2</td>
-	              <td>May</td>
-	              <td>121</td>
-	              <td>136674</td>
-	              <td>42</td>
-	              <td>356</td>
-	              <td>3381</td>
-	              <td>1547</td>
-	              <td>118106</td>
-	              <td>28</td>
-	              <td>46</td>
-	              <td>183609</td>
-	              <td>443910</td>
-	            </tr>
-
-	            <tr>
-	              <td>3</td>
-	              <td>June</td>
-	              <td>122</td>
-	              <td>136622</td>
-	              <td>44</td>
-	              <td>358</td>
-	              <td>3466</td>
-	              <td>1559</td>
-	              <td>118284</td>
-	              <td>28</td>
-	              <td>45</td>
-	              <td>183491</td>
-	              <td>444019</td>
-	            </tr>
-
-	            <tr>
-	              <td>4</td>
-	              <td>July</td>
-	              <td>120</td>
-	              <td>137008</td>
-	              <td>44</td>
-	              <td>361</td>
-	              <td>3604</td>
-	              <td>1579</td>
-	              <td>118753</td>
-	              <td>31</td>
-	              <td>46</td>
-	              <td>183994</td>
-	              <td>445540</td>
-	            </tr>
-
-	            <tr>
-	              <td>5</td>
-	              <td>August</td>
-	              <td>122</td>
-	              <td>137528</td>
-	              <td>44</td>
-	              <td>365</td>
-	              <td>3784</td>
-	              <td>1588</td>
-	              <td>119338</td>
-	              <td>33</td>
-	              <td>46</td>
-	              <td>184644</td>
-	              <td>447492</td>
-	            </tr>
-
-
-	            <tr>
-	              <td>6</td>
-	              <td>September</td>
-	              <td>123</td>
-	              <td>138263</td>
-	              <td>46</td>
-	              <td>364</td>
-	              <td>3940</td>
-	              <td>1615</td>
-	              <td>120134</td>
-	              <td>33</td>
-	              <td>46</td>
-	              <td>185765</td>
-	              <td>450329</td>
-	            </tr>
-	          </tbody>
-
-	          <tfoot>
-	            <tr>
-	              <td>&nbsp;</td>
-	              <td>Net Gain\Loss</td>
-	              <td>3</td>
-	              <td>1333</td>
-	              <td>4</td>
-	              <td>7</td>
-	              <td>682</td>
-	              <td>64</td>
-	              <td>1970</td>
-	              <td>5</td>
-	              <td>0</td>
-	              <td>2049</td>
-	              <td>6117</td>
-	            </tr
-
-	            <tr>
-	              <td>&nbsp;</td>
-	              <td>Growth Percentage</td>
-	              <td>2.50%</td>
-	              <td>0.97%</td>
-	              <td>9.52%</td>
-	              <td>1.96%</td>
-	              <td>20.93%</td>
-	              <td>4.13%</td>
-	              <td>1.67%</td>
-	              <td>17.86%</td>
-	              <td>0.00%</td>
-	              <td>1.12%</td>
-	              <td>1.38%</td>
-	            </tr>
-	          </tfoot>
-	        </table>
-	      </div>
+				<div>
+					<table id="tblRegisteredVotersOverTime" class="display stripe">
+						<thead>
+							<tr>
+								<th>id</th>
+								<th>Month</th>
+								<th>CPF</th>
+								<th>DEM</th>
+								<th>ECO</th>
+								<th>GRE</th>
+								<th>IND</th>
+								<th>LPF</th>
+								<th>NPA</th>
+								<th>PSL</th>
+								<th>REF</th>
+								<th>REP</th>
+								<th>Total Registered Voters</th>
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+				</div>
 
 				<div style="position: relative; margin-top: 1em;"><h1 style="font-size: 2em;">District 1</h1></div>
 
@@ -236,6 +109,43 @@
 
 				<div style="position: relative; margin-top: 1em;">
 					Average Age of 3rd Party: <span id="spnAverageOtherAgeD1"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+				<div id="gendersChartD1"></div>
+
+				<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+				<div id="raceChartD1"></div>
+
+				<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+				<div id="totalD1VotersChart"></div>
+
+				<div style="position: relative; margin-top: 1em;"><h1 style="font-size: 1em;">Registered Voters Over Time</h1></div>
+
+				<div>
+					<table id="tblRegisteredVotersOverTimeD1" class="display stripe">
+						<thead>
+							<tr>
+								<th>id</th>
+								<th>Month</th>
+								<th>CPF</th>
+								<th>DEM</th>
+								<th>ECO</th>
+								<th>GRE</th>
+								<th>IND</th>
+								<th>LPF</th>
+								<th>NPA</th>
+								<th>PSL</th>
+								<th>REF</th>
+								<th>REP</th>
+								<th>Total Registered Voters</th>
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
 				</div>
 
 				<div style="position: relative; margin-top: 1em;"><h1 style="font-size: 2em;">District 2</h1></div>
@@ -260,6 +170,43 @@
 					Average Age of 3rd Party: <span id="spnAverageOtherAgeD2"></span>
 				</div>
 
+				<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+				<div id="gendersChartD2"></div>
+
+				<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+				<div id="raceChartD2"></div>
+
+				<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+				<div id="totalD2VotersChart"></div>
+
+				<div style="position: relative; margin-top: 1em;"><h1 style="font-size: 1em;">Registered Voters Over Time</h1></div>
+
+				<div>
+					<table id="tblRegisteredVotersOverTimeD2" class="display stripe">
+						<thead>
+							<tr>
+								<th>id</th>
+								<th>Month</th>
+								<th>CPF</th>
+								<th>DEM</th>
+								<th>ECO</th>
+								<th>GRE</th>
+								<th>IND</th>
+								<th>LPF</th>
+								<th>NPA</th>
+								<th>PSL</th>
+								<th>REF</th>
+								<th>REP</th>
+								<th>Total Registered Voters</th>
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+				</div>
+
 				<div style="position: relative; margin-top: 1em;"><h1 style="font-size: 2em;">District 3</h1></div>
 
 				<div style="position: relative; margin-top: 1em;">
@@ -282,148 +229,42 @@
 					Average Age of 3rd Party: <span id="spnAverageOtherAgeD3"></span>
 				</div>
 
-	      <div style="position: relative; margin-top: 1em;">
-	        <table id="tblDistrict3" class="display stripe">
-	          <thead>
-	            <tr>
-	              <th>&nbsp;</th>
-	              <th>Month</th>
-	              <th>CPF</th>
-	              <th>DEM</th>
-	              <th>ECO</th>
-	              <th>GRE</th>
-	              <th>IND</th>
-	              <th>LPF</th>
-	              <th>NPA</th>
-	              <th>PSL</th>
-	              <th>REF</th>
-	              <th>REP</th>
-	            </tr>
-	          </thead>
-	          <tbody>
-	            <tr>
-	              <td>1</td>
-	              <td>April</td>
-	              <td>23</td>
-	              <td>29264</td>
-	              <td>8</td>
-	              <td>93</td>
-	              <td>717</td>
-	              <td>322</td>
-	              <td>25365</td>
-	              <td>6</td>
-	              <td>9</td>
-	              <td>32400</td>
-	            </tr>
+				<div style="position: relative; margin-top: 1em;">&nbsp;</div>
 
-	            <tr>
-	              <td>2</td>
-	              <td>May</td>
-	              <td>24</td>
-	              <td>29246</td>
-	              <td>8</td>
-	              <td>95</td>
-	              <td>746</td>
-	              <td>315</td>
-	              <td>25365</td>
-	              <td>6</td>
-	              <td>9</td>
-	              <td>32420</td>
-	            </tr>
+				<div id="gendersChartD3"></div>
 
-	            <tr>
-	              <td>3</td>
-	              <td>June</td>
-	              <td>24</td>
-	              <td>29223</td>
-	              <td>9</td>
-	              <td>96</td>
-	              <td>761</td>
-	              <td>320</td>
-	              <td>25417</td>
-	              <td>6</td>
-	              <td>9</td>
-	              <td>32410</td>
-	            </tr>
+				<div style="position: relative; margin-top: 1em;">&nbsp;</div>
 
-	            <tr>
-	              <td>4</td>
-	              <td>July</td>
-	              <td>24</td>
-	              <td>29331</td>
-	              <td>9</td>
-	              <td>96</td>
-	              <td>790</td>
-	              <td>321</td>
-	              <td>25512</td>
-	              <td>6</td>
-	              <td>9</td>
-	              <td>32499</td>
-	            </tr>
+				<div id="raceChartD3"></div>
 
-	            <tr>
-	              <td>5</td>
-	              <td>August</td>
-	              <td>26</td>
-	              <td>29464</td>
-	              <td>10</td>
-	              <td>97</td>
-	              <td>816</td>
-	              <td>320</td>
-	              <td>25596</td>
-	              <td>7</td>
-	              <td>9</td>
-	              <td>32645</td>
-	            </tr>
+				<div style="position: relative; margin-top: 1em;">&nbsp;</div>
 
-	            <tr>
-	              <td>6</td>
-	              <td>September</td>
-	              <td>26</td>
-	              <td>29601</td>
-	              <td>11</td>
-	              <td>95</td>
-	              <td>852</td>
-	              <td>327</td>
-	              <td>25721</td>
-	              <td>7</td>
-	              <td>10</td>
-	              <td>32726</td>
-	            </tr>
-	          </tbody>
-	          <tfoot>
-	            <tr>
-	              <td>&nbsp;</td>
-	              <td>Net Gain\Loss</td>
-	              <td>3</td>
-	              <td>337</td>
-	              <td>3</td>
-	              <td>2</td>
-	              <td>135</td>
-	              <td>5</td>
-	              <td>356</td>
-	              <td>1</td>
-	              <td>1</td>
-	              <td>326</td>
-	            </tr>
+				<div id="totalD3VotersChart"></div>
 
-	            <tr>
-	              <td>&nbsp;</td>
-	              <td>Growth Percentage</td>
-	              <td>13.04%</td>
-	              <td>1.15%</td>
-	              <td>37.50%</td>
-	              <td>2.15%</td>
-	              <td>18.83%</td>
-	              <td>1.55%</td>
-	              <td>1.40%</td>
-	              <td>16.67%</td>
-	              <td>11.11%</td>
-	              <td>1.01%</td>
-	            </tr>
-	          </tfoot>
-	        </table>
-	      </div>
+				<div style="position: relative; margin-top: 1em;"><h1 style="font-size: 1em;">Registered Voters Over Time</h1></div>
+
+				<div>
+					<table id="tblRegisteredVotersOverTimeD3" class="display stripe">
+						<thead>
+							<tr>
+								<th>id</th>
+								<th>Month</th>
+								<th>CPF</th>
+								<th>DEM</th>
+								<th>ECO</th>
+								<th>GRE</th>
+								<th>IND</th>
+								<th>LPF</th>
+								<th>NPA</th>
+								<th>PSL</th>
+								<th>REF</th>
+								<th>REP</th>
+								<th>Total Registered Voters</th>
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+				</div>
 
 				<div style="position: relative; margin-top: 1em;"><h1 style="font-size: 2em;">District 4</h1></div>
 
@@ -445,6 +286,43 @@
 
 				<div style="position: relative; margin-top: 1em;">
 					Average Age of 3rd Party: <span id="spnAverageOtherAgeD4"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+				<div id="gendersChartD4"></div>
+
+				<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+				<div id="raceChartD4"></div>
+
+				<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+				<div id="totalD4VotersChart"></div>
+
+				<div style="position: relative; margin-top: 1em;"><h1 style="font-size: 1em;">Registered Voters Over Time</h1></div>
+
+				<div>
+					<table id="tblRegisteredVotersOverTimeD4" class="display stripe">
+						<thead>
+							<tr>
+								<th>id</th>
+								<th>Month</th>
+								<th>CPF</th>
+								<th>DEM</th>
+								<th>ECO</th>
+								<th>GRE</th>
+								<th>IND</th>
+								<th>LPF</th>
+								<th>NPA</th>
+								<th>PSL</th>
+								<th>REF</th>
+								<th>REP</th>
+								<th>Total Registered Voters</th>
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
 				</div>
 
 				<div style="position: relative; margin-top: 1em;"><h1 style="font-size: 2em;">District 5</h1></div>
@@ -469,190 +347,43 @@
 					Average Age of 3rd Party: <span id="spnAverageOtherAgeD5"></span>
 				</div>
 
-	      <div style="position: relative; margin-top: 1em;">
-	        <table id="tblDistrict5" class="display stripe">
-	          <thead>
-	            <tr>
-	              <th>&nbsp;</th>
-	              <th>Month</th>
-	              <th>CPF</th>
-	              <th>DEM</th>
-	              <th>ECO</th>
-	              <th>GRE</th>
-	              <th>IND</th>
-	              <th>LPF</th>
-	              <th>NPA</th>
-	              <th>PSL</th>
-	              <th>REF</th>
-	              <th>REP</th>
-	            </tr>
-	          </thead>
+				<div style="position: relative; margin-top: 1em;">&nbsp;</div>
 
-	          <tbody>
-	            <tr>
-	              <td>1</td>
-	              <td>April</td>
-	              <td>24</td>
-	              <td>28367</td>
-	              <td>12</td>
-	              <td>69</td>
-	              <td>656</td>
-	              <td>307</td>
-	              <td>24621</td>
-	              <td>10</td>
-	              <td>14</td>
-	              <td>32967</td>
-	            </tr>
+				<div id="gendersChartD5"></div>
 
-	            <tr>
-	              <td>2</td>
-	              <td>May</td>
-	              <td>23</td>
-	              <td>28363</td>
-	              <td>12</td>
-	              <td>70</td>
-	              <td>675</td>
-	              <td>306</td>
-	              <td>24714</td>
-	              <td>10</td>
-	              <td>14</td>
-	              <td>32947</td>
-	            </tr>
+				<div style="position: relative; margin-top: 1em;">&nbsp;</div>
 
-	            <tr>
-	              <td>3</td>
-	              <td>June</td>
-	              <td>23</td>
-	              <td>28374</td>
-	              <td>12</td>
-	              <td>71</td>
-	              <td>688</td>
-	              <td>307</td>
-	              <td>24746</td>
-	              <td>10</td>
-	              <td>14</td>
-	              <td>32919</td>
-	            </tr>
+				<div id="raceChartD5"></div>
 
-	            <tr>
-	              <td>4</td>
-	              <td>July</td>
-	              <td>22</td>
-	              <td>28492</td>
-	              <td>12</td>
-	              <td>73</td>
-	              <td>717</td>
-	              <td>316</td>
-	              <td>24880</td>
-	              <td>10</td>
-	              <td>14</td>
-	              <td>32992</td>
-	            </tr>
+				<div style="position: relative; margin-top: 1em;">&nbsp;</div>
 
-	            <tr>
-	              <td>5</td>
-	              <td>August</td>
-	              <td>22</td>
-	              <td>28616</td>
-	              <td>12</td>
-	              <td>73</td>
-	              <td>758</td>
-	              <td>319</td>
-	              <td>24988</td>
-	              <td>10</td>
-	              <td>14</td>
-	              <td>33118</td>
-	            </tr>
+				<div id="totalD5VotersChart"></div>
 
-	            <tr>
-	              <td>6</td>
-	              <td>September</td>
-	              <td>22</td>
-	              <td>28682</td>
-	              <td>12</td>
-	              <td>73</td>
-	              <td>780</td>
-	              <td>322</td>
-	              <td>25104</td>
-	              <td>10</td>
-	              <td>14</td>
-	              <td>33216</td>
-	            </tr>
-	          </tbody>
+				<div style="position: relative; margin-top: 1em;"><h1 style="font-size: 1em;">Registered Voters Over Time</h1></div>
 
-	          <tfoot>
-	            <tr>
-	              <td>&nbsp;</td>
-	              <td>Net Gain\Loss</td>
-	              <td>-2</td>
-	              <td>315</td>
-	              <td>0</td>
-	              <td>4</td>
-	              <td>124</td>
-	              <td>15</td>
-	              <td>483</td>
-	              <td>0</td>
-	              <td>0</td>
-	              <td>249</td>
-	            </tr>
-
-	            <tr>
-	              <td>&nbsp;</td>
-	              <td>Growth Percentage</td>
-	              <td>-8.33%</td>
-	              <td>1.11%</td>
-	              <td>0.00%</td>
-	              <td>5.80%</td>
-	              <td>18.90%</td>
-	              <td>4.89%</td>
-	              <td>1.96%</td>
-	              <td>0.00%</td>
-	              <td>0.00%</td>
-	              <td>0.76%</td>
-	            </tr>
-	          </tfoot>
-	        </table>
+				<div>
+					<table id="tblRegisteredVotersOverTimeD5" class="display stripe">
+						<thead>
+							<tr>
+								<th>id</th>
+								<th>Month</th>
+								<th>CPF</th>
+								<th>DEM</th>
+								<th>ECO</th>
+								<th>GRE</th>
+								<th>IND</th>
+								<th>LPF</th>
+								<th>NPA</th>
+								<th>PSL</th>
+								<th>REF</th>
+								<th>REP</th>
+								<th>Total Registered Voters</th>
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+				</div>
 			</div>
-
-	    <div style="position: relative; margin-top: 1em;">
-	      <img src="images/PartyBreakdown.png" />
-	    </div>
-
-	    <div style="position: relative; margin-top: 1em;">
-	      <img src="images/D1Precincts.png" />
-	    </div>
-
-	    <div style="position: relative; margin-top: 1em;">
-	      <img src="images/D2Precincts.png" />
-	    </div>
-
-	    <div style="position: relative; margin-top: 1em;">
-	      <img src="images/D3Precincts.png" />
-	    </div>
-
-	    <div style="position: relative; margin-top: 1em;">
-	      <img src="images/D4Precincts.png" />
-	    </div>
-
-	    <div style="position: relative; margin-top: 1em;">
-	      <img src="images/D5Precincts.png" />
-	    </div>
-
-	    <div style="position: relative; display: block; margin-top: 1em; width: 100%;">
-	      <table id="tblDemographics" class="display stripe">
-	        <thead>
-	          <tr>
-	            <th>District</th>
-	            <th>Race</th>
-	            <th>Gender</th>
-	            <th>Party</th>
-	            <th>Total</th>
-	          </tr>
-	        </thead>
-
-	        <tbody></tbody>
-	      </table>
-	    </div>
 		</div>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -666,7 +397,7 @@
 							self.close();
 						} else {
 							// Load the raw anonymous data:
-							var url = 'https://raw.githubusercontent.com/mgrigajtis/mgrigajtis.github.io/master/d5/data/data.json';
+							var dataUrl = 'https://raw.githubusercontent.com/mgrigajtis/mgrigajtis.github.io/master/d5/data/data.json';
 							var xmlhttp = new XMLHttpRequest();
 
 							xmlhttp.onreadystatechange = function() {
@@ -674,6 +405,7 @@
 										switch(xmlhttp.status) {
 											case 200:
 												var data = JSON.parse(xmlhttp.responseText);
+
 												postMessage(data);
 												break;
 											default:
@@ -683,7 +415,37 @@
 									}
 							};
 
-							xmlhttp.open('GET', url, true);
+							xmlhttp.open('GET', dataUrl, true);
+							xmlhttp.send();
+						}
+					});
+				}
+
+				function historicalDataWorker() {
+					self.addEventListener('message', function(e) {
+						if (e.data[0] === 'close') {
+							self.close();
+						} else {
+							// Load the raw anonymous data:
+							var dataUrl = 'https://raw.githubusercontent.com/mgrigajtis/mgrigajtis.github.io/master/d5/data/historicaldata.json';
+							var xmlhttp = new XMLHttpRequest();
+
+							xmlhttp.onreadystatechange = function() {
+									if (xmlhttp.readyState === 4) {
+										switch(xmlhttp.status) {
+											case 200:
+												var data = JSON.parse(xmlhttp.responseText);
+
+												postMessage(data);
+												break;
+											default:
+												postMessage('');
+												break;
+										}
+									}
+							};
+
+							xmlhttp.open('GET', dataUrl, true);
 							xmlhttp.send();
 						}
 					});
@@ -884,13 +646,194 @@
 
 				if(window !== self) {
 					dataWorker();
+					historicalDataWorker();
 					dataProcessor();
 				}
 
 				try {
 					// load and process the data via workers
 					var dataWorker = new Worker(URL.createObjectURL(new Blob(['(' + dataWorker.toString() + ')()'], {type: 'text/javascript'})));
+					var historicalDataWorker = new Worker(URL.createObjectURL(new Blob(['(' + historicalDataWorker.toString() + ')()'], {type: 'text/javascript'})));
 					var dataProcessorName = new Blob(['(' + dataProcessor.toString() + ')()'], {type: 'text/javascript'});
+
+					historicalDataWorker.onmessage = function(event) {
+						var historicalData = event.data;
+
+						var processData = function(data, callback) {
+							var dataSet = [];
+
+							for (var i=0; i<data.length; i++) {
+								dataSet.push([data[i].id,
+									data[i].month,
+									data[i].CPF,
+									data[i].DEM,
+									data[i].ECO,
+									data[i].GRE,
+									data[i].IND,
+									data[i].LPF,
+									data[i].NPA,
+									data[i].PSL,
+									data[i].REF,
+									data[i].REP,
+									data[i].TotalRegisteredVoters]);
+							}
+
+							dataSet.push([data.length + 1,
+								'Net Gain\\Loss',
+								data[data.length - 1].CPF - data[0].CPF,
+								data[data.length - 1].DEM - data[0].DEM,
+								data[data.length - 1].ECO - data[0].ECO,
+								data[data.length - 1].GRE - data[0].GRE,
+								data[data.length - 1].IND - data[0].IND,
+								data[data.length - 1].LPF - data[0].LPF,
+								data[data.length - 1].NPA - data[0].NPA,
+								data[data.length - 1].PSL - data[0].PSL,
+								data[data.length - 1].REF - data[0].REF,
+								data[data.length - 1].REP - data[0].REP,
+								data[data.length - 1].TotalRegisteredVoters  - data[0].TotalRegisteredVoters]);
+
+								dataSet.push([data.length + 1,
+									'Growth Percentage',
+									((data[data.length - 1].CPF - data[0].CPF) / data[0].CPF * 100).toPrecision(2) + '%',
+									((data[data.length - 1].DEM - data[0].DEM) / data[0].DEM * 100).toPrecision(2) + '%',
+									((data[data.length - 1].ECO - data[0].ECO) / data[0].ECO * 100).toPrecision(2) + '%',
+									((data[data.length - 1].GRE - data[0].GRE) / data[0].GRE * 100).toPrecision(2) + '%',
+									((data[data.length - 1].IND - data[0].IND) / data[0].IND * 100).toPrecision(2) + '%',
+									((data[data.length - 1].LPF - data[0].LPF) / data[0].LPF * 100).toPrecision(2) + '%',
+									((data[data.length - 1].NPA - data[0].NPA) / data[0].NPA * 100).toPrecision(2) + '%',
+									((data[data.length - 1].PSL - data[0].PSL) / data[0].PSL * 100).toPrecision(2) + '%',
+									((data[data.length - 1].REF - data[0].REF) / data[0].REF * 100).toPrecision(2) + '%',
+									((data[data.length - 1].REP - data[0].REP) / data[0].REP * 100).toPrecision(2) + '%',
+									((data[data.length - 1].TotalRegisteredVoters  - data[0].TotalRegisteredVoters) / data[0].TotalRegisteredVoters * 100).toPrecision(2) + '%']);
+
+							if (callback) {
+								callback(dataSet);
+							}
+						};
+
+						// Close the worker
+						historicalDataWorker.postMessage(['close']);
+
+						processData(historicalData.brevard, function (dataSet) {
+							$('#tblRegisteredVotersOverTime').dataTable({
+			          bPaginate: false,
+			          bLengthChange: false,
+			          bFilter: false,
+			          bInfo: false,
+			          ordering: false,
+			          bAutoWidth: true,
+								data: dataSet,
+			          columnDefs: [
+			            {
+			              targets: [0], visible: false
+			            },
+			            {
+			              targets: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], className: 'righty'
+			            }
+			          ]
+			        });
+						});
+
+						processData(historicalData.d1, function (dataSet) {
+							$('#tblRegisteredVotersOverTimeD1').dataTable({
+			          bPaginate: false,
+			          bLengthChange: false,
+			          bFilter: false,
+			          bInfo: false,
+			          ordering: false,
+			          bAutoWidth: true,
+								data: dataSet,
+			          columnDefs: [
+			            {
+			              targets: [0], visible: false
+			            },
+			            {
+			              targets: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], className: 'righty'
+			            }
+			          ]
+			        });
+						});
+
+						processData(historicalData.d2, function (dataSet) {
+							$('#tblRegisteredVotersOverTimeD2').dataTable({
+			          bPaginate: false,
+			          bLengthChange: false,
+			          bFilter: false,
+			          bInfo: false,
+			          ordering: false,
+			          bAutoWidth: true,
+								data: dataSet,
+			          columnDefs: [
+			            {
+			              targets: [0], visible: false
+			            },
+			            {
+			              targets: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], className: 'righty'
+			            }
+			          ]
+			        });
+						});
+
+						processData(historicalData.d3, function (dataSet) {
+							$('#tblRegisteredVotersOverTimeD3').dataTable({
+			          bPaginate: false,
+			          bLengthChange: false,
+			          bFilter: false,
+			          bInfo: false,
+			          ordering: false,
+			          bAutoWidth: true,
+								data: dataSet,
+			          columnDefs: [
+			            {
+			              targets: [0], visible: false
+			            },
+			            {
+			              targets: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], className: 'righty'
+			            }
+			          ]
+			        });
+						});
+
+						processData(historicalData.d4, function (dataSet) {
+							$('#tblRegisteredVotersOverTimeD4').dataTable({
+			          bPaginate: false,
+			          bLengthChange: false,
+			          bFilter: false,
+			          bInfo: false,
+			          ordering: false,
+			          bAutoWidth: true,
+								data: dataSet,
+			          columnDefs: [
+			            {
+			              targets: [0], visible: false
+			            },
+			            {
+			              targets: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], className: 'righty'
+			            }
+			          ]
+			        });
+						});
+
+						processData(historicalData.d5, function (dataSet) {
+							$('#tblRegisteredVotersOverTimeD5').dataTable({
+			          bPaginate: false,
+			          bLengthChange: false,
+			          bFilter: false,
+			          bInfo: false,
+			          ordering: false,
+			          bAutoWidth: true,
+								data: dataSet,
+			          columnDefs: [
+			            {
+			              targets: [0], visible: false
+			            },
+			            {
+			              targets: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], className: 'righty'
+			            }
+			          ]
+			        });
+						});
+					};
 
 					dataWorker.onmessage = function(event) {
 						var voterData = event.data.data;
@@ -951,7 +894,7 @@
 							// We're done processing
 							$('#divLoadingData').html('');
 
-							// Create the genders chart
+							// Create the genders charts
 							new roughViz.Donut({
 		            element: '#gendersChart',
 		            data: {
@@ -967,7 +910,82 @@
 		            fillWeight: 1,
 		          });
 
-							// Create the race chart
+							new roughViz.Donut({
+		            element: '#gendersChartD1',
+		            data: {
+		              labels: ['Male', 'Female', 'Unkown'],
+		              values: [data.d1Totals.males, data.d1Totals.females, data.d1Totals.unkownGenders]
+		            },
+		            title: 'Voters By Gender',
+		            roughness: 1,
+		            colors: ['blue', 'pink', 'yellow'],
+		            stroke: 'black',
+		            strokeWidth: 1,
+		            fillStyle: 'zigzag',
+		            fillWeight: 1,
+		          });
+
+							new roughViz.Donut({
+		            element: '#gendersChartD2',
+		            data: {
+		              labels: ['Male', 'Female', 'Unkown'],
+		              values: [data.d2Totals.males, data.d2Totals.females, data.d2Totals.unkownGenders]
+		            },
+		            title: 'Voters By Gender',
+		            roughness: 1,
+		            colors: ['blue', 'pink', 'yellow'],
+		            stroke: 'black',
+		            strokeWidth: 1,
+		            fillStyle: 'zigzag',
+		            fillWeight: 1,
+		          });
+
+							new roughViz.Donut({
+		            element: '#gendersChartD3',
+		            data: {
+		              labels: ['Male', 'Female', 'Unkown'],
+		              values: [data.d3Totals.males, data.d3Totals.females, data.d3Totals.unkownGenders]
+		            },
+		            title: 'Voters By Gender',
+		            roughness: 1,
+		            colors: ['blue', 'pink', 'yellow'],
+		            stroke: 'black',
+		            strokeWidth: 1,
+		            fillStyle: 'zigzag',
+		            fillWeight: 1,
+		          });
+
+							new roughViz.Donut({
+		            element: '#gendersChartD4',
+		            data: {
+		              labels: ['Male', 'Female', 'Unkown'],
+		              values: [data.d4Totals.males, data.d4Totals.females, data.d4Totals.unkownGenders]
+		            },
+		            title: 'Voters By Gender',
+		            roughness: 1,
+		            colors: ['blue', 'pink', 'yellow'],
+		            stroke: 'black',
+		            strokeWidth: 1,
+		            fillStyle: 'zigzag',
+		            fillWeight: 1,
+		          });
+
+							new roughViz.Donut({
+		            element: '#gendersChartD5',
+		            data: {
+		              labels: ['Male', 'Female', 'Unkown'],
+		              values: [data.d5Totals.males, data.d5Totals.females, data.d5Totals.unkownGenders]
+		            },
+		            title: 'Voters By Gender',
+		            roughness: 1,
+		            colors: ['blue', 'pink', 'yellow'],
+		            stroke: 'black',
+		            strokeWidth: 1,
+		            fillStyle: 'zigzag',
+		            fillWeight: 1,
+		          });
+
+							// Create the race charts
 							new roughViz.Donut({
 		            element: '#raceChart',
 		            data: {
@@ -983,12 +1001,162 @@
 		            fillWeight: 1,
 		          });
 
-							// Create the party chart
+							new roughViz.Donut({
+		            element: '#raceChartD1',
+		            data: {
+		              labels: ['Whites', 'Blacks', 'Hispanics', 'Other'],
+		              values: [data.d1Totals.whites, data.d1Totals.blacks, data.d1Totals.hispanics, data.d1Totals.otherRace]
+		            },
+		            title: 'Voters By Race',
+		            roughness: 1,
+		            colors: ['red', 'green', 'yellow', 'blue'],
+		            stroke: 'black',
+		            strokeWidth: 1,
+		            fillStyle: 'zigzag',
+		            fillWeight: 1,
+		          });
+
+							new roughViz.Donut({
+		            element: '#raceChartD2',
+		            data: {
+		              labels: ['Whites', 'Blacks', 'Hispanics', 'Other'],
+		              values: [data.d2Totals.whites, data.d2Totals.blacks, data.d2Totals.hispanics, data.d2Totals.otherRace]
+		            },
+		            title: 'Voters By Race',
+		            roughness: 1,
+		            colors: ['red', 'green', 'yellow', 'blue'],
+		            stroke: 'black',
+		            strokeWidth: 1,
+		            fillStyle: 'zigzag',
+		            fillWeight: 1,
+		          });
+
+							new roughViz.Donut({
+		            element: '#raceChartD3',
+		            data: {
+		              labels: ['Whites', 'Blacks', 'Hispanics', 'Other'],
+		              values: [data.d3Totals.whites, data.d3Totals.blacks, data.d3Totals.hispanics, data.d3Totals.otherRace]
+		            },
+		            title: 'Voters By Race',
+		            roughness: 1,
+		            colors: ['red', 'green', 'yellow', 'blue'],
+		            stroke: 'black',
+		            strokeWidth: 1,
+		            fillStyle: 'zigzag',
+		            fillWeight: 1,
+		          });
+
+							new roughViz.Donut({
+		            element: '#raceChartD4',
+		            data: {
+		              labels: ['Whites', 'Blacks', 'Hispanics', 'Other'],
+		              values: [data.d4Totals.whites, data.d4Totals.blacks, data.d4Totals.hispanics, data.d4Totals.otherRace]
+		            },
+		            title: 'Voters By Race',
+		            roughness: 1,
+		            colors: ['red', 'green', 'yellow', 'blue'],
+		            stroke: 'black',
+		            strokeWidth: 1,
+		            fillStyle: 'zigzag',
+		            fillWeight: 1,
+		          });
+
+							new roughViz.Donut({
+		            element: '#raceChartD5',
+		            data: {
+		              labels: ['Whites', 'Blacks', 'Hispanics', 'Other'],
+		              values: [data.d5Totals.whites, data.d5Totals.blacks, data.d5Totals.hispanics, data.d5Totals.otherRace]
+		            },
+		            title: 'Voters By Race',
+		            roughness: 1,
+		            colors: ['red', 'green', 'yellow', 'blue'],
+		            stroke: 'black',
+		            strokeWidth: 1,
+		            fillStyle: 'zigzag',
+		            fillWeight: 1,
+		          });
+
+							// Create the party charts
 		          new roughViz.Donut({
 		            element: '#totalBrevardVotersChart',
 		            data: {
 		              labels: ['DEMOCRATS', 'NPAs', 'REPUBLICANS', 'THIRD PARTY'],
 		              values: [data.totals.democrats, data.totals.npas, data.totals.republicans, data.totals.thirdPartyVoters]
+		            },
+		            title: 'Voters By Party',
+		            roughness: 1,
+		            colors: ['blue', 'purple', 'red', 'yellow'],
+		            stroke: 'black',
+		            strokeWidth: 1,
+		            fillStyle: 'zigzag',
+		            fillWeight: 1,
+		          });
+
+							new roughViz.Donut({
+		            element: '#totalD1VotersChart',
+		            data: {
+		              labels: ['DEMOCRATS', 'NPAs', 'REPUBLICANS', 'THIRD PARTY'],
+		              values: [data.d1Totals.democrats, data.d1Totals.npas, data.d1Totals.republicans, data.d1Totals.thirdPartyVoters]
+		            },
+		            title: 'Voters By Party',
+		            roughness: 1,
+		            colors: ['blue', 'purple', 'red', 'yellow'],
+		            stroke: 'black',
+		            strokeWidth: 1,
+		            fillStyle: 'zigzag',
+		            fillWeight: 1,
+		          });
+
+							new roughViz.Donut({
+		            element: '#totalD2VotersChart',
+		            data: {
+		              labels: ['DEMOCRATS', 'NPAs', 'REPUBLICANS', 'THIRD PARTY'],
+		              values: [data.d2Totals.democrats, data.d2Totals.npas, data.d2Totals.republicans, data.d2Totals.thirdPartyVoters]
+		            },
+		            title: 'Voters By Party',
+		            roughness: 1,
+		            colors: ['blue', 'purple', 'red', 'yellow'],
+		            stroke: 'black',
+		            strokeWidth: 1,
+		            fillStyle: 'zigzag',
+		            fillWeight: 1,
+		          });
+
+							new roughViz.Donut({
+		            element: '#totalD3VotersChart',
+		            data: {
+		              labels: ['DEMOCRATS', 'NPAs', 'REPUBLICANS', 'THIRD PARTY'],
+		              values: [data.d3Totals.democrats, data.d3Totals.npas, data.d3Totals.republicans, data.d3Totals.thirdPartyVoters]
+		            },
+		            title: 'Voters By Party',
+		            roughness: 1,
+		            colors: ['blue', 'purple', 'red', 'yellow'],
+		            stroke: 'black',
+		            strokeWidth: 1,
+		            fillStyle: 'zigzag',
+		            fillWeight: 1,
+		          });
+
+							new roughViz.Donut({
+		            element: '#totalD4VotersChart',
+		            data: {
+		              labels: ['DEMOCRATS', 'NPAs', 'REPUBLICANS', 'THIRD PARTY'],
+		              values: [data.d4Totals.democrats, data.d4Totals.npas, data.d4Totals.republicans, data.d4Totals.thirdPartyVoters]
+		            },
+		            title: 'Voters By Party',
+		            roughness: 1,
+		            colors: ['blue', 'purple', 'red', 'yellow'],
+		            stroke: 'black',
+		            strokeWidth: 1,
+		            fillStyle: 'zigzag',
+		            fillWeight: 1,
+		          });
+
+							new roughViz.Donut({
+		            element: '#totalD5VotersChart',
+		            data: {
+		              labels: ['DEMOCRATS', 'NPAs', 'REPUBLICANS', 'THIRD PARTY'],
+		              values: [data.d5Totals.democrats, data.d5Totals.npas, data.d5Totals.republicans, data.d5Totals.thirdPartyVoters]
 		            },
 		            title: 'Voters By Party',
 		            roughness: 1,
@@ -1021,7 +1189,9 @@
 						dataProcessor.postMessage([voterData]);
 					};
 
+
 					dataWorker.postMessage(['']);
+					historicalDataWorker.postMessage(['']);
 				} catch (e) {
 					alert(e.Message);
 				} finally {
