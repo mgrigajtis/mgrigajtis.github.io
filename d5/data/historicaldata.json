@@ -89,6 +89,21 @@
       "REF": 46,
       "REP": 185765,
       "TotalRegisteredVoters": 450329
+    },
+    {
+      "id": 7,
+      "month": "October",
+      "CPF": 127,
+      "DEM": 138757,
+      "ECO": 46,
+      "GRE": 361,
+      "IND": 4083,
+      "LPF": 1635,
+      "NPA": 120325,
+      "PSL": 33,
+      "REF": 47,
+      "REP": 186449,
+      "TotalRegisteredVoters": 451863
     }
   ],
   "d1": [
@@ -181,6 +196,21 @@
       "REF": 8,
       "REP": 36948,
       "TotalRegisteredVoters": 85281
+    },
+    {
+      "id": 7,
+      "month": "October",
+      "CPF": 30,
+      "DEM": 26224,
+      "ECO": 2,
+      "GRE": 48,
+      "IND": 767,
+      "LPF": 297,
+      "NPA": 21042,
+      "PSL": 4,
+      "REF": 8,
+      "REP": 37088,
+      "TotalRegisteredVoters": 85510
     }
   ],
   "d2": [
@@ -274,6 +304,21 @@
       "REF": 7,
       "REP": 36797,
       "TotalRegisteredVoters": 87805
+    },
+    {
+      "id": 7,
+      "month": "October",
+      "CPF": 26,
+      "DEM": 27712,
+      "ECO": 9,
+      "GRE": 82,
+      "IND": 730,
+      "LPF": 322,
+      "NPA": 22213,
+      "PSL": 5,
+      "REF": 7,
+      "REP": 36910,
+      "TotalRegisteredVoters": 88016
     }
   ],
   "d3": [
@@ -366,6 +411,21 @@
       "REF": 10,
       "REP": 32726,
       "TotalRegisteredVoters": 89376
+    },
+    {
+      "id": 7,
+      "month": "October",
+      "CPF": 26,
+      "DEM": 29763,
+      "ECO": 10,
+      "GRE": 95,
+      "IND": 886,
+      "LPF": 330,
+      "NPA": 25832,
+      "PSL": 7,
+      "REF": 10,
+      "REP": 32844,
+      "TotalRegisteredVoters": 89803
     }
   ],
   "d4": [
@@ -458,6 +518,21 @@
       "REF": 7,
       "REP": 46078,
       "TotalRegisteredVoters": 99632
+    },
+    {
+      "id": 7,
+      "month": "October",
+      "CPF": 23,
+      "DEM": 26259,
+      "ECO": 12,
+      "GRE": 62,
+      "IND": 888,
+      "LPF": 357,
+      "NPA": 26153,
+      "PSL": 7,
+      "REF": 7,
+      "REP": 46239,
+      "TotalRegisteredVoters": 100007
     }
   ],
   "d5": [
@@ -550,6 +625,21 @@
       "REF": 14,
       "REP": 33216,
       "TotalRegisteredVoters": 88235
+    },
+    {
+      "id": 7,
+      "month": "October",
+      "CPF": 22,
+      "DEM": 28799,
+      "ECO": 13,
+      "GRE": 74,
+      "IND": 812,
+      "LPF": 329,
+      "NPA": 25085,
+      "PSL": 10,
+      "REF": 15,
+      "REP": 33368,
+      "TotalRegisteredVoters": 88527
     }
   ]
 }
