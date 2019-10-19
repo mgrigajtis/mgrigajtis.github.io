@@ -470,6 +470,42 @@
 					<div id="totalCocoaVotersChart"></div>
 				</div>
 
+				<div class="dataEntry" id="indialantic">
+					<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">Indialantic</h1></div>
+
+					<div style="position: relative; margin-top: 1em;">
+						Average Age of Voters: <span id="spnAverageAgeIndialantic"></span>
+					</div>
+
+					<div style="position: relative; margin-top: 1em;">
+						Average Age of Republicans: <span id="spnAverageRepublicanAgeIndialantic"></span>
+					</div>
+
+					<div style="position: relative; margin-top: 1em;">
+						Average Age of Democrats: <span id="spnAverageDemocratAgeIndialantic"></span>
+					</div>
+
+					<div style="position: relative; margin-top: 1em;">
+						Average Age of NPAs: <span id="spnAverageNpaAgeIndialantic"></span>
+					</div>
+
+					<div style="position: relative; margin-top: 1em;">
+						Average Age of 3rd Party: <span id="spnAverageOtherAgeIndialantic"></span>
+					</div>
+
+					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+					<div id="gendersChartIndialantic"></div>
+
+					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+					<div id="raceChartIndialantic"></div>
+
+					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+					<div id="totalIndialanticVotersChart"></div>
+				</div>
+
 				<div class="dataEntry" id="melbourne">
 					<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">Melbourne</h1></div>
 
@@ -977,6 +1013,7 @@
 							var merrittIslandVoters = [];
 							var westMelbourneVoters = [];
 							var barefootBayVoters = [];
+							var indialanticVoters = [];
 
 							var returnData = {};
 
@@ -1010,6 +1047,9 @@
 										break;
 									case 'COCOA':
 										cocoaVoters.push(dataToProcess[i]);
+										break;
+									case 'INDIALANTIC':
+										indialanticVoters.push(dataToProcess[i]);
 										break;
 									case 'MELBOURNE':
 										melbourneVoters.push(dataToProcess[i]);
@@ -1056,6 +1096,7 @@
 							returnData.merrittIslandVoters = merrittIslandVoters;
 							returnData.westMelbourneVoters = westMelbourneVoters;
 							returnData.barefootBayVoters = barefootBayVoters;
+							returnData.indialanticVoters = indialanticVoters;
 
 							analyzeData(dataToProcess, function(totalVoters) {
 								returnData.totals = totalVoters;
@@ -1105,7 +1146,11 @@
 																						analyzeData(returnData.barefootBayVoters, function(barefoorBayTotals) {
 																							returnData.barefoorBayTotals = barefoorBayTotals;
 
-																							postMessage(returnData);
+																							analyzeData(returnData.indialanticVoters, function(indialanticTotals) {
+																								returnData.indialanticTotals = indialanticTotals;
+
+																								postMessage(returnData);
+																							});
 																						});
 																					});
 																				});
@@ -1326,6 +1371,7 @@
 							drawAverageAges('MerrittIsland', data.merrittIslandTotals);
 							drawAverageAges('WestMelbourne', data.westMelbourneTotals);
 							drawAverageAges('BarefootBay', data.barefoorBayTotals);
+							drawAverageAges('Indialantic', data.indialanticTotals)
 
 							// Draw the Gender Charts
 							drawGenderChart('#gendersChart', data.totals);
@@ -1344,6 +1390,7 @@
 							drawGenderChart('#gendersChartMerrittIsland', data.merrittIslandTotals);
 							drawGenderChart('#gendersChartWestMelbourne', data.westMelbourneTotals);
 							drawGenderChart('#gendersChartBarefootBay', data.barefoorBayTotals);
+							drawGenderChart('#gendersChartIndialantic', data.indialanticTotals)
 
 							// Create the Race Charts
 							drawRaceChart('#raceChart', data.totals);
@@ -1362,6 +1409,7 @@
 							drawRaceChart('#raceChartMerrittIsland', data.merrittIslandTotals);
 							drawRaceChart('#raceChartWestMelbourne', data.westMelbourneTotals);
 							drawRaceChart('#raceChartBarefootBay', data.barefoorBayTotals);
+							drawRaceChart('#raceChartIndialantic', data.indialanticTotals);
 
 							// Create the party charts
 							drawPartyChart('#totalBrevardVotersChart', data.totals);
@@ -1380,6 +1428,7 @@
 							drawPartyChart('#totalMerrittIslandVotersChart', data.merrittIslandTotals);
 							drawPartyChart('#totalWestMelbourneVotersChart', data.westMelbourneTotals);
 							drawPartyChart('#totalBarefootBayVotersChart', data.barefoorBayTotals);
+							drawPartyChart('#totalIndialanticVotersChart', data.indialanticTotals);
 
 							// Create the voters by district chart
 		          new roughViz.Donut({
