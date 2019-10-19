@@ -488,7 +488,40 @@
 
 				<div id="totalSatelliteBeachVotersChart"></div>
 
+				<hr>
+				<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">Mims</h1></div>
 
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of Voters: <span id="spnAverageAgeMims"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of Republicans: <span id="spnAverageRepublicanAgeMims"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of Democrats: <span id="spnAverageDemocratAgeMims"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of NPAs: <span id="spnAverageNpaAgeMims"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of 3rd Party: <span id="spnAverageOtherAgeMims"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+				<div id="gendersChartMims"></div>
+
+				<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+				<div id="raceChartMims"></div>
+
+				<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+				<div id="totalMimsVotersChart"></div>
 
 
 			</div>
@@ -697,6 +730,7 @@
 							var titusvilleVoters = [];
 							var melbourneVoters = [];
 							var satelliteBeachVoters = [];
+							var mimsVoters = [];
 
 							var returnData = {};
 
@@ -734,6 +768,9 @@
 									case 'SATELLITE BEACH':
 										satelliteBeachVoters.push(dataToProcess[i]);
 										break;
+									case 'MIMS':
+										mimsVoters.push(dataToProcess[i]);
+										break;
 									default:
 										break;
 								}
@@ -748,6 +785,7 @@
 							returnData.titusvilleVoters = titusvilleVoters;
 							returnData.melbourneVoters = melbourneVoters;
 							returnData.satelliteBeachVoters = satelliteBeachVoters;
+							returnData.mimsVoters = mimsVoters;
 
 							analyzeData(dataToProcess, function(totalVoters) {
 								returnData.totals = totalVoters;
@@ -776,7 +814,11 @@
 															analyzeData(returnData.satelliteBeachVoters, function(satelliteBeachTotals) {
 																returnData.satelliteBeachTotals = satelliteBeachTotals;
 
-																postMessage(returnData);
+																analyzeData(returnData.mimsVoters, function(mimsTotals) {
+																	returnData.mimsTotals = mimsTotals;
+
+																	postMessage(returnData);
+																});
 															});
 														});
 													});
@@ -983,6 +1025,7 @@
 							drawAverageAges('Titusville', data.titusvilleTotals);
 							drawAverageAges('Melbourne', data.melbourneTotals);
 							drawAverageAges('SatelliteBeach', data.satelliteBeachTotals);
+							drawAverageAges('Mims', data.mimsTotals);
 
 							// Draw the Gender Charts
 							drawGenderChart('#gendersChart', data.totals);
@@ -994,6 +1037,7 @@
 							drawGenderChart('#gendersChartTitusville', data.titusvilleTotals);
 							drawGenderChart('#gendersChartMelbourne', data.melbourneTotals);
 							drawGenderChart('#gendersChartSatelliteBeach', data.satelliteBeachTotals);
+							drawGenderChart('#gendersChartMims', data.mimsTotals);
 
 							// Create the Race Charts
 							drawRaceChart('#raceChart', data.totals);
@@ -1005,6 +1049,7 @@
 							drawRaceChart('#raceChartTitusville', data.titusvilleTotals);
 							drawRaceChart('#raceChartMelbourne', data.melbourneTotals);
 							drawRaceChart('#raceChartSatelliteBeach', data.satelliteBeachTotals);
+							drawRaceChart('#raceChartMims', data.mimsTotals);
 
 							// Create the party charts
 							drawPartyChart('#totalBrevardVotersChart', data.totals);
@@ -1016,6 +1061,7 @@
 							drawPartyChart('#totalTitusvilleVotersChart', data.titusvilleTotals);
 							drawPartyChart('#totalMelbourneVotersChart', data.melbourneTotals);
 							drawPartyChart('#totalSatelliteBeachVotersChart', data.satelliteBeachTotals);
+							drawPartyChart('#totalMimsVotersChart', data.mimsTotals);
 
 							// Create the voters by district chart
 		          new roughViz.Donut({
