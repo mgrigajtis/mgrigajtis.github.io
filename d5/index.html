@@ -383,6 +383,42 @@
 						<tbody></tbody>
 					</table>
 				</div>
+
+				<div style="position: relative; margin-top: 1em;"><h1 style="font-size: 2em;">Titusville</h1></div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of Voters: <span id="spnAverageAgeTitusville"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of Republicans: <span id="spnAverageRepublicanAgeTitusville"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of Democrats: <span id="spnAverageDemocratAgeTitusville"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of NPAs: <span id="spnAverageNpaAgeTitusville"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of 3rd Party: <span id="spnAverageOtherAgeTitusville"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+				<div id="gendersChartTitusville"></div>
+
+				<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+				<div id="raceChartTitusville"></div>
+
+				<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+				<div id="totalTitusvilleVotersChart"></div>
+
+
 			</div>
 		</div>
 
@@ -585,10 +621,14 @@
 							district4Voters = [];
 							district5Voters = [];
 
+							// city variables
+							var titusvilleVoters = [];
+
 							var returnData = {};
 
 							// Now that we have the voter data, we can chop it up and analyze it
 							for (var i=0; i<dataToProcess.length; i++) {
+								// Chop into districts
 								switch (dataToProcess[i].CountyCommissionDistrict) {
 									case '1':
 										district1Voters.push(dataToProcess[i]);
@@ -608,6 +648,16 @@
 									default:
 										break;
 								}
+
+								// Chop into cities
+								switch(dataToProcess[i].City.toUpperCase().trim()) {
+									case 'TITUSVILLE':
+										titusvilleVoters.push(dataToProcess[i]);
+										break;
+									default:
+										break;
+								}
+
 							} // end of chopping all the data
 
 							returnData.district1Voters = district1Voters;
@@ -615,6 +665,7 @@
 							returnData.district3Voters = district3Voters;
 							returnData.district4Voters = district4Voters;
 							returnData.district5Voters = district5Voters;
+							returnData.titusvilleVoters = titusvilleVoters;
 
 							analyzeData(dataToProcess, function(totalVoters) {
 								returnData.totals = totalVoters;
@@ -633,7 +684,11 @@
 
 												analyzeData(returnData.district5Voters, function(d5Totals) {
 													returnData.d5Totals = d5Totals;
-													postMessage(returnData);
+
+													analyzeData(returnData.titusvilleVoters, function(titusvilleTotals) {
+														returnData.titusvilleTotals = titusvilleTotals;
+														postMessage(returnData);
+													});
 												});
 											});
 										});
@@ -892,281 +947,93 @@
 							$('#spnAverageNpaAgeD5').html(data.d5Totals.averageNpaAge);
 							$('#spnAverageOtherAgeD5').html(data.d5Totals.averageOtherAge);
 
+							$('#spnAverageAgeTitusville').html(data.titusvilleTotals.averageAge);
+							$('#spnAverageRepublicanAgeTitusville').html(data.titusvilleTotals.averageRepublicanAge);
+							$('#spnAverageDemocratAgeTitusville').html(data.titusvilleTotals.averageDemocratAge);
+							$('#spnAverageNpaAgeTitusville').html(data.titusvilleTotals.averageNpaAge);
+							$('#spnAverageOtherAgeTitusville').html(data.titusvilleTotals.averageOtherAge);
+
 							// We're done processing
 							$('#divLoadingData').html('');
 
 							// Create the genders charts
-							new roughViz.Donut({
-		            element: '#gendersChart',
-		            data: {
-		              labels: ['Male', 'Female', 'Unkown'],
-		              values: [data.totals.males, data.totals.females, data.totals.unkownGenders]
-		            },
-		            title: 'Voters By Gender',
-		            roughness: 1,
-		            colors: ['blue', 'pink', 'yellow'],
-		            stroke: 'black',
-		            strokeWidth: 1,
-		            fillStyle: 'zigzag',
-		            fillWeight: 1,
-		          });
+							function drawGenderChart (element, totals) {
+								new roughViz.Donut({
+			            element: element,
+			            data: {
+			              labels: ['Male', 'Female', 'Unkown'],
+			              values: [totals.males, totals.females, totals.unkownGenders]
+			            },
+			            title: 'Voters By Gender',
+			            roughness: 1,
+			            colors: ['blue', 'pink', 'yellow'],
+			            stroke: 'black',
+			            strokeWidth: 1,
+			            fillStyle: 'zigzag',
+			            fillWeight: 1,
+			          });
+							}
 
-							new roughViz.Donut({
-		            element: '#gendersChartD1',
-		            data: {
-		              labels: ['Male', 'Female', 'Unkown'],
-		              values: [data.d1Totals.males, data.d1Totals.females, data.d1Totals.unkownGenders]
-		            },
-		            title: 'Voters By Gender',
-		            roughness: 1,
-		            colors: ['blue', 'pink', 'yellow'],
-		            stroke: 'black',
-		            strokeWidth: 1,
-		            fillStyle: 'zigzag',
-		            fillWeight: 1,
-		          });
+							function drawRaceChart(element, totals) {
+								new roughViz.Donut({
+			            element: element,
+			            data: {
+			              labels: ['Whites', 'Blacks', 'Hispanics', 'Other'],
+			              values: [totals.whites, totals.blacks, totals.hispanics, totals.otherRace]
+			            },
+			            title: 'Voters By Race',
+			            roughness: 1,
+			            colors: ['red', 'green', 'yellow', 'blue'],
+			            stroke: 'black',
+			            strokeWidth: 1,
+			            fillStyle: 'zigzag',
+			            fillWeight: 1,
+			          });
+							}
 
-							new roughViz.Donut({
-		            element: '#gendersChartD2',
-		            data: {
-		              labels: ['Male', 'Female', 'Unkown'],
-		              values: [data.d2Totals.males, data.d2Totals.females, data.d2Totals.unkownGenders]
-		            },
-		            title: 'Voters By Gender',
-		            roughness: 1,
-		            colors: ['blue', 'pink', 'yellow'],
-		            stroke: 'black',
-		            strokeWidth: 1,
-		            fillStyle: 'zigzag',
-		            fillWeight: 1,
-		          });
+							function drawPartyChart(element, totals) {
+								new roughViz.Donut({
+			            element: element,
+			            data: {
+			              labels: ['DEMOCRATS', 'NPAs', 'REPUBLICANS', 'THIRD PARTY'],
+			              values: [totals.democrats, totals.npas, totals.republicans, totals.thirdPartyVoters]
+			            },
+			            title: 'Voters By Party',
+			            roughness: 1,
+			            colors: ['blue', 'purple', 'red', 'yellow'],
+			            stroke: 'black',
+			            strokeWidth: 1,
+			            fillStyle: 'zigzag',
+			            fillWeight: 1,
+			          });
+							}
 
-							new roughViz.Donut({
-		            element: '#gendersChartD3',
-		            data: {
-		              labels: ['Male', 'Female', 'Unkown'],
-		              values: [data.d3Totals.males, data.d3Totals.females, data.d3Totals.unkownGenders]
-		            },
-		            title: 'Voters By Gender',
-		            roughness: 1,
-		            colors: ['blue', 'pink', 'yellow'],
-		            stroke: 'black',
-		            strokeWidth: 1,
-		            fillStyle: 'zigzag',
-		            fillWeight: 1,
-		          });
+							// Draw the Gender Charts
+							drawGenderChart('#gendersChart', data.totals);
+							drawGenderChart('#gendersChartD1', data.d1Totals);
+							drawGenderChart('#gendersChartD2', data.d2Totals);
+							drawGenderChart('#gendersChartD3', data.d3Totals);
+							drawGenderChart('#gendersChartD4', data.d4Totals);
+							drawGenderChart('#gendersChartD5', data.d5Totals);
+							drawGenderChart('#gendersChartTitusville', data.titusvilleTotals);
 
-							new roughViz.Donut({
-		            element: '#gendersChartD4',
-		            data: {
-		              labels: ['Male', 'Female', 'Unkown'],
-		              values: [data.d4Totals.males, data.d4Totals.females, data.d4Totals.unkownGenders]
-		            },
-		            title: 'Voters By Gender',
-		            roughness: 1,
-		            colors: ['blue', 'pink', 'yellow'],
-		            stroke: 'black',
-		            strokeWidth: 1,
-		            fillStyle: 'zigzag',
-		            fillWeight: 1,
-		          });
-
-							new roughViz.Donut({
-		            element: '#gendersChartD5',
-		            data: {
-		              labels: ['Male', 'Female', 'Unkown'],
-		              values: [data.d5Totals.males, data.d5Totals.females, data.d5Totals.unkownGenders]
-		            },
-		            title: 'Voters By Gender',
-		            roughness: 1,
-		            colors: ['blue', 'pink', 'yellow'],
-		            stroke: 'black',
-		            strokeWidth: 1,
-		            fillStyle: 'zigzag',
-		            fillWeight: 1,
-		          });
-
-							// Create the race charts
-							new roughViz.Donut({
-		            element: '#raceChart',
-		            data: {
-		              labels: ['Whites', 'Blacks', 'Hispanics', 'Other'],
-		              values: [data.totals.whites, data.totals.blacks, data.totals.hispanics, data.totals.otherRace]
-		            },
-		            title: 'Voters By Race',
-		            roughness: 1,
-		            colors: ['red', 'green', 'yellow', 'blue'],
-		            stroke: 'black',
-		            strokeWidth: 1,
-		            fillStyle: 'zigzag',
-		            fillWeight: 1,
-		          });
-
-							new roughViz.Donut({
-		            element: '#raceChartD1',
-		            data: {
-		              labels: ['Whites', 'Blacks', 'Hispanics', 'Other'],
-		              values: [data.d1Totals.whites, data.d1Totals.blacks, data.d1Totals.hispanics, data.d1Totals.otherRace]
-		            },
-		            title: 'Voters By Race',
-		            roughness: 1,
-		            colors: ['red', 'green', 'yellow', 'blue'],
-		            stroke: 'black',
-		            strokeWidth: 1,
-		            fillStyle: 'zigzag',
-		            fillWeight: 1,
-		          });
-
-							new roughViz.Donut({
-		            element: '#raceChartD2',
-		            data: {
-		              labels: ['Whites', 'Blacks', 'Hispanics', 'Other'],
-		              values: [data.d2Totals.whites, data.d2Totals.blacks, data.d2Totals.hispanics, data.d2Totals.otherRace]
-		            },
-		            title: 'Voters By Race',
-		            roughness: 1,
-		            colors: ['red', 'green', 'yellow', 'blue'],
-		            stroke: 'black',
-		            strokeWidth: 1,
-		            fillStyle: 'zigzag',
-		            fillWeight: 1,
-		          });
-
-							new roughViz.Donut({
-		            element: '#raceChartD3',
-		            data: {
-		              labels: ['Whites', 'Blacks', 'Hispanics', 'Other'],
-		              values: [data.d3Totals.whites, data.d3Totals.blacks, data.d3Totals.hispanics, data.d3Totals.otherRace]
-		            },
-		            title: 'Voters By Race',
-		            roughness: 1,
-		            colors: ['red', 'green', 'yellow', 'blue'],
-		            stroke: 'black',
-		            strokeWidth: 1,
-		            fillStyle: 'zigzag',
-		            fillWeight: 1,
-		          });
-
-							new roughViz.Donut({
-		            element: '#raceChartD4',
-		            data: {
-		              labels: ['Whites', 'Blacks', 'Hispanics', 'Other'],
-		              values: [data.d4Totals.whites, data.d4Totals.blacks, data.d4Totals.hispanics, data.d4Totals.otherRace]
-		            },
-		            title: 'Voters By Race',
-		            roughness: 1,
-		            colors: ['red', 'green', 'yellow', 'blue'],
-		            stroke: 'black',
-		            strokeWidth: 1,
-		            fillStyle: 'zigzag',
-		            fillWeight: 1,
-		          });
-
-							new roughViz.Donut({
-		            element: '#raceChartD5',
-		            data: {
-		              labels: ['Whites', 'Blacks', 'Hispanics', 'Other'],
-		              values: [data.d5Totals.whites, data.d5Totals.blacks, data.d5Totals.hispanics, data.d5Totals.otherRace]
-		            },
-		            title: 'Voters By Race',
-		            roughness: 1,
-		            colors: ['red', 'green', 'yellow', 'blue'],
-		            stroke: 'black',
-		            strokeWidth: 1,
-		            fillStyle: 'zigzag',
-		            fillWeight: 1,
-		          });
+							// Create the Race Charts
+							drawRaceChart('#raceChart', data.totals);
+							drawRaceChart('#raceChartD1', data.d1Totals);
+							drawRaceChart('#raceChartD2', data.d2Totals);
+							drawRaceChart('#raceChartD3', data.d3Totals);
+							drawRaceChart('#raceChartD4', data.d4Totals);
+							drawRaceChart('#raceChartD5', data.d5Totals);
+							drawRaceChart('#raceChartTitusville', data.titusvilleTotals);
 
 							// Create the party charts
-		          new roughViz.Donut({
-		            element: '#totalBrevardVotersChart',
-		            data: {
-		              labels: ['DEMOCRATS', 'NPAs', 'REPUBLICANS', 'THIRD PARTY'],
-		              values: [data.totals.democrats, data.totals.npas, data.totals.republicans, data.totals.thirdPartyVoters]
-		            },
-		            title: 'Voters By Party',
-		            roughness: 1,
-		            colors: ['blue', 'purple', 'red', 'yellow'],
-		            stroke: 'black',
-		            strokeWidth: 1,
-		            fillStyle: 'zigzag',
-		            fillWeight: 1,
-		          });
-
-							new roughViz.Donut({
-		            element: '#totalD1VotersChart',
-		            data: {
-		              labels: ['DEMOCRATS', 'NPAs', 'REPUBLICANS', 'THIRD PARTY'],
-		              values: [data.d1Totals.democrats, data.d1Totals.npas, data.d1Totals.republicans, data.d1Totals.thirdPartyVoters]
-		            },
-		            title: 'Voters By Party',
-		            roughness: 1,
-		            colors: ['blue', 'purple', 'red', 'yellow'],
-		            stroke: 'black',
-		            strokeWidth: 1,
-		            fillStyle: 'zigzag',
-		            fillWeight: 1,
-		          });
-
-							new roughViz.Donut({
-		            element: '#totalD2VotersChart',
-		            data: {
-		              labels: ['DEMOCRATS', 'NPAs', 'REPUBLICANS', 'THIRD PARTY'],
-		              values: [data.d2Totals.democrats, data.d2Totals.npas, data.d2Totals.republicans, data.d2Totals.thirdPartyVoters]
-		            },
-		            title: 'Voters By Party',
-		            roughness: 1,
-		            colors: ['blue', 'purple', 'red', 'yellow'],
-		            stroke: 'black',
-		            strokeWidth: 1,
-		            fillStyle: 'zigzag',
-		            fillWeight: 1,
-		          });
-
-							new roughViz.Donut({
-		            element: '#totalD3VotersChart',
-		            data: {
-		              labels: ['DEMOCRATS', 'NPAs', 'REPUBLICANS', 'THIRD PARTY'],
-		              values: [data.d3Totals.democrats, data.d3Totals.npas, data.d3Totals.republicans, data.d3Totals.thirdPartyVoters]
-		            },
-		            title: 'Voters By Party',
-		            roughness: 1,
-		            colors: ['blue', 'purple', 'red', 'yellow'],
-		            stroke: 'black',
-		            strokeWidth: 1,
-		            fillStyle: 'zigzag',
-		            fillWeight: 1,
-		          });
-
-							new roughViz.Donut({
-		            element: '#totalD4VotersChart',
-		            data: {
-		              labels: ['DEMOCRATS', 'NPAs', 'REPUBLICANS', 'THIRD PARTY'],
-		              values: [data.d4Totals.democrats, data.d4Totals.npas, data.d4Totals.republicans, data.d4Totals.thirdPartyVoters]
-		            },
-		            title: 'Voters By Party',
-		            roughness: 1,
-		            colors: ['blue', 'purple', 'red', 'yellow'],
-		            stroke: 'black',
-		            strokeWidth: 1,
-		            fillStyle: 'zigzag',
-		            fillWeight: 1,
-		          });
-
-							new roughViz.Donut({
-		            element: '#totalD5VotersChart',
-		            data: {
-		              labels: ['DEMOCRATS', 'NPAs', 'REPUBLICANS', 'THIRD PARTY'],
-		              values: [data.d5Totals.democrats, data.d5Totals.npas, data.d5Totals.republicans, data.d5Totals.thirdPartyVoters]
-		            },
-		            title: 'Voters By Party',
-		            roughness: 1,
-		            colors: ['blue', 'purple', 'red', 'yellow'],
-		            stroke: 'black',
-		            strokeWidth: 1,
-		            fillStyle: 'zigzag',
-		            fillWeight: 1,
-		          });
+							drawPartyChart('#totalBrevardVotersChart', data.totals);
+							drawPartyChart('#totalD1VotersChart', data.d1Totals);
+							drawPartyChart('#totalD2VotersChart', data.d2Totals);
+							drawPartyChart('#totalD3VotersChart', data.d3Totals);
+							drawPartyChart('#totalD4VotersChart', data.d4Totals);
+							drawPartyChart('#totalD5VotersChart', data.d5Totals);
+							drawPartyChart('#totalTitusvilleVotersChart', data.titusvilleTotals);
 
 							// Create the voters by district chart
 		          new roughViz.Donut({
@@ -1189,7 +1056,6 @@
 
 						dataProcessor.postMessage([voterData]);
 					};
-
 
 					dataWorker.postMessage(['']);
 					historicalDataWorker.postMessage(['']);
