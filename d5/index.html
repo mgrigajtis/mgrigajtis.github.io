@@ -418,6 +418,44 @@
 
 				<div id="totalTitusvilleVotersChart"></div>
 
+				<div style="position: relative; margin-top: 1em;"><h1 style="font-size: 2em;">Melbourne</h1></div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of Voters: <span id="spnAverageAgeMelbourne"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of Republicans: <span id="spnAverageRepublicanAgeMelbourne"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of Democrats: <span id="spnAverageDemocratAgeMelbourne"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of NPAs: <span id="spnAverageNpaAgeMelbourne"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of 3rd Party: <span id="spnAverageOtherAgeMelbourne"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+				<div id="gendersChartMelbourne"></div>
+
+				<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+				<div id="raceChartMelbourne"></div>
+
+				<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+				<div id="totalMelbourneVotersChart"></div>
+
+
+
+
+
 
 			</div>
 		</div>
@@ -623,6 +661,7 @@
 
 							// city variables
 							var titusvilleVoters = [];
+							var melbourneVoters = [];
 
 							var returnData = {};
 
@@ -654,6 +693,9 @@
 									case 'TITUSVILLE':
 										titusvilleVoters.push(dataToProcess[i]);
 										break;
+									case 'MELBOURNE':
+										melbourneVoters.push(dataToProcess[i]);
+										break;
 									default:
 										break;
 								}
@@ -666,6 +708,7 @@
 							returnData.district4Voters = district4Voters;
 							returnData.district5Voters = district5Voters;
 							returnData.titusvilleVoters = titusvilleVoters;
+							returnData.melbourneVoters = melbourneVoters;
 
 							analyzeData(dataToProcess, function(totalVoters) {
 								returnData.totals = totalVoters;
@@ -687,7 +730,12 @@
 
 													analyzeData(returnData.titusvilleVoters, function(titusvilleTotals) {
 														returnData.titusvilleTotals = titusvilleTotals;
-														postMessage(returnData);
+
+														analyzeData(returnData.melbourneVoters, function(melbourneTotals) {
+															returnData.melbourneTotals = melbourneTotals;
+
+															postMessage(returnData);
+														});
 													});
 												});
 											});
@@ -907,54 +955,13 @@
 
 							dataProcessor.postMessage(['close']);
 
-							// Voter Numbers
-							$('#spnTotalVoters').html(voterData.length);
-
-							// Average Ages
-							$('#spnAverageAge').html(data.totals.averageAge);
-							$('#spnAverageRepublicanAge').html(data.totals.averageRepublicanAge);
-							$('#spnAverageDemocratAge').html(data.totals.averageDemocratAge);
-							$('#spnAverageNpaAge').html(data.totals.averageNpaAge);
-							$('#spnAverageOtherAge').html(data.totals.averageOtherAge);
-
-							$('#spnAverageAgeD1').html(data.d1Totals.averageAge);
-							$('#spnAverageRepublicanAgeD1').html(data.d1Totals.averageRepublicanAge);
-							$('#spnAverageDemocratAgeD1').html(data.d1Totals.averageDemocratAge);
-							$('#spnAverageNpaAgeD1').html(data.d1Totals.averageNpaAge);
-							$('#spnAverageOtherAgeD1').html(data.d1Totals.averageOtherAge);
-
-							$('#spnAverageAgeD2').html(data.d2Totals.averageAge);
-							$('#spnAverageRepublicanAgeD2').html(data.d2Totals.averageRepublicanAge);
-							$('#spnAverageDemocratAgeD2').html(data.d2Totals.averageDemocratAge);
-							$('#spnAverageNpaAgeD2').html(data.d2Totals.averageNpaAge);
-							$('#spnAverageOtherAgeD2').html(data.d2Totals.averageOtherAge);
-
-							$('#spnAverageAgeD3').html(data.d3Totals.averageAge);
-							$('#spnAverageRepublicanAgeD3').html(data.d3Totals.averageRepublicanAge);
-							$('#spnAverageDemocratAgeD3').html(data.d3Totals.averageDemocratAge);
-							$('#spnAverageNpaAgeD3').html(data.d3Totals.averageNpaAge);
-							$('#spnAverageOtherAgeD3').html(data.d3Totals.averageOtherAge);
-
-							$('#spnAverageAgeD4').html(data.d4Totals.averageAge);
-							$('#spnAverageRepublicanAgeD4').html(data.d4Totals.averageRepublicanAge);
-							$('#spnAverageDemocratAgeD4').html(data.d4Totals.averageDemocratAge);
-							$('#spnAverageNpaAgeD4').html(data.d4Totals.averageNpaAge);
-							$('#spnAverageOtherAgeD4').html(data.d4Totals.averageOtherAge);
-
-							$('#spnAverageAgeD5').html(data.d5Totals.averageAge);
-							$('#spnAverageRepublicanAgeD5').html(data.d5Totals.averageRepublicanAge);
-							$('#spnAverageDemocratAgeD5').html(data.d5Totals.averageDemocratAge);
-							$('#spnAverageNpaAgeD5').html(data.d5Totals.averageNpaAge);
-							$('#spnAverageOtherAgeD5').html(data.d5Totals.averageOtherAge);
-
-							$('#spnAverageAgeTitusville').html(data.titusvilleTotals.averageAge);
-							$('#spnAverageRepublicanAgeTitusville').html(data.titusvilleTotals.averageRepublicanAge);
-							$('#spnAverageDemocratAgeTitusville').html(data.titusvilleTotals.averageDemocratAge);
-							$('#spnAverageNpaAgeTitusville').html(data.titusvilleTotals.averageNpaAge);
-							$('#spnAverageOtherAgeTitusville').html(data.titusvilleTotals.averageOtherAge);
-
-							// We're done processing
-							$('#divLoadingData').html('');
+							function drawAverageAges(element, totals) {
+								$('#spnAverageAge' + element).html(totals.averageAge);
+								$('#spnAverageRepublicanAge' + element).html(totals.averageRepublicanAge);
+								$('#spnAverageDemocratAge' + element).html(totals.averageDemocratAge);
+								$('#spnAverageNpaAge' + element).html(totals.averageNpaAge);
+								$('#spnAverageOtherAge' + element).html(totals.averageOtherAge);
+							}
 
 							// Create the genders charts
 							function drawGenderChart (element, totals) {
@@ -1008,6 +1015,22 @@
 			          });
 							}
 
+							// We're done processing
+							$('#divLoadingData').html('');
+
+							// Print the total Voter Numbers
+							$('#spnTotalVoters').html(voterData.length);
+
+							// Print the average ages of the data segments
+							drawAverageAges('', data.totals);
+							drawAverageAges('D1', data.d1Totals);
+							drawAverageAges('D2', data.d2Totals);
+							drawAverageAges('D3', data.d3Totals);
+							drawAverageAges('D4', data.d4Totals);
+							drawAverageAges('D5', data.d5Totals);
+							drawAverageAges('Titusville', data.titusvilleTotals);
+							drawAverageAges('Melbourne', data.melbourneTotals);
+
 							// Draw the Gender Charts
 							drawGenderChart('#gendersChart', data.totals);
 							drawGenderChart('#gendersChartD1', data.d1Totals);
@@ -1016,6 +1039,7 @@
 							drawGenderChart('#gendersChartD4', data.d4Totals);
 							drawGenderChart('#gendersChartD5', data.d5Totals);
 							drawGenderChart('#gendersChartTitusville', data.titusvilleTotals);
+							drawGenderChart('#gendersChartMelbourne', data.melbourneTotals);
 
 							// Create the Race Charts
 							drawRaceChart('#raceChart', data.totals);
@@ -1025,6 +1049,7 @@
 							drawRaceChart('#raceChartD4', data.d4Totals);
 							drawRaceChart('#raceChartD5', data.d5Totals);
 							drawRaceChart('#raceChartTitusville', data.titusvilleTotals);
+							drawRaceChart('#raceChartMelbourne', data.melbourneTotals);
 
 							// Create the party charts
 							drawPartyChart('#totalBrevardVotersChart', data.totals);
@@ -1034,6 +1059,7 @@
 							drawPartyChart('#totalD4VotersChart', data.d4Totals);
 							drawPartyChart('#totalD5VotersChart', data.d5Totals);
 							drawPartyChart('#totalTitusvilleVotersChart', data.titusvilleTotals);
+							drawPartyChart('#totalMelbourneVotersChart', data.melbourneTotals);
 
 							// Create the voters by district chart
 		          new roughViz.Donut({
