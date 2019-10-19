@@ -523,7 +523,40 @@
 
 				<div id="totalMimsVotersChart"></div>
 
+				<hr>
+				<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">Palm Bay</h1></div>
 
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of Voters: <span id="spnAverageAgePalmBay"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of Republicans: <span id="spnAverageRepublicanAgePalmBay"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of Democrats: <span id="spnAverageDemocratAgePalmBay"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of NPAs: <span id="spnAverageNpaAgePalmBay"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">
+					Average Age of 3rd Party: <span id="spnAverageOtherAgePalmBay"></span>
+				</div>
+
+				<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+				<div id="gendersChartPalmBay"></div>
+
+				<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+				<div id="raceChartPalmBay"></div>
+
+				<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+				<div id="totalPalmBayVotersChart"></div>
 			</div>
 		</div>
 
@@ -731,6 +764,7 @@
 							var melbourneVoters = [];
 							var satelliteBeachVoters = [];
 							var mimsVoters = [];
+							var palmBayVoters = [];
 
 							var returnData = {};
 
@@ -770,6 +804,9 @@
 										break;
 									case 'MIMS':
 										mimsVoters.push(dataToProcess[i]);
+										break
+									case 'PALM BAY':
+										palmBayVoters.push(dataToProcess[i]);
 										break;
 									default:
 										break;
@@ -786,6 +823,7 @@
 							returnData.melbourneVoters = melbourneVoters;
 							returnData.satelliteBeachVoters = satelliteBeachVoters;
 							returnData.mimsVoters = mimsVoters;
+							returnData.palmBayVoters = palmBayVoters;
 
 							analyzeData(dataToProcess, function(totalVoters) {
 								returnData.totals = totalVoters;
@@ -817,7 +855,11 @@
 																analyzeData(returnData.mimsVoters, function(mimsTotals) {
 																	returnData.mimsTotals = mimsTotals;
 
-																	postMessage(returnData);
+																	analyzeData(returnData.palmBayVoters, function(palmBayTotals) {
+																		returnData.palmBayTotals = palmBayTotals;
+
+																		postMessage(returnData);
+																	});
 																});
 															});
 														});
@@ -1026,6 +1068,7 @@
 							drawAverageAges('Melbourne', data.melbourneTotals);
 							drawAverageAges('SatelliteBeach', data.satelliteBeachTotals);
 							drawAverageAges('Mims', data.mimsTotals);
+							drawAverageAges('PalmBay', data.palmBayTotals);
 
 							// Draw the Gender Charts
 							drawGenderChart('#gendersChart', data.totals);
@@ -1038,6 +1081,7 @@
 							drawGenderChart('#gendersChartMelbourne', data.melbourneTotals);
 							drawGenderChart('#gendersChartSatelliteBeach', data.satelliteBeachTotals);
 							drawGenderChart('#gendersChartMims', data.mimsTotals);
+							drawGenderChart('#gendersChartPalmBay', data.palmBayTotals);
 
 							// Create the Race Charts
 							drawRaceChart('#raceChart', data.totals);
@@ -1050,6 +1094,7 @@
 							drawRaceChart('#raceChartMelbourne', data.melbourneTotals);
 							drawRaceChart('#raceChartSatelliteBeach', data.satelliteBeachTotals);
 							drawRaceChart('#raceChartMims', data.mimsTotals);
+							drawRaceChart('#raceChartPalmBay', data.palmBayTotals);
 
 							// Create the party charts
 							drawPartyChart('#totalBrevardVotersChart', data.totals);
@@ -1062,6 +1107,7 @@
 							drawPartyChart('#totalMelbourneVotersChart', data.melbourneTotals);
 							drawPartyChart('#totalSatelliteBeachVotersChart', data.satelliteBeachTotals);
 							drawPartyChart('#totalMimsVotersChart', data.mimsTotals);
+							drawPartyChart('#totalPalmBayVotersChart', data.palmBayTotals);
 
 							// Create the voters by district chart
 		          new roughViz.Donut({
