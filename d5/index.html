@@ -17,7 +17,10 @@
 
 	<body style="margin-top: 0; padding-top: 0;">
 		<div>
-			<div id="divLoadingData"><h1 class="pulsate" style="font-size: 2em;">Loading Data, Please Wait</h1></div>
+			<div id="divLoadingData">
+				<h1 class="pulsate" style="font-size: 2em;">Loading Data, Please Wait</h1>
+				<img src="images/loading-hourglass.gif">
+			</div>
 
 			<div id="mainContent" style="display: none;">
 				<div class="dataEntry" id="brevardTotals">
@@ -470,6 +473,78 @@
 					<div id="totalCocoaVotersChart"></div>
 				</div>
 
+				<div class="dataEntry" id="cocoaBeach">
+					<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">Cocoa Beach</h1></div>
+
+					<div style="position: relative; margin-top: 1em;">
+						Average Age of Voters: <span id="spnAverageAgeCocoaBeach"></span>
+					</div>
+
+					<div style="position: relative; margin-top: 1em;">
+						Average Age of Republicans: <span id="spnAverageRepublicanAgeCocoaBeach"></span>
+					</div>
+
+					<div style="position: relative; margin-top: 1em;">
+						Average Age of Democrats: <span id="spnAverageDemocratAgeCocoaBeach"></span>
+					</div>
+
+					<div style="position: relative; margin-top: 1em;">
+						Average Age of NPAs: <span id="spnAverageNpaAgeCocoaBeach"></span>
+					</div>
+
+					<div style="position: relative; margin-top: 1em;">
+						Average Age of 3rd Party: <span id="spnAverageOtherAgeCocoaBeach"></span>
+					</div>
+
+					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+					<div id="gendersChartCocoaBeach"></div>
+
+					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+					<div id="raceChartCocoaBeach"></div>
+
+					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+					<div id="totalCocoaBeachVotersChart"></div>
+				</div>
+
+				<div class="dataEntry" id="grantValkaria">
+					<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">Grant Valkaria</h1></div>
+
+					<div style="position: relative; margin-top: 1em;">
+						Average Age of Voters: <span id="spnAverageAgeGrantValkaria"></span>
+					</div>
+
+					<div style="position: relative; margin-top: 1em;">
+						Average Age of Republicans: <span id="spnAverageRepublicanAgeGrantValkaria"></span>
+					</div>
+
+					<div style="position: relative; margin-top: 1em;">
+						Average Age of Democrats: <span id="spnAverageDemocratAgeGrantValkaria"></span>
+					</div>
+
+					<div style="position: relative; margin-top: 1em;">
+						Average Age of NPAs: <span id="spnAverageNpaAgeGrantValkaria"></span>
+					</div>
+
+					<div style="position: relative; margin-top: 1em;">
+						Average Age of 3rd Party: <span id="spnAverageOtherAgeGrantValkaria"></span>
+					</div>
+
+					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+					<div id="gendersChartGrantValkaria"></div>
+
+					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+					<div id="raceChartGrantValkaria"></div>
+
+					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+					<div id="totalGrantValkariaVotersChart"></div>
+				</div>
+
 				<div class="dataEntry" id="indialantic">
 					<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">Indialantic</h1></div>
 
@@ -540,6 +615,42 @@
 					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
 
 					<div id="totalMelbourneVotersChart"></div>
+				</div>
+
+				<div class="dataEntry" id="melbourneBeach">
+					<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">Melbourne Beach</h1></div>
+
+					<div style="position: relative; margin-top: 1em;">
+						Average Age of Voters: <span id="spnAverageAgeMelbourneBeach"></span>
+					</div>
+
+					<div style="position: relative; margin-top: 1em;">
+						Average Age of Republicans: <span id="spnAverageRepublicanAgeMelbourneBeach"></span>
+					</div>
+
+					<div style="position: relative; margin-top: 1em;">
+						Average Age of Democrats: <span id="spnAverageDemocratAgeMelbourneBeach"></span>
+					</div>
+
+					<div style="position: relative; margin-top: 1em;">
+						Average Age of NPAs: <span id="spnAverageNpaAgeMelbourneBeach"></span>
+					</div>
+
+					<div style="position: relative; margin-top: 1em;">
+						Average Age of 3rd Party: <span id="spnAverageOtherAgeMelbourneBeach"></span>
+					</div>
+
+					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+					<div id="gendersChartMelbourneBeach"></div>
+
+					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+					<div id="raceChartMelbourneBeach"></div>
+
+					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+					<div id="totalMelbourneBeachVotersChart"></div>
 				</div>
 
 				<div class="dataEntry" id="merrittIsland">
@@ -1014,6 +1125,9 @@
 							var westMelbourneVoters = [];
 							var barefootBayVoters = [];
 							var indialanticVoters = [];
+							var cocoaBeachVoters = [];
+							var melbourneBeachVoters = [];
+							var grantValkariaVoters = [];
 
 							var returnData = {};
 
@@ -1048,11 +1162,20 @@
 									case 'COCOA':
 										cocoaVoters.push(dataToProcess[i]);
 										break;
+									case 'COCOA BEACH':
+										cocoaBeachVoters.push(dataToProcess[i]);
+										break;
+									case 'GRANT VALKARIA':
+										grantValkariaVoters.push(dataToProcess[i]);
+										break;
 									case 'INDIALANTIC':
 										indialanticVoters.push(dataToProcess[i]);
 										break;
 									case 'MELBOURNE':
 										melbourneVoters.push(dataToProcess[i]);
+										break;
+									case 'MELBOURNE BEACH':
+										melbourneBeachVoters.push(dataToProcess[i]);
 										break;
 									case 'MERRITT ISLAND':
 										merrittIslandVoters.push(dataToProcess[i]);
@@ -1097,6 +1220,9 @@
 							returnData.westMelbourneVoters = westMelbourneVoters;
 							returnData.barefootBayVoters = barefootBayVoters;
 							returnData.indialanticVoters = indialanticVoters;
+							returnData.cocoaBeachVoters = cocoaBeachVoters;
+							returnData.melbourneBeachVoters = melbourneBeachVoters;
+							returnData.grantValkariaVoters = grantValkariaVoters;
 
 							analyzeData(dataToProcess, function(totalVoters) {
 								returnData.totals = totalVoters;
@@ -1149,7 +1275,19 @@
 																							analyzeData(returnData.indialanticVoters, function(indialanticTotals) {
 																								returnData.indialanticTotals = indialanticTotals;
 
-																								postMessage(returnData);
+																								analyzeData(returnData.cocoaBeachVoters, function(cocoaBeachTotals) {
+																									returnData.cocoaBeachTotals = cocoaBeachTotals;
+
+																									analyzeData(returnData.melbourneBeachVoters, function(melbourneBeachTotals) {
+																										returnData.melbourneBeachTotals = melbourneBeachTotals;
+
+																										analyzeData(returnData.grantValkariaVoters, function(grantValkariaTotals) {
+																											returnData.grantValkariaTotals = grantValkariaTotals;
+
+																											postMessage(returnData);
+																										});
+																									});
+																								});
 																							});
 																						});
 																					});
@@ -1281,7 +1419,7 @@
 						var dataProcessor = new Worker(URL.createObjectURL(dataProcessorName));
 
 						// We're done loading
-						$('#divLoadingData').html('<h1 class="pulsate" style="font-size: 2em;">Processing data, please wait.</h1>');
+						$('#divLoadingData').html('<h1 class="pulsate" style="font-size: 2em;">Processing data, please wait.</h1><img src="images/loading-hourglass.gif">');
 
 						dataProcessor.onmessage = function(event) {
 							var data = event.data;
@@ -1372,6 +1510,9 @@
 							drawAverageAges('WestMelbourne', data.westMelbourneTotals);
 							drawAverageAges('BarefootBay', data.barefoorBayTotals);
 							drawAverageAges('Indialantic', data.indialanticTotals)
+							drawAverageAges('CocoaBeach', data.cocoaBeachTotals);
+							drawAverageAges('MelbourneBeach', data.melbourneBeachTotals);
+							drawAverageAges('GrantValkaria', data.grantValkariaTotals);
 
 							// Draw the Gender Charts
 							drawGenderChart('#gendersChart', data.totals);
@@ -1391,6 +1532,9 @@
 							drawGenderChart('#gendersChartWestMelbourne', data.westMelbourneTotals);
 							drawGenderChart('#gendersChartBarefootBay', data.barefoorBayTotals);
 							drawGenderChart('#gendersChartIndialantic', data.indialanticTotals)
+							drawGenderChart('#gendersChartCocoaBeach', data.cocoaBeachTotals);
+							drawGenderChart('#gendersChartMelbourneBeach', data.melbourneBeachTotals);
+							drawGenderChart('#gendersChartGrantValkaria', data.grantValkariaTotals);
 
 							// Create the Race Charts
 							drawRaceChart('#raceChart', data.totals);
@@ -1410,6 +1554,9 @@
 							drawRaceChart('#raceChartWestMelbourne', data.westMelbourneTotals);
 							drawRaceChart('#raceChartBarefootBay', data.barefoorBayTotals);
 							drawRaceChart('#raceChartIndialantic', data.indialanticTotals);
+							drawRaceChart('#raceChartCocoaBeach', data.cocoaBeachTotals);
+							drawRaceChart('#raceChartMelbourneBeach', data.melbourneBeachTotals);
+							drawRaceChart('#raceChartGrantValkaria', data.grantValkariaTotals);
 
 							// Create the party charts
 							drawPartyChart('#totalBrevardVotersChart', data.totals);
@@ -1429,6 +1576,9 @@
 							drawPartyChart('#totalWestMelbourneVotersChart', data.westMelbourneTotals);
 							drawPartyChart('#totalBarefootBayVotersChart', data.barefoorBayTotals);
 							drawPartyChart('#totalIndialanticVotersChart', data.indialanticTotals);
+							drawPartyChart('#totalCocoaBeachVotersChart', data.cocoaBeachTotals);
+							drawPartyChart('#totalMelbourneBeachVotersChart', data.melbourneBeachTotals);
+							drawPartyChart('#totalGrantValkariaVotersChart', data.grantValkariaTotals);
 
 							// Create the voters by district chart
 		          new roughViz.Donut({
