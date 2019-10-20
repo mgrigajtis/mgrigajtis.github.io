@@ -66,6 +66,72 @@ textarea {
     font: inherit;
 }
 
+#navbar {
+  background-color: #333;
+  z-index: 100;
+}
+
+/* Navbar links */
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+#navbar span {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #777;
+  min-width: 160px;
+  padding: 6px 8px;
+  z-index: 600;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover span {
+  color: #000000;
+}
+
+.dataEntry {
+  padding-top: 1em;
+}
+
+br.clear {
+  clear: both;
+}
+
+#dataContent {
+  padding-top: 2em;
+  padding-left: 1em;
+  overflow: hidden;
+}
+
 .righty {
   text-align: right;
 }
@@ -99,7 +165,7 @@ textarea {
     $MAIN
 \*------------------------------------*/
 html {
-    background-color: #f6f9f9;
+    background-color: #ffffff;
     color: #95a4a9;
     font: 12px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
 }

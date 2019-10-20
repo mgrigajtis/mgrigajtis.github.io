@@ -15,902 +15,1020 @@
 		<![endif]-->
 	</head>
 
-	<body style="margin-top: 0; padding-top: 0;">
+	<body style="margin: 0; padding: 0;">
 		<div>
 			<div id="divLoadingData">
-				<h1 class="pulsate" style="font-size: 2em;">Loading Data, Please Wait</h1>
+				<h1 class="pulsate" style="font-size: 2em; padding-left: 1em;">Loading Data, Please Wait</h1>
 				<img src="images/loading-hourglass.gif">
 			</div>
 
 			<div id="mainContent" style="display: none;">
-				<div class="dataEntry" id="brevardTotals">
-					<div style="position: relative; margin-top: 1em;"><h1 style="font-size: 3em;">Brevard County Totals</h1></div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Total Voters in Brevard: <span id="spnTotalVoters"></span>
+				<div id="navbar">
+					<a href="#brevardTotals">Brevard Totals</a>
+					<div class="dropdown">
+					  <span>County Districts</span>
+					  <div class="dropdown-content">
+					    <a href="#district1">District 1</a><br class="clear">
+							<a href="#district2">District 2</a><br class="clear">
+							<a href="#district3">District 3</a><br class="clear">
+							<a href="#district4">District 4</a><br class="clear">
+							<a href="#district5">District 5</a>
+					  </div>
 					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Voters: <span id="spnAverageAge"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Republicans: <span id="spnAverageRepublicanAge"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Democrats: <span id="spnAverageDemocratAge"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of NPAs: <span id="spnAverageNpaAge"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of 3rd Party: <span id="spnAverageOtherAge"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="gendersChart"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="raceChart"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="totalBrevardVotersChart"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="votersByDistrictChart"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div style="position: relative; margin-top: 1em;"><h1 style="font-size: 1em;">Registered Voters Over Time</h1></div>
-
-					<div>
-						<table id="tblRegisteredVotersOverTime" class="display stripe">
-							<thead>
-								<tr>
-									<th>id</th>
-									<th>Month</th>
-									<th>CPF</th>
-									<th>DEM</th>
-									<th>ECO</th>
-									<th>GRE</th>
-									<th>IND</th>
-									<th>LPF</th>
-									<th>NPA</th>
-									<th>PSL</th>
-									<th>REF</th>
-									<th>REP</th>
-									<th>Total Registered Voters</th>
-								</tr>
-							</thead>
-							<tbody></tbody>
-						</table>
+					<div class="dropdown">
+					  <span>Cities</span>
+					  <div class="dropdown-content">
+					    <a href="#barefootBay">Barefoot Bay</a><br class="clear">
+							<a href="#cocoa">Cocoa</a><br class="clear">
+							<a href="#cocoaBeach">Cocoa Beach</a><br class="clear">
+							<a href="#grantValkaria">Grant Valkaria</a><br class="clear">
+							<a href="#indialantic">Indialantic</a><br class="clear">
+							<a href="#malabar">Malabar</a><br class="clear">
+							<a href="#melbourne">Melbourne</a><br class="clear">
+							<a href="#melbourneBeach">Melbourne Beach</a><br class="clear">
+							<a href="#merrittIsland">Merritt Island</a><br class="clear">
+							<a href="#mims">Mims</a><br class="clear">
+							<a href="#palmBay">Palm Bay</a><br class="clear">
+							<a href="#rockledge">Rockledge</a><br class="clear">
+							<a href="#satelliteBeach">Satellite Beach</a><br class="clear">
+							<a href="#titusville">Titusville</a><br class="clear">
+							<a href="#westMelbourne">West Melbourne</a>
+					  </div>
 					</div>
 				</div>
+				<div id="dataContent">
+					<div class="dataEntry" id="brevardTotals">
+						<div style="position: relative; margin-top: 1em;"><h1 style="font-size: 3em;">Brevard County Totals</h1></div>
 
+						<div style="position: relative; margin-top: 1em;">
+							Total Voters: <span id="spnTotalVoters"></span>
+						</div>
 
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Voters: <span id="spnAverageAge"></span>
+						</div>
 
-				<div class="dataEntry" id="district1">
-					<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">District 1</h1></div>
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Republicans: <span id="spnAverageRepublicanAge"></span>
+						</div>
 
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Voters: <span id="spnAverageAgeD1"></span>
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Democrats: <span id="spnAverageDemocratAge"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of NPAs: <span id="spnAverageNpaAge"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of 3rd Party: <span id="spnAverageOtherAge"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="gendersChart"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="raceChart"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="totalVotersChart"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="votersByDistrictChart"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div style="position: relative; margin-top: 1em;"><h1 style="font-size: 1em;">Registered Voters Over Time</h1></div>
+
+						<div>
+							<table id="tblRegisteredVotersOverTime" class="display stripe">
+								<thead>
+									<tr>
+										<th>id</th>
+										<th>Month</th>
+										<th>CPF</th>
+										<th>DEM</th>
+										<th>ECO</th>
+										<th>GRE</th>
+										<th>IND</th>
+										<th>LPF</th>
+										<th>NPA</th>
+										<th>PSL</th>
+										<th>REF</th>
+										<th>REP</th>
+										<th>Total Registered Voters</th>
+									</tr>
+								</thead>
+								<tbody></tbody>
+							</table>
+						</div>
 					</div>
 
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Republicans: <span id="spnAverageRepublicanAgeD1"></span>
+					<div class="dataEntry" id="district1">
+						<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">District 1</h1></div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Total Voters: <span id="spnTotalVotersD1"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Voters: <span id="spnAverageAgeD1"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Republicans: <span id="spnAverageRepublicanAgeD1"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Democrats: <span id="spnAverageDemocratAgeD1"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of NPAs: <span id="spnAverageNpaAgeD1"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of 3rd Party: <span id="spnAverageOtherAgeD1"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="gendersChartD1"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="raceChartD1"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="totalD1VotersChart"></div>
+
+						<div style="position: relative; margin-top: 1em;"><h1 style="font-size: 1em;">Registered Voters Over Time</h1></div>
+
+						<div>
+							<table id="tblRegisteredVotersOverTimeD1" class="display stripe">
+								<thead>
+									<tr>
+										<th>id</th>
+										<th>Month</th>
+										<th>CPF</th>
+										<th>DEM</th>
+										<th>ECO</th>
+										<th>GRE</th>
+										<th>IND</th>
+										<th>LPF</th>
+										<th>NPA</th>
+										<th>PSL</th>
+										<th>REF</th>
+										<th>REP</th>
+										<th>Total Registered Voters</th>
+									</tr>
+								</thead>
+								<tbody></tbody>
+							</table>
+						</div>
 					</div>
 
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Democrats: <span id="spnAverageDemocratAgeD1"></span>
+					<div class="dataEntry" id="district2">
+						<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">District 2</h1></div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Total Voters: <span id="spnTotalVotersD2"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Voters: <span id="spnAverageAgeD2"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Republicans: <span id="spnAverageRepublicanAgeD2"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Democrats: <span id="spnAverageDemocratAgeD2"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of NPAs: <span id="spnAverageNpaAgeD2"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of 3rd Party: <span id="spnAverageOtherAgeD2"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="gendersChartD2"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="raceChartD2"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="totalD2VotersChart"></div>
+
+						<div style="position: relative; margin-top: 1em;"><h1 style="font-size: 1em;">Registered Voters Over Time</h1></div>
+
+						<div>
+							<table id="tblRegisteredVotersOverTimeD2" class="display stripe">
+								<thead>
+									<tr>
+										<th>id</th>
+										<th>Month</th>
+										<th>CPF</th>
+										<th>DEM</th>
+										<th>ECO</th>
+										<th>GRE</th>
+										<th>IND</th>
+										<th>LPF</th>
+										<th>NPA</th>
+										<th>PSL</th>
+										<th>REF</th>
+										<th>REP</th>
+										<th>Total Registered Voters</th>
+									</tr>
+								</thead>
+								<tbody></tbody>
+							</table>
+						</div>
 					</div>
 
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of NPAs: <span id="spnAverageNpaAgeD1"></span>
+					<div class="dataEntry" id="district3">
+						<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">District 3</h1></div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Total Voters: <span id="spnTotalVotersD3"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Voters: <span id="spnAverageAgeD3"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Republicans: <span id="spnAverageRepublicanAgeD3"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Democrats: <span id="spnAverageDemocratAgeD3"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of NPAs: <span id="spnAverageNpaAgeD3"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of 3rd Party: <span id="spnAverageOtherAgeD3"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="gendersChartD3"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="raceChartD3"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="totalD3VotersChart"></div>
+
+						<div style="position: relative; margin-top: 1em;"><h1 style="font-size: 1em;">Registered Voters Over Time</h1></div>
+
+						<div>
+							<table id="tblRegisteredVotersOverTimeD3" class="display stripe">
+								<thead>
+									<tr>
+										<th>id</th>
+										<th>Month</th>
+										<th>CPF</th>
+										<th>DEM</th>
+										<th>ECO</th>
+										<th>GRE</th>
+										<th>IND</th>
+										<th>LPF</th>
+										<th>NPA</th>
+										<th>PSL</th>
+										<th>REF</th>
+										<th>REP</th>
+										<th>Total Registered Voters</th>
+									</tr>
+								</thead>
+								<tbody></tbody>
+							</table>
+						</div>
 					</div>
 
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of 3rd Party: <span id="spnAverageOtherAgeD1"></span>
+					<div class="dataEntry" id="district4">
+						<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">District 4</h1></div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Total Voters: <span id="spnTotalVotersD4"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Voters: <span id="spnAverageAgeD4"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Republicans: <span id="spnAverageRepublicanAgeD4"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Democrats: <span id="spnAverageDemocratAgeD4"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of NPAs: <span id="spnAverageNpaAgeD4"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of 3rd Party: <span id="spnAverageOtherAgeD4"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="gendersChartD4"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="raceChartD4"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="totalD4VotersChart"></div>
+
+						<div style="position: relative; margin-top: 1em;"><h1 style="font-size: 1em;">Registered Voters Over Time</h1></div>
+
+						<div>
+							<table id="tblRegisteredVotersOverTimeD4" class="display stripe">
+								<thead>
+									<tr>
+										<th>id</th>
+										<th>Month</th>
+										<th>CPF</th>
+										<th>DEM</th>
+										<th>ECO</th>
+										<th>GRE</th>
+										<th>IND</th>
+										<th>LPF</th>
+										<th>NPA</th>
+										<th>PSL</th>
+										<th>REF</th>
+										<th>REP</th>
+										<th>Total Registered Voters</th>
+									</tr>
+								</thead>
+								<tbody></tbody>
+							</table>
+						</div>
 					</div>
 
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+					<div class="dataEntry" id="district5">
+						<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">District 5</h1></div>
 
-					<div id="gendersChartD1"></div>
+						<div style="position: relative; margin-top: 1em;">
+							Total Voters: <span id="spnTotalVotersD5"></span>
+						</div>
 
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Voters: <span id="spnAverageAgeD5"></span>
+						</div>
 
-					<div id="raceChartD1"></div>
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Republicans: <span id="spnAverageRepublicanAgeD5"></span>
+						</div>
 
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Democrats: <span id="spnAverageDemocratAgeD5"></span>
+						</div>
 
-					<div id="totalD1VotersChart"></div>
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of NPAs: <span id="spnAverageNpaAgeD5"></span>
+						</div>
 
-					<div style="position: relative; margin-top: 1em;"><h1 style="font-size: 1em;">Registered Voters Over Time</h1></div>
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of 3rd Party: <span id="spnAverageOtherAgeD5"></span>
+						</div>
 
-					<div>
-						<table id="tblRegisteredVotersOverTimeD1" class="display stripe">
-							<thead>
-								<tr>
-									<th>id</th>
-									<th>Month</th>
-									<th>CPF</th>
-									<th>DEM</th>
-									<th>ECO</th>
-									<th>GRE</th>
-									<th>IND</th>
-									<th>LPF</th>
-									<th>NPA</th>
-									<th>PSL</th>
-									<th>REF</th>
-									<th>REP</th>
-									<th>Total Registered Voters</th>
-								</tr>
-							</thead>
-							<tbody></tbody>
-						</table>
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="gendersChartD5"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="raceChartD5"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="totalD5VotersChart"></div>
+
+						<div style="position: relative; margin-top: 1em;"><h1 style="font-size: 1em;">Registered Voters Over Time</h1></div>
+
+						<div>
+							<table id="tblRegisteredVotersOverTimeD5" class="display stripe">
+								<thead>
+									<tr>
+										<th>id</th>
+										<th>Month</th>
+										<th>CPF</th>
+										<th>DEM</th>
+										<th>ECO</th>
+										<th>GRE</th>
+										<th>IND</th>
+										<th>LPF</th>
+										<th>NPA</th>
+										<th>PSL</th>
+										<th>REF</th>
+										<th>REP</th>
+										<th>Total Registered Voters</th>
+									</tr>
+								</thead>
+								<tbody></tbody>
+							</table>
+						</div>
+					</div>
+
+					<div class="dataEntry" id="barefootBay">
+						<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">Barefoot Bay</h1></div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Voters: <span id="spnAverageAgeBarefootBay"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Republicans: <span id="spnAverageRepublicanAgeBarefootBay"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Democrats: <span id="spnAverageDemocratAgeBarefootBay"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of NPAs: <span id="spnAverageNpaAgeBarefootBay"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of 3rd Party: <span id="spnAverageOtherAgeBarefootBay"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="gendersChartBarefootBay"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="raceChartBarefootBay"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="totalBarefootBayVotersChart"></div>
+					</div>
+
+					<div class="dataEntry" id="capeCanaveral">
+						<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">Cape Canaveral</h1></div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Voters: <span id="spnAverageAgeCapeCanaveral"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Republicans: <span id="spnAverageRepublicanAgeCapeCanaveral"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Democrats: <span id="spnAverageDemocratAgeCapeCanaveral"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of NPAs: <span id="spnAverageNpaAgeCapeCanaveral"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of 3rd Party: <span id="spnAverageOtherAgeCapeCanaveral"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="gendersChartCapeCanaveral"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="raceChartCapeCanaveral"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="totalCapeCanaveralVotersChart"></div>
+					</div>
+
+					<div class="dataEntry" id="cocoa">
+						<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">Cocoa</h1></div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Voters: <span id="spnAverageAgeCocoa"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Republicans: <span id="spnAverageRepublicanAgeCocoa"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Democrats: <span id="spnAverageDemocratAgeCocoa"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of NPAs: <span id="spnAverageNpaAgeCocoa"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of 3rd Party: <span id="spnAverageOtherAgeCocoa"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="gendersChartCocoa"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="raceChartCocoa"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="totalCocoaVotersChart"></div>
+					</div>
+
+					<div class="dataEntry" id="cocoaBeach">
+						<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">Cocoa Beach</h1></div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Voters: <span id="spnAverageAgeCocoaBeach"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Republicans: <span id="spnAverageRepublicanAgeCocoaBeach"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Democrats: <span id="spnAverageDemocratAgeCocoaBeach"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of NPAs: <span id="spnAverageNpaAgeCocoaBeach"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of 3rd Party: <span id="spnAverageOtherAgeCocoaBeach"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="gendersChartCocoaBeach"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="raceChartCocoaBeach"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="totalCocoaBeachVotersChart"></div>
+					</div>
+
+					<div class="dataEntry" id="grantValkaria">
+						<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">Grant Valkaria</h1></div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Voters: <span id="spnAverageAgeGrantValkaria"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Republicans: <span id="spnAverageRepublicanAgeGrantValkaria"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Democrats: <span id="spnAverageDemocratAgeGrantValkaria"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of NPAs: <span id="spnAverageNpaAgeGrantValkaria"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of 3rd Party: <span id="spnAverageOtherAgeGrantValkaria"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="gendersChartGrantValkaria"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="raceChartGrantValkaria"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="totalGrantValkariaVotersChart"></div>
+					</div>
+
+					<div class="dataEntry" id="indialantic">
+						<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">Indialantic</h1></div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Voters: <span id="spnAverageAgeIndialantic"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Republicans: <span id="spnAverageRepublicanAgeIndialantic"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Democrats: <span id="spnAverageDemocratAgeIndialantic"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of NPAs: <span id="spnAverageNpaAgeIndialantic"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of 3rd Party: <span id="spnAverageOtherAgeIndialantic"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="gendersChartIndialantic"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="raceChartIndialantic"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="totalIndialanticVotersChart"></div>
+					</div>
+
+					<div class="dataEntry" id="malabar">
+						<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">Malabar</h1></div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Voters: <span id="spnAverageAgeMalabar"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Republicans: <span id="spnAverageRepublicanAgeMalabar"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Democrats: <span id="spnAverageDemocratAgeMalabar"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of NPAs: <span id="spnAverageNpaAgeMalabar"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of 3rd Party: <span id="spnAverageOtherAgeMalabar"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="gendersChartMalabar"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="raceChartMalabar"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="totalMalabarVotersChart"></div>
+					</div>
+
+					<div class="dataEntry" id="melbourne">
+						<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">Melbourne</h1></div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Voters: <span id="spnAverageAgeMelbourne"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Republicans: <span id="spnAverageRepublicanAgeMelbourne"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Democrats: <span id="spnAverageDemocratAgeMelbourne"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of NPAs: <span id="spnAverageNpaAgeMelbourne"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of 3rd Party: <span id="spnAverageOtherAgeMelbourne"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="gendersChartMelbourne"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="raceChartMelbourne"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="totalMelbourneVotersChart"></div>
+					</div>
+
+					<div class="dataEntry" id="melbourneBeach">
+						<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">Melbourne Beach</h1></div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Voters: <span id="spnAverageAgeMelbourneBeach"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Republicans: <span id="spnAverageRepublicanAgeMelbourneBeach"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Democrats: <span id="spnAverageDemocratAgeMelbourneBeach"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of NPAs: <span id="spnAverageNpaAgeMelbourneBeach"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of 3rd Party: <span id="spnAverageOtherAgeMelbourneBeach"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="gendersChartMelbourneBeach"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="raceChartMelbourneBeach"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="totalMelbourneBeachVotersChart"></div>
+					</div>
+
+					<div class="dataEntry" id="merrittIsland">
+						<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">Merritt Island</h1></div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Voters: <span id="spnAverageAgeMerrittIsland"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Republicans: <span id="spnAverageRepublicanAgeMerrittIsland"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Democrats: <span id="spnAverageDemocratAgeMerrittIsland"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of NPAs: <span id="spnAverageNpaAgeMerrittIsland"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of 3rd Party: <span id="spnAverageOtherAgeMerrittIsland"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="gendersChartMerrittIsland"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="raceChartMerrittIsland"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="totalMerrittIslandVotersChart"></div>
+					</div>
+
+					<div class="dataEntry" id="mims">
+						<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">Mims</h1></div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Voters: <span id="spnAverageAgeMims"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Republicans: <span id="spnAverageRepublicanAgeMims"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Democrats: <span id="spnAverageDemocratAgeMims"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of NPAs: <span id="spnAverageNpaAgeMims"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of 3rd Party: <span id="spnAverageOtherAgeMims"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="gendersChartMims"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="raceChartMims"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="totalMimsVotersChart"></div>
+					</div>
+
+					<div class="dataEntry" id="palmBay">
+						<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">Palm Bay</h1></div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Voters: <span id="spnAverageAgePalmBay"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Republicans: <span id="spnAverageRepublicanAgePalmBay"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Democrats: <span id="spnAverageDemocratAgePalmBay"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of NPAs: <span id="spnAverageNpaAgePalmBay"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of 3rd Party: <span id="spnAverageOtherAgePalmBay"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="gendersChartPalmBay"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="raceChartPalmBay"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="totalPalmBayVotersChart"></div>
+					</div>
+
+					<div class="dataEntry" id="rockledge">
+						<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">Rockledge</h1></div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Voters: <span id="spnAverageAgeRockledge"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Republicans: <span id="spnAverageRepublicanAgeRockledge"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Democrats: <span id="spnAverageDemocratAgeRockledge"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of NPAs: <span id="spnAverageNpaAgeRockledge"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of 3rd Party: <span id="spnAverageOtherAgeRockledge"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="gendersChartRockledge"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="raceChartRockledge"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="totalRockledgeVotersChart"></div>
+					</div>
+
+					<div class="dataEntry" id="satelliteBeach">
+						<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">Satellite Beach</h1></div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Voters: <span id="spnAverageAgeSatelliteBeach"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Republicans: <span id="spnAverageRepublicanAgeSatelliteBeach"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Democrats: <span id="spnAverageDemocratAgeSatelliteBeach"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of NPAs: <span id="spnAverageNpaAgeSatelliteBeach"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of 3rd Party: <span id="spnAverageOtherAgeSatelliteBeach"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="gendersChartSatelliteBeach"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="raceChartSatelliteBeach"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="totalSatelliteBeachVotersChart"></div>
+					</div>
+
+					<div class="dataEntry" id="titusville">
+						<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">Titusville</h1></div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Voters: <span id="spnAverageAgeTitusville"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Republicans: <span id="spnAverageRepublicanAgeTitusville"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Democrats: <span id="spnAverageDemocratAgeTitusville"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of NPAs: <span id="spnAverageNpaAgeTitusville"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of 3rd Party: <span id="spnAverageOtherAgeTitusville"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="gendersChartTitusville"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="raceChartTitusville"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="totalTitusvilleVotersChart"></div>
+					</div>
+
+					<div class="dataEntry" id="westMelbourne">
+						<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">West Melbourne</h1></div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Voters: <span id="spnAverageAgeWestMelbourne"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Republicans: <span id="spnAverageRepublicanAgeWestMelbourne"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of Democrats: <span id="spnAverageDemocratAgeWestMelbourne"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of NPAs: <span id="spnAverageNpaAgeWestMelbourne"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">
+							Average Age of 3rd Party: <span id="spnAverageOtherAgeWestMelbourne"></span>
+						</div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="gendersChartWestMelbourne"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="raceChartWestMelbourne"></div>
+
+						<div style="position: relative; margin-top: 1em;">&nbsp;</div>
+
+						<div id="totalWestMelbourneVotersChart"></div>
 					</div>
 				</div>
-
-				<div class="dataEntry" id="district2">
-					<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">District 2</h1></div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Voters: <span id="spnAverageAgeD2"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Republicans: <span id="spnAverageRepublicanAgeD2"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Democrats: <span id="spnAverageDemocratAgeD2"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of NPAs: <span id="spnAverageNpaAgeD2"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of 3rd Party: <span id="spnAverageOtherAgeD2"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="gendersChartD2"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="raceChartD2"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="totalD2VotersChart"></div>
-
-					<div style="position: relative; margin-top: 1em;"><h1 style="font-size: 1em;">Registered Voters Over Time</h1></div>
-
-					<div>
-						<table id="tblRegisteredVotersOverTimeD2" class="display stripe">
-							<thead>
-								<tr>
-									<th>id</th>
-									<th>Month</th>
-									<th>CPF</th>
-									<th>DEM</th>
-									<th>ECO</th>
-									<th>GRE</th>
-									<th>IND</th>
-									<th>LPF</th>
-									<th>NPA</th>
-									<th>PSL</th>
-									<th>REF</th>
-									<th>REP</th>
-									<th>Total Registered Voters</th>
-								</tr>
-							</thead>
-							<tbody></tbody>
-						</table>
-					</div>
-				</div>
-
-				<div class="dataEntry" id="district3">
-					<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">District 3</h1></div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Voters: <span id="spnAverageAgeD3"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Republicans: <span id="spnAverageRepublicanAgeD3"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Democrats: <span id="spnAverageDemocratAgeD3"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of NPAs: <span id="spnAverageNpaAgeD3"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of 3rd Party: <span id="spnAverageOtherAgeD3"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="gendersChartD3"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="raceChartD3"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="totalD3VotersChart"></div>
-
-					<div style="position: relative; margin-top: 1em;"><h1 style="font-size: 1em;">Registered Voters Over Time</h1></div>
-
-					<div>
-						<table id="tblRegisteredVotersOverTimeD3" class="display stripe">
-							<thead>
-								<tr>
-									<th>id</th>
-									<th>Month</th>
-									<th>CPF</th>
-									<th>DEM</th>
-									<th>ECO</th>
-									<th>GRE</th>
-									<th>IND</th>
-									<th>LPF</th>
-									<th>NPA</th>
-									<th>PSL</th>
-									<th>REF</th>
-									<th>REP</th>
-									<th>Total Registered Voters</th>
-								</tr>
-							</thead>
-							<tbody></tbody>
-						</table>
-					</div>
-				</div>
-
-				<div class="dataEntry" id="district4">
-					<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">District 4</h1></div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Voters: <span id="spnAverageAgeD4"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Republicans: <span id="spnAverageRepublicanAgeD4"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Democrats: <span id="spnAverageDemocratAgeD4"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of NPAs: <span id="spnAverageNpaAgeD4"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of 3rd Party: <span id="spnAverageOtherAgeD4"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="gendersChartD4"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="raceChartD4"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="totalD4VotersChart"></div>
-
-					<div style="position: relative; margin-top: 1em;"><h1 style="font-size: 1em;">Registered Voters Over Time</h1></div>
-
-					<div>
-						<table id="tblRegisteredVotersOverTimeD4" class="display stripe">
-							<thead>
-								<tr>
-									<th>id</th>
-									<th>Month</th>
-									<th>CPF</th>
-									<th>DEM</th>
-									<th>ECO</th>
-									<th>GRE</th>
-									<th>IND</th>
-									<th>LPF</th>
-									<th>NPA</th>
-									<th>PSL</th>
-									<th>REF</th>
-									<th>REP</th>
-									<th>Total Registered Voters</th>
-								</tr>
-							</thead>
-							<tbody></tbody>
-						</table>
-					</div>
-				</div>
-
-				<div class="dataEntry" id="district5">
-					<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">District 5</h1></div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Voters: <span id="spnAverageAgeD5"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Republicans: <span id="spnAverageRepublicanAgeD5"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Democrats: <span id="spnAverageDemocratAgeD5"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of NPAs: <span id="spnAverageNpaAgeD5"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of 3rd Party: <span id="spnAverageOtherAgeD5"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="gendersChartD5"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="raceChartD5"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="totalD5VotersChart"></div>
-
-					<div style="position: relative; margin-top: 1em;"><h1 style="font-size: 1em;">Registered Voters Over Time</h1></div>
-
-					<div>
-						<table id="tblRegisteredVotersOverTimeD5" class="display stripe">
-							<thead>
-								<tr>
-									<th>id</th>
-									<th>Month</th>
-									<th>CPF</th>
-									<th>DEM</th>
-									<th>ECO</th>
-									<th>GRE</th>
-									<th>IND</th>
-									<th>LPF</th>
-									<th>NPA</th>
-									<th>PSL</th>
-									<th>REF</th>
-									<th>REP</th>
-									<th>Total Registered Voters</th>
-								</tr>
-							</thead>
-							<tbody></tbody>
-						</table>
-					</div>
-				</div>
-
-				<div class="dataEntry" id="barefootBay">
-					<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">Barefoot Bay</h1></div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Voters: <span id="spnAverageAgeBarefootBay"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Republicans: <span id="spnAverageRepublicanAgeBarefootBay"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Democrats: <span id="spnAverageDemocratAgeBarefootBay"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of NPAs: <span id="spnAverageNpaAgeBarefootBay"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of 3rd Party: <span id="spnAverageOtherAgeBarefootBay"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="gendersChartBarefootBay"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="raceChartBarefootBay"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="totalBarefootBayVotersChart"></div>
-				</div>
-
-				<div class="dataEntry" id="cocoa">
-					<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">Cocoa</h1></div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Voters: <span id="spnAverageAgeCocoa"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Republicans: <span id="spnAverageRepublicanAgeCocoa"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Democrats: <span id="spnAverageDemocratAgeCocoa"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of NPAs: <span id="spnAverageNpaAgeCocoa"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of 3rd Party: <span id="spnAverageOtherAgeCocoa"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="gendersChartCocoa"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="raceChartCocoa"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="totalCocoaVotersChart"></div>
-				</div>
-
-				<div class="dataEntry" id="cocoaBeach">
-					<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">Cocoa Beach</h1></div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Voters: <span id="spnAverageAgeCocoaBeach"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Republicans: <span id="spnAverageRepublicanAgeCocoaBeach"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Democrats: <span id="spnAverageDemocratAgeCocoaBeach"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of NPAs: <span id="spnAverageNpaAgeCocoaBeach"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of 3rd Party: <span id="spnAverageOtherAgeCocoaBeach"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="gendersChartCocoaBeach"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="raceChartCocoaBeach"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="totalCocoaBeachVotersChart"></div>
-				</div>
-
-				<div class="dataEntry" id="grantValkaria">
-					<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">Grant Valkaria</h1></div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Voters: <span id="spnAverageAgeGrantValkaria"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Republicans: <span id="spnAverageRepublicanAgeGrantValkaria"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Democrats: <span id="spnAverageDemocratAgeGrantValkaria"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of NPAs: <span id="spnAverageNpaAgeGrantValkaria"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of 3rd Party: <span id="spnAverageOtherAgeGrantValkaria"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="gendersChartGrantValkaria"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="raceChartGrantValkaria"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="totalGrantValkariaVotersChart"></div>
-				</div>
-
-				<div class="dataEntry" id="indialantic">
-					<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">Indialantic</h1></div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Voters: <span id="spnAverageAgeIndialantic"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Republicans: <span id="spnAverageRepublicanAgeIndialantic"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Democrats: <span id="spnAverageDemocratAgeIndialantic"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of NPAs: <span id="spnAverageNpaAgeIndialantic"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of 3rd Party: <span id="spnAverageOtherAgeIndialantic"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="gendersChartIndialantic"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="raceChartIndialantic"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="totalIndialanticVotersChart"></div>
-				</div>
-
-				<div class="dataEntry" id="melbourne">
-					<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">Melbourne</h1></div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Voters: <span id="spnAverageAgeMelbourne"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Republicans: <span id="spnAverageRepublicanAgeMelbourne"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Democrats: <span id="spnAverageDemocratAgeMelbourne"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of NPAs: <span id="spnAverageNpaAgeMelbourne"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of 3rd Party: <span id="spnAverageOtherAgeMelbourne"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="gendersChartMelbourne"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="raceChartMelbourne"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="totalMelbourneVotersChart"></div>
-				</div>
-
-				<div class="dataEntry" id="melbourneBeach">
-					<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">Melbourne Beach</h1></div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Voters: <span id="spnAverageAgeMelbourneBeach"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Republicans: <span id="spnAverageRepublicanAgeMelbourneBeach"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Democrats: <span id="spnAverageDemocratAgeMelbourneBeach"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of NPAs: <span id="spnAverageNpaAgeMelbourneBeach"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of 3rd Party: <span id="spnAverageOtherAgeMelbourneBeach"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="gendersChartMelbourneBeach"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="raceChartMelbourneBeach"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="totalMelbourneBeachVotersChart"></div>
-				</div>
-
-				<div class="dataEntry" id="merrittIsland">
-					<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">Merritt Island</h1></div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Voters: <span id="spnAverageAgeMerrittIsland"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Republicans: <span id="spnAverageRepublicanAgeMerrittIsland"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Democrats: <span id="spnAverageDemocratAgeMerrittIsland"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of NPAs: <span id="spnAverageNpaAgeMerrittIsland"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of 3rd Party: <span id="spnAverageOtherAgeMerrittIsland"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="gendersChartMerrittIsland"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="raceChartMerrittIsland"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="totalMerrittIslandVotersChart"></div>
-				</div>
-
-				<div class="dataEntry" id="mims">
-					<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">Mims</h1></div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Voters: <span id="spnAverageAgeMims"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Republicans: <span id="spnAverageRepublicanAgeMims"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Democrats: <span id="spnAverageDemocratAgeMims"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of NPAs: <span id="spnAverageNpaAgeMims"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of 3rd Party: <span id="spnAverageOtherAgeMims"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="gendersChartMims"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="raceChartMims"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="totalMimsVotersChart"></div>
-				</div>
-
-				<div class="dataEntry" id="palmBay">
-					<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">Palm Bay</h1></div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Voters: <span id="spnAverageAgePalmBay"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Republicans: <span id="spnAverageRepublicanAgePalmBay"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Democrats: <span id="spnAverageDemocratAgePalmBay"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of NPAs: <span id="spnAverageNpaAgePalmBay"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of 3rd Party: <span id="spnAverageOtherAgePalmBay"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="gendersChartPalmBay"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="raceChartPalmBay"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="totalPalmBayVotersChart"></div>
-				</div>
-
-				<div class="dataEntry" id="rockledge">
-					<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">Rockledge</h1></div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Voters: <span id="spnAverageAgeRockledge"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Republicans: <span id="spnAverageRepublicanAgeRockledge"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Democrats: <span id="spnAverageDemocratAgeRockledge"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of NPAs: <span id="spnAverageNpaAgeRockledge"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of 3rd Party: <span id="spnAverageOtherAgeRockledge"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="gendersChartRockledge"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="raceChartRockledge"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="totalRockledgeVotersChart"></div>
-				</div>
-
-				<div class="dataEntry" id="satelliteBeach">
-					<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">Satellite Beach</h1></div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Voters: <span id="spnAverageAgeSatelliteBeach"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Republicans: <span id="spnAverageRepublicanAgeSatelliteBeach"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Democrats: <span id="spnAverageDemocratAgeSatelliteBeach"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of NPAs: <span id="spnAverageNpaAgeSatelliteBeach"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of 3rd Party: <span id="spnAverageOtherAgeSatelliteBeach"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="gendersChartSatelliteBeach"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="raceChartSatelliteBeach"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="totalSatelliteBeachVotersChart"></div>
-				</div>
-
-				<div class="dataEntry" id="titusville">
-					<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">Titusville</h1></div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Voters: <span id="spnAverageAgeTitusville"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Republicans: <span id="spnAverageRepublicanAgeTitusville"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Democrats: <span id="spnAverageDemocratAgeTitusville"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of NPAs: <span id="spnAverageNpaAgeTitusville"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of 3rd Party: <span id="spnAverageOtherAgeTitusville"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="gendersChartTitusville"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="raceChartTitusville"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="totalTitusvilleVotersChart"></div>
-				</div>
-
-				<div class="dataEntry" id="westMelbourne">
-					<div style="position: relative; margin-top: 1.5em;"><h1 style="font-size: 3em;">West Melbourne</h1></div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Voters: <span id="spnAverageAgeWestMelbourne"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Republicans: <span id="spnAverageRepublicanAgeWestMelbourne"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of Democrats: <span id="spnAverageDemocratAgeWestMelbourne"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of NPAs: <span id="spnAverageNpaAgeWestMelbourne"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">
-						Average Age of 3rd Party: <span id="spnAverageOtherAgeWestMelbourne"></span>
-					</div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="gendersChartWestMelbourne"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="raceChartWestMelbourne"></div>
-
-					<div style="position: relative; margin-top: 1em;">&nbsp;</div>
-
-					<div id="totalWestMelbourneVotersChart"></div>
-				</div>
-
-
-
-
-
-
-
 			</div>
 		</div>
 
@@ -1128,6 +1246,8 @@
 							var cocoaBeachVoters = [];
 							var melbourneBeachVoters = [];
 							var grantValkariaVoters = [];
+							var malabarVoters = [];
+							var capeCanaveralVoters = [];
 
 							var returnData = {};
 
@@ -1159,6 +1279,9 @@
 									case 'BAREFOOT BAY':
 										barefootBayVoters.push(dataToProcess[i]);
 										break;
+									case 'CAPE CANAVERAL':
+										capeCanaveralVoters.push(dataToProcess[i]);
+										break;
 									case 'COCOA':
 										cocoaVoters.push(dataToProcess[i]);
 										break;
@@ -1170,6 +1293,9 @@
 										break;
 									case 'INDIALANTIC':
 										indialanticVoters.push(dataToProcess[i]);
+										break;
+									case 'MALABAR':
+										malabarVoters.push(dataToProcess[i]);
 										break;
 									case 'MELBOURNE':
 										melbourneVoters.push(dataToProcess[i]);
@@ -1223,6 +1349,8 @@
 							returnData.cocoaBeachVoters = cocoaBeachVoters;
 							returnData.melbourneBeachVoters = melbourneBeachVoters;
 							returnData.grantValkariaVoters = grantValkariaVoters;
+							returnData.malabarVoters = malabarVoters;
+							returnData.capeCanaveralVoters = capeCanaveralVoters;
 
 							analyzeData(dataToProcess, function(totalVoters) {
 								returnData.totals = totalVoters;
@@ -1284,7 +1412,15 @@
 																										analyzeData(returnData.grantValkariaVoters, function(grantValkariaTotals) {
 																											returnData.grantValkariaTotals = grantValkariaTotals;
 
-																											postMessage(returnData);
+																											analyzeData(returnData.malabarVoters, function(malabarTotals) {
+																												returnData.malabarTotals = malabarTotals;
+
+																												analyzeData(returnData.capeCanaveralVoters, function(capeCanaveralTotals) {
+																													returnData.capeCanaveralTotals = capeCanaveralTotals;
+
+																													postMessage(returnData);
+																												});
+																											});
 																										});
 																									});
 																								});
@@ -1419,7 +1555,7 @@
 						var dataProcessor = new Worker(URL.createObjectURL(dataProcessorName));
 
 						// We're done loading
-						$('#divLoadingData').html('<h1 class="pulsate" style="font-size: 2em;">Processing data, please wait.</h1><img src="images/loading-hourglass.gif">');
+						$('#divLoadingData').html('<h1 class="pulsate" style="font-size: 2em; padding-left: 1em;">Processing data, please wait.</h1><img src="images/loading-hourglass.gif">');
 
 						dataProcessor.onmessage = function(event) {
 							var data = event.data;
@@ -1492,95 +1628,41 @@
 							// Print the total Voter Numbers
 							$('#spnTotalVoters').html(voterData.length);
 
-							// Print the average ages of the data segments
-							drawAverageAges('', data.totals);
-							drawAverageAges('D1', data.d1Totals);
-							drawAverageAges('D2', data.d2Totals);
-							drawAverageAges('D3', data.d3Totals);
-							drawAverageAges('D4', data.d4Totals);
-							drawAverageAges('D5', data.d5Totals);
-							drawAverageAges('Titusville', data.titusvilleTotals);
-							drawAverageAges('Melbourne', data.melbourneTotals);
-							drawAverageAges('SatelliteBeach', data.satelliteBeachTotals);
-							drawAverageAges('Mims', data.mimsTotals);
-							drawAverageAges('PalmBay', data.palmBayTotals);
-							drawAverageAges('Cocoa', data.cocoaTotals);
-							drawAverageAges('Rockledge', data.rockledgeTotals);
-							drawAverageAges('MerrittIsland', data.merrittIslandTotals);
-							drawAverageAges('WestMelbourne', data.westMelbourneTotals);
-							drawAverageAges('BarefootBay', data.barefoorBayTotals);
-							drawAverageAges('Indialantic', data.indialanticTotals)
-							drawAverageAges('CocoaBeach', data.cocoaBeachTotals);
-							drawAverageAges('MelbourneBeach', data.melbourneBeachTotals);
-							drawAverageAges('GrantValkaria', data.grantValkariaTotals);
+							var dataEntries = [
+								{ name: '', totals: data.totals },
+								{ name: 'D1', totals: data.d1Totals },
+								{ name: 'D2', totals: data.d2Totals },
+								{ name: 'D3', totals: data.d3Totals },
+								{ name: 'D4', totals: data.d4Totals },
+								{ name: 'D5', totals: data.d5Totals },
+								{ name: 'BarefootBay', totals: data.barefoorBayTotals },
+								{ name: 'CapeCanaveral', totals: data.capeCanaveralTotals },
+								{ name: 'Cocoa', totals: data.cocoaTotals },
+								{ name: 'CocoaBeach', totals: data.cocoaBeachTotals },
+								{ name: 'GrantValkaria', totals: data.grantValkariaTotals },
+								{ name: 'Indialantic', totals: data.indialanticTotals },
+								{ name: 'Malabar', totals: data.malabarTotals },
+								{ name: 'Melbourne', totals: data.melbourneTotals },
+								{ name: 'MelbourneBeach', totals: data.melbourneTotals },
+								{ name: 'MerrittIsland', totals: data.merrittIslandTotals },
+								{ name: 'Mims', totals: data.mimsTotals },
+								{ name: 'PalmBay', totals: data.palmBayTotals },
+								{ name: 'Rockledge', totals: data.rockledgeTotals },
+								{ name: 'SatelliteBeach', totals: data.satelliteBeachTotals },
+								{ name: 'Titusville', totals: data.titusvilleTotals },
+								{ name: 'WestMelbourne', totals: data.westMelbourneTotals }
+							];
 
-							// Draw the Gender Charts
-							drawGenderChart('#gendersChart', data.totals);
-							drawGenderChart('#gendersChartD1', data.d1Totals);
-							drawGenderChart('#gendersChartD2', data.d2Totals);
-							drawGenderChart('#gendersChartD3', data.d3Totals);
-							drawGenderChart('#gendersChartD4', data.d4Totals);
-							drawGenderChart('#gendersChartD5', data.d5Totals);
-							drawGenderChart('#gendersChartTitusville', data.titusvilleTotals);
-							drawGenderChart('#gendersChartMelbourne', data.melbourneTotals);
-							drawGenderChart('#gendersChartSatelliteBeach', data.satelliteBeachTotals);
-							drawGenderChart('#gendersChartMims', data.mimsTotals);
-							drawGenderChart('#gendersChartPalmBay', data.palmBayTotals);
-							drawGenderChart('#gendersChartCocoa', data.cocoaTotals);
-							drawGenderChart('#gendersChartRockledge', data.rockledgeTotals);
-							drawGenderChart('#gendersChartMerrittIsland', data.merrittIslandTotals);
-							drawGenderChart('#gendersChartWestMelbourne', data.westMelbourneTotals);
-							drawGenderChart('#gendersChartBarefootBay', data.barefoorBayTotals);
-							drawGenderChart('#gendersChartIndialantic', data.indialanticTotals)
-							drawGenderChart('#gendersChartCocoaBeach', data.cocoaBeachTotals);
-							drawGenderChart('#gendersChartMelbourneBeach', data.melbourneBeachTotals);
-							drawGenderChart('#gendersChartGrantValkaria', data.grantValkariaTotals);
-
-							// Create the Race Charts
-							drawRaceChart('#raceChart', data.totals);
-							drawRaceChart('#raceChartD1', data.d1Totals);
-							drawRaceChart('#raceChartD2', data.d2Totals);
-							drawRaceChart('#raceChartD3', data.d3Totals);
-							drawRaceChart('#raceChartD4', data.d4Totals);
-							drawRaceChart('#raceChartD5', data.d5Totals);
-							drawRaceChart('#raceChartTitusville', data.titusvilleTotals);
-							drawRaceChart('#raceChartMelbourne', data.melbourneTotals);
-							drawRaceChart('#raceChartSatelliteBeach', data.satelliteBeachTotals);
-							drawRaceChart('#raceChartMims', data.mimsTotals);
-							drawRaceChart('#raceChartPalmBay', data.palmBayTotals);
-							drawRaceChart('#raceChartCocoa', data.cocoaTotals);
-							drawRaceChart('#raceChartRockledge', data.rockledgeTotals);
-							drawRaceChart('#raceChartMerrittIsland', data.merrittIslandTotals);
-							drawRaceChart('#raceChartWestMelbourne', data.westMelbourneTotals);
-							drawRaceChart('#raceChartBarefootBay', data.barefoorBayTotals);
-							drawRaceChart('#raceChartIndialantic', data.indialanticTotals);
-							drawRaceChart('#raceChartCocoaBeach', data.cocoaBeachTotals);
-							drawRaceChart('#raceChartMelbourneBeach', data.melbourneBeachTotals);
-							drawRaceChart('#raceChartGrantValkaria', data.grantValkariaTotals);
-
-							// Create the party charts
-							drawPartyChart('#totalBrevardVotersChart', data.totals);
-							drawPartyChart('#totalD1VotersChart', data.d1Totals);
-							drawPartyChart('#totalD2VotersChart', data.d2Totals);
-							drawPartyChart('#totalD3VotersChart', data.d3Totals);
-							drawPartyChart('#totalD4VotersChart', data.d4Totals);
-							drawPartyChart('#totalD5VotersChart', data.d5Totals);
-							drawPartyChart('#totalTitusvilleVotersChart', data.titusvilleTotals);
-							drawPartyChart('#totalMelbourneVotersChart', data.melbourneTotals);
-							drawPartyChart('#totalSatelliteBeachVotersChart', data.satelliteBeachTotals);
-							drawPartyChart('#totalMimsVotersChart', data.mimsTotals);
-							drawPartyChart('#totalPalmBayVotersChart', data.palmBayTotals);
-							drawPartyChart('#totalCocoaVotersChart', data.cocoaTotals);
-							drawPartyChart('#totalRockledgeVotersChart', data.rockledgeTotals);
-							drawPartyChart('#totalMerrittIslandVotersChart', data.merrittIslandTotals);
-							drawPartyChart('#totalWestMelbourneVotersChart', data.westMelbourneTotals);
-							drawPartyChart('#totalBarefootBayVotersChart', data.barefoorBayTotals);
-							drawPartyChart('#totalIndialanticVotersChart', data.indialanticTotals);
-							drawPartyChart('#totalCocoaBeachVotersChart', data.cocoaBeachTotals);
-							drawPartyChart('#totalMelbourneBeachVotersChart', data.melbourneBeachTotals);
-							drawPartyChart('#totalGrantValkariaVotersChart', data.grantValkariaTotals);
+							for (var i=0; i<dataEntries.length; i++) {
+								drawAverageAges(dataEntries[i].name, dataEntries[i].totals);
+								drawGenderChart('#gendersChart' + dataEntries[i].name, dataEntries[i].totals);
+								drawRaceChart('#raceChart' + dataEntries[i].name, dataEntries[i].totals);
+								drawRaceChart('#raceChart' + dataEntries[i].name, dataEntries[i].totals);
+								drawPartyChart('#total' + dataEntries[i].name + 'VotersChart', dataEntries[i].totals);
+							}
 
 							// Create the voters by district chart
+							// Might not be needed
 		          new roughViz.Donut({
 		            element: '#votersByDistrictChart',
 		            data: {
@@ -1610,61 +1692,23 @@
 
 				}
 
-        $('#tblTotalVoters').dataTable({
-          bPaginate: false,
-          bLengthChange: false,
-          bFilter: false,
-          bInfo: false,
-          ordering: false,
-          bAutoWidth: true,
-          columnDefs: [
-            {
-              targets: [0], visible: false
-            },
-            {
-              targets: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], className: 'righty'
-            }
-          ]
-        });
+				// When the user scrolls the page, execute myFunction
+				window.onscroll = function() {stickyFunction()};
 
-        $('#tblDistrict3').dataTable({
-          bPaginate: false,
-          bLengthChange: false,
-          bFilter: false,
-          ordering: false,
-          bInfo: false,
-          bAutoWidth: true,
-          columnDefs: [
-            {
-              targets: [0], visible: false
-            },
-            {
-              targets: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11], className: 'righty'
-            }
-          ]
-        });
+				// Get the navbar
+				var navbar = document.getElementById("navbar");
 
-        $('#tblDistrict5').dataTable({
-          bPaginate: false,
-          bLengthChange: false,
-          bFilter: false,
-          ordering: false,
-          bInfo: false,
-          bAutoWidth: true,
-          columnDefs: [
-            {
-              targets: [0], visible: false
-            },
-            {
-              targets: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11], className: 'righty'
-            }
-          ]
-        });
+				// Get the offset position of the navbar
+				var sticky = navbar.offsetTop;
 
-				$('#tblDemographics').dataTable({
-					//ajax: 'D5AndD3Demographics.json'
-					ajax: 'https://raw.githubusercontent.com/mgrigajtis/mgrigajtis.github.io/master/d5/D5AndD3Demographics.json'
-				});
+				// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+				function stickyFunction() {
+				  if (window.pageYOffset >= sticky) {
+				    navbar.classList.add('sticky')
+				  } else {
+				    navbar.classList.remove('sticky');
+				  }
+				}
       });
     </script>
 	</body>
