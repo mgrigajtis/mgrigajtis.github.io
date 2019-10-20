@@ -41,15 +41,21 @@
 					    <a href="#barefootBay">Barefoot Bay</a><br class="clear">
 							<a href="#cocoa">Cocoa</a><br class="clear">
 							<a href="#cocoaBeach">Cocoa Beach</a><br class="clear">
+							<a href="#fellsmere">Fellsmere</a><br class="clear">
 							<a href="#grantValkaria">Grant Valkaria</a><br class="clear">
 							<a href="#indialantic">Indialantic</a><br class="clear">
 							<a href="#indianHarbourBeach">Indian Harbour Beach</a><br class="clear">
+							<a href="#kenansville">Kenansville</a><br class="clear">
 							<a href="#malabar">Malabar</a><br class="clear">
 							<a href="#melbourne">Melbourne</a><br class="clear">
 							<a href="#melbourneBeach">Melbourne Beach</a><br class="clear">
+							<a href="#melbourneVillage">Melbourne Village</a><br class="clear">
 							<a href="#merrittIsland">Merritt Island</a><br class="clear">
+							<a href="#micco">Micco</a><br class="clear">
 							<a href="#mims">Mims</a><br class="clear">
 							<a href="#palmBay">Palm Bay</a><br class="clear">
+							<a href="#palmShores">Palm Shores</a><br class="clear">
+							<a href="#patrickAFB">Patrick Air Force Base</a><br class="clear">
 							<a href="#rockledge">Rockledge</a><br class="clear">
 							<a href="#satelliteBeach">Satellite Beach</a><br class="clear">
 							<a href="#titusville">Titusville</a><br class="clear">
@@ -231,11 +237,11 @@
 								}
 
 								returnData.totalVoters = dataArray.length;
-								returnData.averageAge = Math.round(totalAgeSum / knownAges);
-								returnData.averageRepublicanAge = Math.round(totalRepublicanAge / knownRepublicanAges);
-								returnData.averageDemocratAge = Math.round(totalDemocratAge / knownDemocratAges);
-								returnData.averageNpaAge = Math.round(totalNpaAge / knownNpaAges);
-								returnData.averageOtherAge = Math.round(totalOtherAge / knownOtherAges);
+								returnData.averageAge = (knownAges === 0) ? 0 : Math.round(totalAgeSum / knownAges);
+								returnData.averageRepublicanAge = (knownRepublicanAges === 0) ? 0 : Math.round(totalRepublicanAge / knownRepublicanAges);
+								returnData.averageDemocratAge = (knownDemocratAges === 0) ? 0 : Math.round(totalDemocratAge / knownDemocratAges);
+								returnData.averageNpaAge = (knownNpaAges === 0) ? 0 : Math.round(totalNpaAge / knownNpaAges);
+								returnData.averageOtherAge = (knownOtherAges === 0) ? 0 : Math.round(totalOtherAge / knownOtherAges);
 								returnData.males = males;
 								returnData.females = females;
 								returnData.unkownGenders = unkownGenders;
@@ -280,6 +286,12 @@
 							var malabarVoters = [];
 							var capeCanaveralVoters = [];
 							var indianHarbourBeachVoters = [];
+							var palmShoresVoters = [];
+							var miccoVoters = [];
+							var melbourneVillageVoters = [];
+							var patrickAFBVoters = [];
+							var fellsmereVoters = [];
+							var kenansvilleVoters = [];
 
 							var returnData = {};
 
@@ -320,6 +332,9 @@
 									case 'COCOA BEACH':
 										cocoaBeachVoters.push(dataToProcess[i]);
 										break;
+									case 'FELLSMERE':
+										fellsmereVoters.push(dataToProcess[i]);
+										break;
 									case 'GRANT VALKARIA':
 										grantValkariaVoters.push(dataToProcess[i]);
 										break;
@@ -328,6 +343,9 @@
 										break;
 									case 'INDIAN HARBOUR BEACH':
 										indianHarbourBeachVoters.push(dataToProcess[i]);
+										break;
+									case 'KENANSVILLE':
+										kenansvilleVoters.push(dataToProcess[i]);
 										break;
 									case 'MALABAR':
 										malabarVoters.push(dataToProcess[i]);
@@ -338,14 +356,26 @@
 									case 'MELBOURNE BEACH':
 										melbourneBeachVoters.push(dataToProcess[i]);
 										break;
+									case 'MELBOURNE VILLAGE':
+										melbourneVillageVoters.push(dataToProcess[i]);
+										break;
 									case 'MERRITT ISLAND':
 										merrittIslandVoters.push(dataToProcess[i]);
 										break;
+									case 'MICCO':
+										miccoVoters.push(dataToProcess[i]);
+										break;
 									case 'MIMS':
 										mimsVoters.push(dataToProcess[i]);
-										break
+										break;
 									case 'PALM BAY':
 										palmBayVoters.push(dataToProcess[i]);
+										break;
+									case 'PALM SHORES':
+										palmShoresVoters.push(dataToProcess[i]);
+										break;
+									case 'PATRICK AFB':
+										patrickAFBVoters.push(dataToProcess[i]);
 										break;
 									case 'ROCKLEDGE':
 										rockledgeVoters.push(dataToProcess[i]);
@@ -387,6 +417,12 @@
 							returnData.malabarVoters = malabarVoters;
 							returnData.capeCanaveralVoters = capeCanaveralVoters;
 							returnData.indianHarbourBeachVoters = indianHarbourBeachVoters;
+							returnData.palmShoresVoters = palmShoresVoters;
+							returnData.miccoVoters = miccoVoters;
+							returnData.melbourneVillageVoters = melbourneVillageVoters;
+							returnData.patrickAFBVoters = patrickAFBVoters;
+							returnData.fellsmereVoters = fellsmereVoters;
+							returnData.kenansvilleVoters = kenansvilleVoters;
 
 							analyzeData(dataToProcess, function(totalVoters) {
 								returnData.totals = totalVoters;
@@ -457,7 +493,31 @@
 																													analyzeData(returnData.indianHarbourBeachVoters, function(indianHarbourBeachTotals) {
 																														returnData.indianHarbourBeachTotals = indianHarbourBeachTotals;
 
-																														postMessage(returnData);
+																														analyzeData(returnData.palmShoresVoters, function(palmShoresTotals) {
+																															returnData.palmShoresTotals = palmShoresTotals;
+
+																															analyzeData(returnData.miccoVoters, function(miccoTotals) {
+																																returnData.miccoTotals = miccoTotals;
+
+																																analyzeData(returnData.melbourneVillageVoters, function(melbourneVillageTotals) {
+																																	returnData.melbourneVillageTotals = melbourneVillageTotals;
+
+																																	analyzeData(returnData.patrickAFBVoters, function(patrickAFBTotals) {
+																																		returnData.patrickAFBTotals = patrickAFBTotals;
+
+																																		analyzeData(returnData.fellsmereVoters, function(fellsmereTotals) {
+																																			returnData.fellsmereTotals = fellsmereTotals;
+
+																																			analyzeData(returnData.kenansvilleVoters, function(kenansvilleTotals) {
+																																				returnData.kenansvilleTotals = kenansvilleTotals;
+
+																																				postMessage(returnData);
+																																			});
+																																		});
+																																	});
+																																});
+																															});
+																														});
 																													});
 																												});
 																											});
@@ -663,15 +723,37 @@
 
 							// Create the genders charts
 							function drawGenderChart (element, totals) {
+								labels = [];
+								values = [];
+								colors = [];
+
+								if (totals.whites > 0) {
+									labels.push('Males');
+									values.push(totals.males);
+									colors.push('blue');
+								}
+
+								if (totals.blacks > 0) {
+									labels.push('Females');
+									values.push(totals.females);
+									colors.push('pink');
+								}
+
+								if (totals.hispanics > 0) {
+									labels.push('Unknown');
+									values.push(totals.unkownGenders);
+									colors.push('yellow');
+								}
+
 								new roughViz.Donut({
 			            element: element,
 			            data: {
-			              labels: ['Male', 'Female', 'Unkown'],
-			              values: [totals.males, totals.females, totals.unkownGenders]
+			              labels: labels,
+			              values: values
 			            },
 			            title: 'Voters By Gender',
 			            roughness: 1,
-			            colors: ['blue', 'pink', 'yellow'],
+			            colors: colors,
 			            stroke: 'black',
 			            strokeWidth: 1,
 			            fillStyle: 'zigzag',
@@ -680,15 +762,43 @@
 							}
 
 							function drawRaceChart(element, totals) {
+								labels = [];
+								values = [];
+								colors = [];
+
+								if (totals.whites > 0) {
+									labels.push('Whites');
+									values.push(totals.whites);
+									colors.push('red');
+								}
+
+								if (totals.blacks > 0) {
+									labels.push('Blacks');
+									values.push(totals.blacks);
+									colors.push('green');
+								}
+
+								if (totals.hispanics > 0) {
+									labels.push('Hispanics');
+									values.push(totals.hispanics);
+									colors.push('yellow');
+								}
+
+								if (totals.other > 0) {
+									labels.push('Other');
+									values.push(totals.others);
+									colors.push('blue');
+								}
+
 								new roughViz.Donut({
 			            element: element,
 			            data: {
-			              labels: ['Whites', 'Blacks', 'Hispanics', 'Other'],
-			              values: [totals.whites, totals.blacks, totals.hispanics, totals.otherRace]
+			              labels: labels,
+			              values: values
 			            },
 			            title: 'Voters By Race',
 			            roughness: 1,
-			            colors: ['red', 'green', 'yellow', 'blue'],
+			            colors: colors,
 			            stroke: 'black',
 			            strokeWidth: 1,
 			            fillStyle: 'zigzag',
@@ -697,15 +807,43 @@
 							}
 
 							function drawPartyChart(element, totals) {
+								labels = [];
+								values = [];
+								colors = [];
+
+								if (totals.democrats > 0) {
+									labels.push('Democrats');
+									values.push(totals.democrats);
+									colors.push('blue');
+								}
+
+								if (totals.npas > 0) {
+									labels.push('NPAs');
+									values.push(totals.npas);
+									colors.push('purple');
+								}
+
+								if (totals.republicans > 0) {
+									labels.push('Republicans');
+									values.push(totals.republicans);
+									colors.push('red');
+								}
+
+								if (totals.thirdPartyVoters > 0) {
+									labels.push('Third Party');
+									values.push(totals.thirdPartyVoters);
+									colors.push('yellow');
+								}
+
 								new roughViz.Donut({
 			            element: element,
 			            data: {
-			              labels: ['DEMOCRATS', 'NPAs', 'REPUBLICANS', 'THIRD PARTY'],
-			              values: [totals.democrats, totals.npas, totals.republicans, totals.thirdPartyVoters]
+			              labels: labels,
+			              values: values
 			            },
 			            title: 'Voters By Party',
 			            roughness: 1,
-			            colors: ['blue', 'purple', 'red', 'yellow'],
+			            colors: colors,
 			            stroke: 'black',
 			            strokeWidth: 1,
 			            fillStyle: 'zigzag',
@@ -730,15 +868,21 @@
 								{ name: 'CapeCanaveral', totals: data.capeCanaveralTotals, title: 'Cape Canaveral', dataTable: false },
 								{ name: 'Cocoa', totals: data.cocoaTotals, title: 'Cocoa', dataTable: false },
 								{ name: 'CocoaBeach', totals: data.cocoaBeachTotals, title: 'Cocoa Beach', dataTable: false },
+								{ name: 'Fellsmere', totals: data.fellsmereTotals, title: 'Fellsmere', dataTable: false },
 								{ name: 'GrantValkaria', totals: data.grantValkariaTotals, title: 'Grant Valkaria', dataTable: false },
 								{ name: 'Indialantic', totals: data.indialanticTotals, title: 'Indialantic', dataTable: false },
 								{ name: 'IndianHarbourBeach', totals: data.indianHarbourBeachTotals, title: 'Indian Harbour Beach', dataTables: false },
+								{ name: 'Kenansville', totals: data.kenansvilleTotals, title: 'Kenansville', dataTable: false },
 								{ name: 'Malabar', totals: data.malabarTotals, title: 'Malabar', dataTable: false },
 								{ name: 'Melbourne', totals: data.melbourneTotals, title: 'Melbourne', dataTable: false },
 								{ name: 'MelbourneBeach', totals: data.melbourneTotals, title: 'Melbourne Beach', dataTable: false },
+								{ name: 'MelbourneVillage', totals: data.melbourneVillageTotals, title: 'Melbourne Village', dataTable: false },
 								{ name: 'MerrittIsland', totals: data.merrittIslandTotals, title: 'Merritt Island', dataTable: false },
+								{ name: 'Micco', totals: data.miccoTotals, title: 'Micco', dataTable: false },
 								{ name: 'Mims', totals: data.mimsTotals, title: 'Mims', dataTable: false },
 								{ name: 'PalmBay', totals: data.palmBayTotals, title: 'Palm Bay', dataTable: false },
+								{ name: 'PalmShores', totals: data.palmShoresTotals, title: 'Palm Shores', dataTable: false },
+								{ name: 'PatrickAFB', totals: data.patrickAFBTotals, title: 'Patrick Air Force Base', dataTable: false },
 								{ name: 'Rockledge', totals: data.rockledgeTotals, title: 'Rockledge', dataTable: false },
 								{ name: 'SatelliteBeach', totals: data.satelliteBeachTotals, title: 'Satellite Beach', dataTable: false },
 								{ name: 'Titusville', totals: data.titusvilleTotals, title: 'Titusville', dataTable: false },
