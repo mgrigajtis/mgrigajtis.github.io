@@ -24,7 +24,7 @@
 
 			<div id="mainContent" style="display: none;">
 				<div id="navbar">
-					<a href="#brevard">Citrus Totals</a>
+					<a href="#citrus">Citrus Totals</a>
 					<div class="dropdown">
 					  <span>County Districts</span>
 					  <div class="dropdown-content">
@@ -651,7 +651,7 @@
 							});
 						}
 
-						drawDataTable('#tblRegisteredVotersOverTimeBrevard', historicalData.brevard);
+						drawDataTable('#tblRegisteredVotersOverTimeCitrus', historicalData.citrus);
 						drawDataTable('#tblRegisteredVotersOverTimeD1', historicalData.d1);
 						drawDataTable('#tblRegisteredVotersOverTimeD2', historicalData.d2);
 						drawDataTable('#tblRegisteredVotersOverTimeD3', historicalData.d3);
@@ -872,7 +872,7 @@
 							$('#spnTotalVoters').html(voterData.length);
 
 							var dataEntries = [
-								{ name: 'Brevard', totals: data.totals, title: 'Brevard County', dataTable: true },
+								{ name: 'Citrus', totals: data.totals, title: 'Citrus County', dataTable: true },
 								{ name: 'D1', totals: data.d1Totals, title: 'District 1', dataTable: true },
 								{ name: 'D2', totals: data.d2Totals, title: 'District 2', dataTable: true },
 								{ name: 'D3', totals: data.d3Totals, title: 'District 3', dataTable: true },
