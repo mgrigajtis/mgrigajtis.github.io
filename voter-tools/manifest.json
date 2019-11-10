@@ -1,7 +1,7 @@
 {
   "name": "voter-tools",
   "short_name": "voter-tools",
-  "start_url": "/",
+  "start_url": "/voter-tools/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#fff",
