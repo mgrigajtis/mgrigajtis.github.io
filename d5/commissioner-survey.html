@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>District 5 Commissioner Survey</title>
+	</head>
+
+	<body>
+		<div class="content">
+			<h1 class="title">District 5 Quick Survey</h1>
+      <div id="surveyQuestion">
+        <input type="hidden" name="question" id="question" value="What do you think of the job Kristine Isnardi is doing as County Commissioner for District 5?" />
+        <span>What do you think of the job Kristine Isnardi is doing as County Commissioner for District 5?<span><br />
+        <input type="radio" name="answer" value="Who?" />Who?<br />
+        <input type="radio" name="answer" value="Strongly Approve" />Strongly Approve<br />
+        <input type="radio" name="answer" value="Approve" />Approve<br />
+        <input type="radio" name="answer" value="Neither Approve nor Disapprove" />Neither Approve nor Disapprove<br />
+        <input type="radio" name="answer" value="Disapprove" />Disapprove<br />
+        <input type="radio" name="answer" value="Strongly Disapprove" />Strongly Disapprove<br />
+        <button id="submit" onclick="submit();">Submit</button>
+      </div>
+		</div>
+    <script type="text/javascript">
+      function submit() {
+        var question = document.getElementById('question').value;
+        var radios = document.getElementsByName('answer');
+        var answer = '';
+
+        for (var i = 0, length = radios.length; i < length; i++) {
+         if (radios[i].checked) {
+          // do whatever you want with the checked radio
+          answer = radios[i].value;
+
+          // only one radio can be logically checked, don't check the rest
+          break;
+         }
+       }
+
+       var params = JSON.stringify({question: question, answer: answer});
+       var xmlhttp = new XMLHttpRequest();
+
+  		 xmlhttp.onreadystatechange = function() {
+  		     if (xmlhttp.readyState === 4) {
+  						switch(xmlhttp.status) {
+  							case 200:
+                  document.getElementById('surveyQuestion').innerHTML = 'Thank you!';
+                  break;
+  							default:
+  								alert('Error!');
+  								break;
+  						}
+  					}
+  			};
+
+  			xmlhttp.open('POST', 'http://3.88.211.242/api/recordsurvey', true);
+        xmlhttp.setRequestHeader('Content-Type', 'application/json');
+  			xmlhttp.send(params);
+      }
+    </script>
+	</body>
+</html>
