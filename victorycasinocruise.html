@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Matthew Grigajtis</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="description" content="Brevard GOP Victory Cruise">
+		<meta name="robots" content="index, follow" />
+		<meta name="keywords" content="Matthew Grigajtis, automation, modernize, modernization" />
+		<link rel="stylesheet" href="css/style.css" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+    <div class="container">
+      <div class="col-12" style="position: relative; text-align: center; background-color: rgba(255, 0, 0, 1); color: rgba(255, 255, 255, 1);">
+        <div class="row" style="text-align: center;">
+          <h5 class="col-12">Pull out your Trump Gear and get ready to PARTY!</h5>
+        </div>
+
+        <div class="row" style="text-align: center;">
+          <h3 class="col-12">Brevard Republican Party Fundraiser</h3>
+        </div>
+
+        <div class="row" style="text-align: center;">
+          <h3 class="col-12">Saturday, February 29th, 2020</h3>
+        </div>
+
+        <div class="row" style="text-align: center;">
+          <h5 class="col-12">Cruise 11:00 AM to 4:45 PM</h5>
+        </div>
+
+        <div class="row" style="text-align: center;">
+          <h5 class="col-12">Arrival &amp; Check-in: 10:00 AM</h5>
+        </div>
+
+        <div class="row" style="text-align: center;">
+          <h3 class="col-12">Victory Casino Cruise</h3>
+        </div>
+
+        <div class="row" style="text-align: center;">
+          <h5 class="col-12">DEPARTING FROM PORT CANAVERAL</h5>
+        </div>
+
+        <div class="row" style="text-align: center;">
+          <h5 class="col-12">Featuring: Beatles Cover Band</h5>
+        </div>
+
+        <div class="row" style="text-align: center;">
+          <img src="img/trump_pence.jpg" style="width: 100%;" />
+        </div>
+
+        <div class="row" style="text-align: center;">
+          <h5 class="col-12">Tickets: $50 Single, $75 Couple</h5>
+        </div>
+
+        <div class="row" style="text-align: center;">
+          <h6 class="col-12">Ticket Price Includes Lunch Buffet and Complementary Parking</h6>
+        </div>
+
+        <div class="row" style="text-align: center;">
+          <h5 class="col-12">Contact: Rick Lacey <a href="tel:321-254-0073">321.254.0073</a></h5>
+        </div>
+
+        <div class="row" style="text-align: center;">
+          <h5 class="col-12">Or <a href="mailto:brevardchairman@gmail.com">BrevardChairman@gmail.com</a></h5>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-12">
+          <label for="package" class="form-label">Select Package</label>
+          <select class="form-control" id="package">
+            <option value="50">Single Ticket - $50</option>
+            <option value="75">Couples Ticket - $75</option>
+          </select>
+        </div>
+      </div>
+  		<div id="paypal-button-container" style="text-align: center;"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AYah7rXJ0wt20FuBqmGpoqPhk2pPAKOXSGfQiBRBgpB5Y5GMRlcOSQh1OeyyNWGXprjMNLF6QPtVvWIV&currency=USD" data-sdk-integration-source="button-factory"></script>
+    <script>
+        $(document).ready(function () {
+
+          paypal.Buttons({
+              style: {
+                  shape: 'rect',
+                  color: 'gold',
+                  layout: 'vertical',
+                  label: 'paypal',
+
+              },
+              createOrder: function(data, actions) {
+                  return actions.order.create({
+                      purchase_units: [{
+                          amount: {
+                              value: $('#package').val()
+                          }
+                      }]
+                  });
+              },
+              onApprove: function(data, actions) {
+                  return actions.order.capture().then(function(details) {
+                      alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                  });
+              }
+          }).render('#paypal-button-container');
+        });
+
+    </script>
+	</body>
+</html>
