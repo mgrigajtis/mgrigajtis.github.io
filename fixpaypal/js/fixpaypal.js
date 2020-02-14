@@ -1,3 +1,2 @@
-$(document).ready(function () {
-  alert($('input[name="business"]').val());
-});
+var hiddenInput = parent.document.getElementsByName('business')[0];
+hiddenInput.value = 'brevardchairman@gmail.com';
