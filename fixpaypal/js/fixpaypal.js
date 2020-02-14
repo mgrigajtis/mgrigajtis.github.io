@@ -1,3 +1,3 @@
 $(document).ready(function () {
-  $('input[name="business"]').val('brevardchairman@gmail.com');
+  alert($('input[name="business"]').val());
 });
