@@ -170,8 +170,9 @@ html {
     color: #95a4a9;
     font: 12px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-body {
-    margin: 10%;
+
+#main-content {
+	padding: 10%;
 }
 
 .avatar {
