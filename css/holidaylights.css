@@ -22,26 +22,26 @@
 }
 
 .lightrope li {
-position: relative;
--webkit-animation-fill-mode: both;
-animation-fill-mode: both;
--webkit-animation-iteration-count: infinite;
-animation-iteration-count: infinite;
-list-style: none;
-margin: 0;
-padding: 0;
-display: block;
-width: 12px;
-height: 28px;
-border-radius: 50%;
-margin: 20px;
-display: inline-block;
-background: #00f7a5;
-box-shadow: 0px 4.6666666667px 24px 3px #00f7a5;
--webkit-animation-name: flash-1;
-animation-name: flash-1;
--webkit-animation-duration: 2s;
-animation-duration: 2s;
+  position: relative;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 12px;
+  height: 28px;
+  border-radius: 50%;
+  margin: 20px;
+  display: inline-block;
+  background: #00f7a5;
+  box-shadow: 0px 4.6666666667px 24px 3px #00f7a5;
+  -webkit-animation-name: flash-1;
+  animation-name: flash-1;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
 }
 
 .lightrope li:nth-child(2n+1) {
@@ -172,4 +172,226 @@ animation-duration: 2s;
         background: rgba(247, 0, 148, 0.4);
         box-shadow: 0px 4.6666666667px 24px 3px rgba(247, 0, 148, 0.2);
     }
+}
+
+/* Snow styling */
+.snow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 50;
+  overflow: none;
+
+  /* Pass-through click events */
+  pointer-events: none;
+
+  /* Encourage hardware acceleration */
+  /* 20vh per row of flakes - adjust falling animation too  */
+  transform: translate3d(0, -20vh, 0);
+
+  /* Flex used to space the i tags evenly horizontally. Plays nicely at inbetween widths */
+  /* Temporarily disable if you are adjusting the number of flakes on screen */
+  display:flex;
+  justify-content: space-between;
+
+  /* Allow for multi row snowflakes */
+  flex-wrap: wrap;
+}
+
+/* Generic styling of snowflakes, default animation and transform */
+[class^="snow_flake"] {
+  will-change: transform;
+  display: inline-block;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000;
+  animation: falling;
+  animation-iteration-count: infinite;
+
+  /* Filter is completely optional and may cause performance issues on low powered GPUs. */
+  /* filter: drop-shadow(0 1px 1px rgba(0,0,0,.125)) blur(1px); */
+  background-size: contain;
+  background-repeat: no-repeat;
+  backface-visibility: hidden;
+
+  /* Snowflake image */
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96' fill='%23fff' fill-rule='evenodd'%3E%3Cpath d='M38.2 65l1-9.7 6.8-3.8v7.8L38.2 65zM58 65l-8-5.8v-7.8l6.8 4 1 9.6zm9.8-17l-9 3.8-6.6-3.8 7-4 8.6 4zm-39.4 0l8.7-4 7 4-6.5 3.8-8.8-4zM58 31l-1 9.6-7 4v-8l8-5.7zm-19.8 0l7.8 5.5v8l-6.7-3.8-1-9.8zm12-17L60.5 3.5l2.8 3-13.3 13v12L63 22l-1.7 16 10.2-5.7 5-18.3 4 1-4 14.4 12.2-7 2 3.6-12 7L93 37l-1.3 3.8-18.2-5-10.2 5.8L78 48l-14.7 6.4 10 5.6 18-5 1.2 4-14.3 3.8L90.6 70l-2 3.5L76 66.3l4 14.4-4 1-5-18.2-9.8-5.6L63 73.3 50 64v11.6L63.3 89l-2.8 3L50 81.5V96h-4V81.5L35.4 92l-2.8-3L46 75.8V64.4l-12.8 9.3 1.7-16-10.5 6-5 18-4-1 4-14.3-12.5 7L5 70l13-7.2-14.5-4 1-3.8L23 60l10-5.7L18.3 48l14.4-6.4-10.2-6-18.3 5-1-3.8 14.3-4-12.2-7 2-3.4 12.2 7-4-14.4 4-1 5 18.2 10.4 6-2-16 13 9.2V19.8L32.4 6.3l3-2.8L46 14V0h4v14z'/%3E%3C/svg%3E");
+}
+
+/* Four sizes, each requires individual origins set */
+[class^="snow_flake"]:nth-child(4n+0) {
+  width: 2.5rem;
+  height: 2.5rem;
+  transform-origin: -5% -5%;
+}
+
+[class^="snow_flake"]:nth-child(4n+1) {
+  width: 2rem;
+  height: 2rem;
+  transform-origin: 15% 0;
+}
+
+[class^="snow_flake"]:nth-child(4n+2) {
+  width: 1.5rem;
+  height: 1.5rem;
+  transform-origin: 0 -30%;
+}
+
+[class^="snow_flake"]:nth-child(4n+3) {
+  width: 1rem;
+  height: 1rem;
+  transform-origin: -100% -100%;
+}
+
+/* Keep first snowflake close to the edge */
+[class^="snow_flake"]:first-child {
+  transform-origin: 60% 40%;
+}
+
+/* Delay the start times */
+[class^="snow_flake"]:nth-of-type(5n+0) {
+  animation-delay: 0s;
+}
+
+[class^="snow_flake"]:nth-of-type(5n+1) {
+  animation-delay: 2s;
+}
+
+[class^="snow_flake"]:nth-of-type(5n+2) {
+  animation-delay: 4s;
+}
+
+[class^="snow_flake"]:nth-of-type(5n+3) {
+  animation-delay: 6s;
+}
+
+[class^="snow_flake"]:nth-of-type(5n+4) {
+  animation-delay: 8s;
+}
+
+/* Animation durations are calculated to be multiples of each other +/- a few seconds for initial delays */
+[class^="snow_flake"]:nth-child(3n+0) {
+  animation-duration: 12s;
+}
+
+[class^="snow_flake"]:nth-child(3n+1) {
+  animation-duration: 18s;
+}
+
+[class^="snow_flake"]:nth-child(3n+2) {
+  animation-duration: 24s;
+}
+
+/* Tweak timing functions - a tad more random */
+[class^="snow_flake"]:nth-of-type(6n+0) {
+  animation-timing-function: ease-in-out;
+}
+
+[class^="snow_flake"]:nth-of-type(6n+1) {
+  animation-timing-function: ease-out;
+}
+
+[class^="snow_flake"]:nth-of-type(6n+2) {
+  animation-timing-function: ease;
+}
+
+[class^="snow_flake"]:nth-of-type(6n+3) {
+  animation-timing-function: ease-in;
+}
+
+[class^="snow_flake"]:nth-of-type(6n+4) {
+  animation-timing-function: linear;
+}
+
+[class^="snow_flake"]:nth-of-type(6n+5) {
+  animation-timing-function: cubic-bezier(0.2, 0.3, 0.8, 0.9);
+}
+
+/* Tweak opacity - more randomness */
+[class^="snow_flake"]:nth-of-type(7n+0) {opacity: 0.6;}
+[class^="snow_flake"]:nth-of-type(7n+1) {opacity: 0.9;}
+[class^="snow_flake"]:nth-of-type(7n+2) {opacity: 0.5;}
+[class^="snow_flake"]:nth-of-type(7n+4) {opacity: 0.8;}
+[class^="snow_flake"]:nth-of-type(7n+6) {opacity: 0.7;}
+
+/* Filter is completely optional, and it may cause performance issues on low powered GPUs. */
+[class^="snow_flake"]:nth-of-type(3n+0) {
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,.125));
+}
+
+[class^="snow_flake"]:nth-of-type(3n+1) {
+  filter: blur(1px);
+}
+
+/* Increase number of snowflakes at common device widths */
+.snow_flake-600px,
+.snow_flake-768px,
+.snow_flake-1024px,
+.snow_flake-1280px,
+.snow_flake-1366px,
+.snow_flake-1440px,
+.snow_flake-1600px,
+.snow_flake-1800px,
+.snow_flake-1920px {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .snow_flake-600px {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 768px) {
+  .snow_flake-768px {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .snow_flake-1024px {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 1280px) {
+  .snow_flake-1280px {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 1366px) {
+  .snow_flake-1366px {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 1600px) {
+  .snow_flake-1600px {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 1800px) {
+  .snow_flake-1800px {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 1920px) {
+  .snow_flake-1920px {
+    display: inline-block;
+  }
+}
+
+/* Animation for all snowflakes */
+@keyframes falling {
+  from {
+    transform: translate(0, 0) rotate(0deg) scale(0.8);
+  }
+  to {
+    transform: translate(0, 120vh) rotate(360deg) scale(1.2);
+  }
 }

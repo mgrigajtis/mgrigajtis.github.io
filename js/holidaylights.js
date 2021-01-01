@@ -1,12 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
-  /************************************\
-  | generateLightRope                  |
-  |                                    |
-  | This function returns a UL object  |
-  | with 50 li elements.  This is what |
-  | ties to the CSS                    |
-  \************************************/
-  function generateLightRope(callback) {
+  function putUpChristmasLights() {
+    var div = document.createElement('div');
+    div.id = 'christmasLights';
+
     var ul = document.createElement('ul');
     ul.setAttribute('class','lightrope');
 
@@ -15,9 +11,38 @@ document.addEventListener('DOMContentLoaded', function() {
       ul.appendChild(li);
     }
 
-    if (callback) {
-      callback(ul);
-    }
+    div.appendChild(ul);
+
+    document.body.insertBefore(div, document.body.childNodes[0]);
+  }
+
+  function letItSnow() {
+    var snowDiv = document.createElement('div');
+    snowDiv.className = 'snow';
+    snowDiv.innerHTML =  `
+      <i class=snow_flake></i>
+      <i class=snow_flake></i>
+      <i class=snow_flake></i>
+      <i class=snow_flake-600px></i>
+      <i class=snow_flake-600px></i>
+      <i class=snow_flake-600px></i>
+      <i class=snow_flake-600px></i>
+      <i class=snow_flake-768px></i>
+      <i class=snow_flake-768px></i>
+      <i class=snow_flake-1024px></i>
+      <i class=snow_flake-1024px></i>
+      <i class=snow_flake-1024px></i>
+      <i class=snow_flake-1280px></i>
+      <i class=snow_flake-1280px></i>
+      <i class=snow_flake-1366px></i>
+      <i class=snow_flake-1600px></i>
+      <i class=snow_flake-1600px></i>
+      <i class=snow_flake-1800px></i>
+      <i class=snow_flake-1800px></i>
+      <i class=snow_flake-1920px></i>
+      <i class=snow_flake-1920px></i>`;
+
+    document.body.insertBefore(snowDiv, document.body.childNodes[0]);
   }
 
   // Get the current date
@@ -27,24 +52,14 @@ document.addEventListener('DOMContentLoaded', function() {
   // JavaScripts starts with month 0, so we add 1
   var currentMonth = currentDate.getMonth() + 1;
 
-  // This is the DIV that gets appended to the document body
-  var div = document.createElement('div');
-  generateLightRope(function(ul) {
-    div.appendChild(ul);
+  // Winter Actions
+  if (currentMonth === 12 || currentMonth === 1 || currentMonth === 2) {
+    // It snows during the Winter months
+    letItSnow();
 
-    // This is the id of the div that gets set based on the month
-    var divId = '';
-
-    switch(currentMonth) {
-      case 12:
-        divId = 'christmasLights';
-        break;
+    // We put up the Christmas lights in December
+    if (currentMonth === 12) {
+      putUpChristmasLights();
     }
-
-    // Append the div to the body if it is a certain time of year
-    if (divId !== '') {
-      div.id = divId;
-      document.body.appendChild(div);
-    }
-  });
+  }
 });
