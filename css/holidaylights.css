@@ -549,12 +549,6 @@
   filter: drop-shadow(0 1px 1px rgba(0,0,0,.125));
 }
 
-/*
-[class^="leaf"]:nth-of-type(3n+1) {
-  filter: blur(1px);
-}
-*/
-
 /* Increase number of snowflakes at common device widths */
 .leaf-600px,
 .leaf-768px,
@@ -630,4 +624,41 @@
   to {
     transform: translate(0, 120vh) rotate(360deg) scale(1.2);
   }
+}
+
+
+/* Heart Animation Styling */
+@keyframes heartfade {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.heart {
+    z-index: 50;
+    animation: heartfade 6s linear;
+    position: absolute;
+}
+
+.heart:before,
+.heart:after {
+    content: "";
+    background-color: #fc2a62;
+    position: absolute;
+    height: 30px;
+    width: 45px;
+    border-radius: 15px 0px 0px 15px;
+}
+
+.heart:before {
+    transform: rotate(45deg);
+}
+
+.heart:after {
+    left: 10.5px;
+    transform: rotate(135deg);
 }
