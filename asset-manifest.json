@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ad90b9b0.css",
+    "main.js": "/static/js/main.e1bdb010.js",
+    "static/js/787.89c470ce.chunk.js": "/static/js/787.89c470ce.chunk.js",
+    "static/media/DropSpiderLogo.png": "/static/media/DropSpiderLogo.4880ec201dea762cdcae.png",
+    "static/media/MetaQuestAvatar.png": "/static/media/MetaQuestAvatar.16d895b5541715773ced.png",
+    "static/media/UFOBlastorama.png": "/static/media/UFOBlastorama.906f546c48ec01266230.png",
+    "static/media/JavaScript.png": "/static/media/JavaScript.28d87eb26073cbc28c61.png",
+    "static/media/jquery.png": "/static/media/jquery.f2e1f99024a8d6067cba.png",
+    "index.html": "/index.html",
+    "main.ad90b9b0.css.map": "/static/css/main.ad90b9b0.css.map",
+    "main.e1bdb010.js.map": "/static/js/main.e1bdb010.js.map",
+    "787.89c470ce.chunk.js.map": "/static/js/787.89c470ce.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ad90b9b0.css",
+    "static/js/main.e1bdb010.js"
+  ]
+}
